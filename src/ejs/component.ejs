@@ -1,6 +1,10 @@
-<% baseUrlPath='.' ; ejsPath='.' ; pageData="" %>
+<% baseUrlPath='' ; ejsPath='.' ; pageData="" %>
 <!DOCTYPE html>
 <html lang="ja">
+  <!-- css -->
+  <!-- <link rel="stylesheet" href="../../dist/assets/css/style.css" /> -->
+  <!-- <link rel="stylesheet" href="/assets/css/style.css" /> -->
+  <link rel="stylesheet" href="<%= baseUrlPath %>/assets/css/style.css" />
   <style>
     .wrapper {
       max-width: 1000px;
@@ -18,7 +22,7 @@
     .p {
       margin-top: 10px;
       margin-bottom: 20px;
-      color: white;
+      color: gray;
     }
   </style>
   <body>
@@ -41,6 +45,13 @@
       <h2 class="h2">.footer</h2>
       <p class="p">フッター</p>
       <%- include(ejsPath + '/common/_footer' ) %>
+      <h2 class="h2">.c-campaign-tab</h2>
+      <p class="p">キャンペーンページのタブ</p>
+      <!-- prettier-ignore -->
+      <%- include(ejsPath + '/component/_c-campaign-tab' ,{link:'#',title:'all'}) %>
+      <!-- prettier-ignore -->
+      <%- include(ejsPath + '/component/_c-campaign-tab',{link:'#', title:'ライセンス講習'}) %>
+      <!-- prettier-ignore -->
     </div>
   </body>
 </html>
