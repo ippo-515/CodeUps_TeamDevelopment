@@ -1,23 +1,22 @@
 @use "sass:math";
 
-
-
 // インナー幅設定
 // コンテンツのインナー幅（最も共通の幅が多い部分）
-$l-inner: 1100px;
+$l-inner: 1080px;
 // ※キュンパス幅ではなくインナーの幅を指す
 
 // 余白
 $padding-pc: 25px;
-$padding-sp: 20px;
+$padding-sp: 15px;
 // ※PC時：デザインカンプの余白の幅ではない。PC時は通常25pxで大丈夫！
 
 ////////////////////
 // フォント設定
 ////////////////////
 
-$base-font-family: "";
-$second-font-family: "";
+$base-font-family: "Noto Sans JP", serif;
+$second-font-family: "Gotu", sans-serif;
+$third-font-family: "Lato", sans-serif;
 // ※検証ツールでしっかり反映されているか確認する
 
 body {
@@ -25,8 +24,10 @@ body {
 }
 
 // フォントウェイト
-$regular: 300;
+$light: 300;
 $normal: 400;
+$medium: 500;
+$semi-bold: 600;
 $bold: 700;
 
 ////////////////////
@@ -36,6 +37,7 @@ $bold: 700;
 //色指定（共通性のあるものは出来る限り指定すると良い）
 $black: #111;
 $white: #fff;
-
-
-
+$gray: #9a9a9a;
+$color-primary: #408f95; // メインの色
+$color-background: #ddf0f1; // 背景の色
+$color-accent: #0d2936; // 文字色
