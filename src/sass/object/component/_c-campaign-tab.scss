@@ -1,0 +1,6 @@
+@use "global" as *;
+
+.c-campaign-tab {
+	@include mq(md) {
+	}
+}
