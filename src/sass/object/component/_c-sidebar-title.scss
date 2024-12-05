@@ -1,0 +1,27 @@
+.c-sidebar-title {
+  border-left: 8px solid #408F95;
+  color: #0D2936;
+  display: inline-block;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  padding: 0.4375rem 0 0.4375rem 5.125rem;
+  position: relative;
+}
+
+.c-sidebar-title::before {
+  background-image: url(../images/common/whaleblack.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  content: "";
+  height: 3.125rem;
+  left: 1.575rem;
+  max-width: 3.125rem;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  z-index: 1;
+}
