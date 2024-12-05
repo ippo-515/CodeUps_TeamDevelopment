@@ -1,0 +1,42 @@
+
+<%
+project = '.';
+
+const breadcrumbs = [
+  { label: "TOP", url: "index.html" },
+  { label: "キャンペーン" },
+  { label: "私たちについて" },
+  { label: "ダイビング情報" },
+  { label: "ブログ一覧" },
+  { label: "ブログ詳細" },
+  { label: "お客様の声" },
+  { label: "料金一覧" },
+  { label: "よくある質問" },
+  { label: "お問い合わせ" },
+  { label: "お問い合わせエラー" },
+  { label: "送信完了" },
+  { label: "サイトマップ" },
+  { label: "プライバシーポリシー" },
+  { label: "利用規約" },
+  { label: "404" },
+]
+%>
+
+<div class="breadcrumb layout-breadcrumb">
+  <div class="breadcrumb__inner inner">
+    <% breadcrumbs.forEach((breadcrumb, index) => { %>
+      <span>
+        <% if (breadcrumb.url) { %>
+          <a href="<%= breadcrumb.url %>">
+            <span><%= breadcrumb.label %></span>
+          </a>
+        <% } else { %>
+          <span class="breadcrumb__item"><%= breadcrumb.label %></span>
+        <% } %>
+      </span>
+      <% if (index < breadcrumbs.length - 1) { %>
+        &nbsp;&gt;&nbsp;
+      <% } %>
+    <% }); %>
+  </div>
+</div>
