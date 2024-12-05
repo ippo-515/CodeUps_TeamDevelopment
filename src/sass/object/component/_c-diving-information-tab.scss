@@ -1,0 +1,18 @@
+@use "global" as *;
+
+.c-diving-information-tab {
+  // position: relative;
+  // display: inline-block;
+  // font-size: rem(14);
+  // line-height: calc(22 / 14);
+  // letter-spacing: rem(0);
+  // font-weight: $normal;
+  // color: $color-primary;
+  // padding: rem(6) rem(32);
+  // border: 1px solid $color-primary;
+  // text-transform: uppercase;
+  // overflow: hidden;
+  // z-index: 1;
+  @include mq(md) {
+  }
+}
