@@ -55,6 +55,13 @@
       <p class="p">サイドバータイトル</p>
       <!-- prettier-ignore -->
       <%- include(ejsPath + '/component/_c-sidebar-title',{title:'人気記事'}) %>
+      <h2 class="h2">.c-breadcrumb</h2>
+      <p class="p">パンくず</p>
+      <!-- prettier-ignore -->
+      <%
+      const breadcrumbsKey = "diving"; // ここのキーを変更すると出し分けできます(キーは_c-breadcrumb.ejsファイルに記載)
+      %>
+      <%- include(ejsPath + '/component/_c-breadcrumb', { breadcrumbsKey }) %>
       <!-- prettier-ignore -->
       <h2 class="h2">.c-button</h2>
       <p class="p">ボタン</p>

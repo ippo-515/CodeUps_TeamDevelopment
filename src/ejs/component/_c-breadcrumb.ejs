@@ -2,24 +2,39 @@
 <%
 project = '.';
 
-const breadcrumbs = [
-  { label: "TOP", url: "index.html" },
-  { label: "キャンペーン" },
-  { label: "私たちについて" },
-  { label: "ダイビング情報" },
-  { label: "ブログ一覧" },
-  { label: "ブログ詳細" },
-  { label: "お客様の声" },
-  { label: "料金一覧" },
-  { label: "よくある質問" },
-  { label: "お問い合わせ" },
-  { label: "お問い合わせエラー" },
-  { label: "送信完了" },
-  { label: "サイトマップ" },
-  { label: "プライバシーポリシー" },
-  { label: "利用規約" },
-  { label: "404" },
-]
+// パンくずリストの定義
+const breadcrumbsData = {
+  home: { label: "TOP", url: "index.html" },
+  campaign: [{ label: "キャンペーン" }],
+  about: [{ label: "私たちについて" }],
+  diving: [{ label: "ダイビング情報" }],
+  blogList: [{ label: "ブログ一覧" }],
+  blogDetail: [{ label: "ブログ一覧" }, { label: "ブログ詳細" }],
+  reviews: [{ label: "お客様の声" }],
+  pricing: [{ label: "料金一覧" }],
+  faq: [{ label: "よくある質問" }],
+  contact: [{ label: "お問い合わせ" }],
+  contactError: [{ label: "お問い合わせ" }, { label: "お問い合わせエラー" }],
+  contactComplete: [{ label: "お問い合わせ" }, { label: "送信完了" }],
+  sitemap: [{ label: "サイトマップ" }],
+  privacyPolicy: [{ label: "プライバシーポリシー" }],
+  terms: [{ label: "利用規約" }],
+  notFound: [{ label: "404" }],
+};
+
+// パンくずリストを動的に生成する関数
+function generateBreadcrumbs(key) {
+  return [breadcrumbsData.home, ...(breadcrumbsData[key] || [])];
+}
+
+// breadcrumbsKey が提供されていない場合のチェック
+if (!breadcrumbsKey) {
+  throw new Error('breadcrumbsKey が指定されていません。');
+}
+console.log('Breadcrumbs Key:', breadcrumbsKey);
+
+// パンくずリストの生成
+const breadcrumbs = generateBreadcrumbs(breadcrumbsKey);
 %>
 
 <div class="breadcrumb layout-breadcrumb">
