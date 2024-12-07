@@ -63,16 +63,14 @@
       %>
       <%- include(ejsPath + '/component/_c-breadcrumb', { breadcrumbsKey }) %>
       <!-- prettier-ignore -->
-
       <h2 class="h2">.c-button</h2>
       <p class="p">ボタン</p>
       <%- include(ejsPath + '/component/_c-button' ,{link:'#',text:'View more'}) %>
-
+      <!-- prettier-ignore -->
       <h2 class="h2">.c-pagenavi</h2>
       <p class="p">ページネーション</p>
       <!-- prettier-ignore -->
-      <%- include(ejsPath + '/component/_c-pagenavi',{title:'人気記事'}) %>
-
+      <%- include(ejsPath + '/component/_c-pagenavi') %>
     </div>
   </body>
 </html>
