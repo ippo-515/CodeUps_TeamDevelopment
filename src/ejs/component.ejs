@@ -51,7 +51,11 @@
       <!-- prettier-ignore -->
       <%- include(ejsPath + '/component/_c-campaign-tab' ,{link:'#',title:'all'}) %>
       <!-- prettier-ignore -->
-      <%- include(ejsPath + '/component/_c-campaign-tab',{link:'#', title:'ライセンス講習'}) %>
+      <h2 class="h2">.p-campaign-tabs</h2>
+      <p class="p">キャンペーンページのタブリスト</p>
+      <!-- prettier-ignore -->
+      <%- include(ejsPath + '/project/_p-campaign-tabs') %>
+      <!-- prettier-ignore -->
       <h2 class="h2">.c-sidebar-title</h2>
       <p class="p">サイドバータイトル</p>
       <!-- prettier-ignore -->
@@ -70,8 +74,8 @@
       <!-- prettier-ignore -->
       <h2 class="h2">.c-section-header</h2>
       <p class="p">セクションタイトル</p>
-      <%
-      const sectionKey = "campaign"; // ここでキーを指定することで対応するセクションタイトルが出力されます
+      <% const sectionKey =
+      "campaign";//ここでキーを指定することで対応するセクションタイトルが出力されます
       %>
       <!-- prettier-ignore -->
       <%- include(ejsPath + '/component/_c-section-header', { sectionKey }) %>
@@ -83,8 +87,17 @@
       <h2 class="h2">.c-diving-information-tab</h2>
       <p class="p">ダイビング情報ページのタブ</p>
       <!-- prettier-ignore -->
+      <%- include(ejsPath + '/component/_c-diving-information-tab' ,{link: '#', 
+      imgDefault:'./assets/images/common/information-tab-green.png', imgDefaultAlt:'クジラの画像', 
+      imgHover: './assets/images/common/information-tab-white.png',
+      imgHoverAlt: 'クジラの画像', 
+      title1: 'ライセンス', 
+      title2: '講習' }) %>
       <!-- prettier-ignore -->
-      <%- include(ejsPath + '/component/_c-diving-information-tab' ,{link:'#',title:'<span class="c-diving-information-tab__break">ライセンス</span><span class="c-diving-information-tab__break">講習</span>'}) %>
+      <h2 class="h2">.p-diving-information-tabs</h2>
+      <p class="p">ダイビング情報ページのタブリスト</p>
+      <!-- prettier-ignore -->
+      <%- include(ejsPath + '/project/_p-diving-information-tabs') %>
       <!-- prettier-ignore -->
       <h2 class="h2">.c-right-facing-fish</h2>
       <p class="p">ページ共通さかなの装飾(右向き)</p>

@@ -1,15 +1,11 @@
 <a href="<%= link %>" class="c-diving-information-tab">
   <div class="c-diving-information-tab__inner">
     <div class="c-diving-information-tab__img">
-      <img
-        src="./assets/images/common/information-tab-green.png"
-        alt="クジラの画像"
-      />
-      <img
-        src="./assets/images/common/information-tab-white.png"
-        alt="クジラの画像"
-      />
+      <img src="<%- imgDefault %>" alt="<%- imgDefaultAlt %>" />
+      <img src="<%- imgHover %>" alt="<%- imgHoverAlt %>" />
     </div>
-    <p class="c-diving-information-tab__text"><%- title %></p>
+    <p class="c-diving-information-tab__text">
+      <%- title1 %><br class="u-mobile" /><%- title2 %>
+    </p>
   </div>
 </a>

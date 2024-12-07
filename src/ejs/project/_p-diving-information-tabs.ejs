@@ -1,0 +1,26 @@
+<% project = '.'; tabText = [ { link: '#',
+imgDefault:'./assets/images/common/information-tab-green.png',
+imgDefaultAlt:'クジラの画像', imgHover:
+'./assets/images/common/information-tab-white.png', imgHoverAlt: 'クジラの画像',
+title1: 'ライセンス', title2: '講習' },{ link: '#',
+imgDefault:'./assets/images/common/information-tab-green.png',
+imgDefaultAlt:'クジラの画像', imgHover:
+'./assets/images/common/information-tab-white.png', imgHoverAlt: 'クジラの画像',
+title1: 'ファン', title2: 'ダイビング' },{ link: '#',
+imgDefault:'./assets/images/common/information-tab-green.png',
+imgDefaultAlt:'クジラの画像', imgHover:
+'./assets/images/common/information-tab-white.png', imgHoverAlt: 'クジラの画像',
+title1: '体験', title2: 'ダイビング' }, ] %>
+
+<div class="p-diving-information-tabs">
+  <ul class="p-sp3column-pc3column">
+    <% tabText.forEach(function(tab) { %>
+    <li class="p-sp3column-pc3column__item">
+      <%- include(project + './component/_c-diving-information-tab', { link:
+      tab.link, imgDefault: tab.imgDefault, imgDefaultAlt: tab.imgDefaultAlt,
+      imgHover: tab.imgHover, imgHoverAlt: tab.imgHoverAlt, title1:tab.title1,
+      title2: tab.title2}) %>
+    </li>
+    <% }); %>
+  </ul>
+</div>

@@ -1,0 +1,14 @@
+<% project = '.'; tabText = [ {link: '#', title: 'all'}, {link: '#',
+title:'ライセンス講習'}, {link: '#', title: 'ファンダイビング'}, {link: '#',
+title: '体験ダイビング'}, ] %>
+
+<div class="p-campaign-tabs">
+  <ul class="p-sp2column-pcfree">
+    <% tabText.forEach(function(tab) { %>
+    <li class="p-sp2column-pcfree__item">
+      <%- include(project + './component/_c-campaign-tab', { link: tab.link,
+      title: tab.title, }) %>
+    </li>
+    <% }); %>
+  </ul>
+</div>

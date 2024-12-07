@@ -1,24 +1,23 @@
 @use "global" as *;
 
-.p-sp2column-pcfree {
+.p-sp3column-pc3column {
   width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   // justify-content: space-between;
   row-gap: rem(16);
-  column-gap: rem(21);
+  column-gap: rem(19);
   @include mq("md") {
-    row-gap: rem(16);
-    column-gap: rem(32);
+    column-gap: rem(90);
   }
 }
 
-.p-sp2column-pcfree__item {
+.p-sp3column-pc3column__item {
   margin: 0;
   padding: 0;
-  width: calc(100% / 2 - rem(21) * 1 / 2);
+  width: calc(100% / 3 - rem(19) * 2 / 3);
   @include mq("md") {
-    width: rem(162);
+    width: calc(100% / 3 - rem(90) * 2 / 3);
   }
 }
