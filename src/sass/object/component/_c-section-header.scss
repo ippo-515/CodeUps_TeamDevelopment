@@ -1,0 +1,54 @@
+@use "global" as *;
+
+.c-section-header {
+  text-align: center;
+}
+
+.c-section-header__engtitle {
+  font-family: $second-font-family;
+  font-size: rem(32);
+  font-weight: $normal;
+  color: $color-accent;
+  line-height: 1;
+
+  @include mq(md) {
+    font-size: rem(40);
+  }
+}
+
+.c-section-header__engtitle::first-letter {
+  color: $color-primary;
+}
+
+.c-section-header__engtitle--white-pc {
+  @include mq(md) {
+    color: $white;
+  }
+}
+
+.c-section-header__engtitle--white-pc::first-letter {
+  @include mq(md) {
+    color: $white;
+  }
+}
+
+.c-section-header__engtitle--large {
+  font-size: rem(80);
+}
+
+.c-section-header__jatitle {
+  font-size: rem(12);
+  font-weight: $normal;
+  color: $color-primary;
+  margin-top: rem(8);
+
+  @include mq(md) {
+    margin-top: rem(8);
+  }
+}
+
+.c-section-header__jatitle--white-pc {
+  @include mq(md) {
+    color: $white;
+  }
+}
