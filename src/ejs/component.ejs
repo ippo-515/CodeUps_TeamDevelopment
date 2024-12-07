@@ -87,7 +87,12 @@
       <h2 class="h2">.c-diving-information-tab</h2>
       <p class="p">ダイビング情報ページのタブ</p>
       <!-- prettier-ignore -->
-      <%- include(ejsPath + '/component/_c-diving-information-tab' ,{link:'#',title1:'ライセンス',title2:'講習'}) %>
+      <%- include(ejsPath + '/component/_c-diving-information-tab' ,{link: '#', 
+      imgDefault:'./assets/images/common/information-tab-green.png', imgDefaultAlt:'クジラの画像', 
+      imgHover: './assets/images/common/information-tab-white.png',
+      imgHoverAlt: 'クジラの画像', 
+      title1: 'ライセンス', 
+      title2: '講習' }) %>
       <!-- prettier-ignore -->
       <h2 class="h2">.p-diving-information-tabs</h2>
       <p class="p">ダイビング情報ページのタブリスト</p>
