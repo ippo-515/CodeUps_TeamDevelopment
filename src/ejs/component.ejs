@@ -11,9 +11,9 @@
       width: 100%;
       margin: auto;
     }
-    div {
+    /* div {
       margin: 40px 0;
-    }
+    } */
     .h2 {
       margin-top: 75px;
       background-color: yellow;
@@ -73,7 +73,17 @@
       const sectionKey = "campaign"; // ここでキーを指定することで対応するセクションタイトルが出力されます
       %>
       <!-- prettier-ignore -->
-      <%- include(ejsPath + '/component/_c-section-header', { sectionKey }) %>
+      <%- include(ejsPath + '/component/_c-section-header', { sectionKey }) %>  
+      <!-- prettier-ignore -->
+      <h2 class="h2">.c-pagenavi</h2>
+      <p class="p">ページネーション</p>
+      <!-- prettier-ignore -->
+      <%- include(ejsPath + '/component/_c-pagenavi') %>
+      <h2 class="h2">.c-diving-information-tab</h2>
+      <p class="p">ダイビング情報ページのタブ</p>
+      <!-- prettier-ignore -->
+      <%- include(ejsPath + '/component/_c-diving-information-tab' ,{link:'#',title:'ライセンス講習'}) %>
+      <!-- prettier-ignore -->
     </div>
   </body>
 </html>
