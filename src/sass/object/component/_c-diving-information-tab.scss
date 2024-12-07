@@ -4,14 +4,16 @@
   position: relative;
   display: inline-block;
   background-color: $color-background;
-  padding: rem(13) rem(30);
+  padding: rem(10) rem(16);
   text-transform: uppercase;
   color: $color-primary;
   cursor: pointer;
   overflow: hidden;
+  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
   z-index: 1;
   transition: all 0.3s ease;
-  @include mq(md) {
+  @include mq("md") {
+    padding: rem(13) rem(30);
   }
 }
 
@@ -45,9 +47,13 @@
 }
 
 .c-diving-information-tab__img {
+  display: none;
   position: relative;
   width: rem(64);
   // margin-bottom: rem(64);
+  @include mq("md") {
+    display: block;
+  }
 }
 
 .c-diving-information-tab__img::before {
@@ -89,10 +95,24 @@
   opacity: 1;
   z-index: 1;
 }
+
 .c-diving-information-tab__text {
-  font-size: rem(24);
-  line-height: calc(24 / 24);
+  font-size: rem(14);
+  line-height: calc(20 / 14);
   letter-spacing: rem(0);
   font-weight: $normal;
-  transition: all 0.1s ease,
+  text-align: center;
+  transition: all 0.1s ease;
+  @include mq("md") {
+    font-size: rem(24);
+    line-height: calc(24 / 24);
+    letter-spacing: rem(0);
+  }
+}
+
+.c-diving-information-tab__break {
+  display: block;
+  @include mq("md") {
+    display: inline;
+  }
 }
