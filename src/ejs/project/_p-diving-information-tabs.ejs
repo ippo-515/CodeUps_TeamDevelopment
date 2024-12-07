@@ -1,0 +1,17 @@
+<% project = '.'; // 連想配列を作ることで、変更箇所をまとめることもできます let
+tabText = [ {link: '#', title1: 'ライセンス', title2: '講習'}, {link: '#',
+title1: 'ファン', title2: 'ダイビング'}, {link: '#', title1: '体験', title2:
+'ダイビング'}, ] %>
+
+<ul class="p-diving-information-tabs">
+  <div class="p-diving-information-tabs__item">
+    <div class="p-sp2column-pcfree">
+      <% tabText.forEach(function(tab) { %>
+      <li class="p-sp2column-pcfree__item">
+        <%- include(project + './component/_c-diving-information-tab',
+        {link:tab.link, title1:tab.title1, title2:tab.title2, }) %>
+      </li>
+      <% }); %>
+    </div>
+  </li>
+</ul>

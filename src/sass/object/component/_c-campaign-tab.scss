@@ -2,14 +2,15 @@
 
 .c-campaign-tab {
   position: relative;
-  display: inline-block;
+  display: block;
   font-size: rem(14);
   line-height: calc(22 / 14);
   letter-spacing: rem(0);
   font-weight: $normal;
   color: $color-primary;
-  padding: rem(6) rem(32);
+  padding: rem(6) rem(0);
   border: 1px solid $color-primary;
+  text-align: center;
   text-transform: uppercase;
   overflow: hidden;
   z-index: 1;
