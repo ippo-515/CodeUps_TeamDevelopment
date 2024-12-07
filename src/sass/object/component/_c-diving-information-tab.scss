@@ -1,18 +1,40 @@
 @use "global" as *;
 
 .c-diving-information-tab {
+  position: relative;
   display: inline-block;
-  font-size: rem(24);
-  line-height: calc(24 / 24);
-  letter-spacing: rem(0);
-  font-weight: $normal;
-  color: $white;
-  background-color: $color-primary;
+  background-color: $color-background;
   padding: rem(13) rem(30);
+  text-transform: uppercase;
+  color: $color-primary;
+  cursor: pointer;
   overflow: hidden;
   z-index: 1;
+  transition: all 0.3s ease;
   @include mq(md) {
   }
+}
+
+.c-diving-information-tab::after {
+  background: $color-primary;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: 0.2s cubic-bezier(0.45, 0, 0.55, 1);
+  z-index: -1;
+}
+
+.c-diving-information-tab:hover {
+  color: $white;
+  transition: opacity 0.3s ease;
+}
+.c-diving-information-tab:hover::after {
+  transform: scale(1, 1);
 }
 
 .c-diving-information-tab__inner {
@@ -20,7 +42,6 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-
 }
 
 .c-diving-information-tab__img {
@@ -43,8 +64,35 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: all 0.3s ease;
 }
 
-.c-diving-information-tab__text {
+/* 通常時は1つ目の画像を表示 */
+.c-diving-information-tab img:nth-child(1) {
+  opacity: 1;
+  z-index: 1;
+}
 
+/* 通常時は2つ目の画像を非表示 */
+.c-diving-information-tab img:nth-child(2) {
+  opacity: 0;
+  z-index: 0;
+}
+
+/* hover時に2つ目の画像を表示 */
+.c-diving-information-tab:hover img:nth-child(1) {
+  opacity: 0;
+  z-index: 0;
+}
+
+.c-diving-information-tab:hover img:nth-child(2) {
+  opacity: 1;
+  z-index: 1;
+}
+.c-diving-information-tab__text {
+  font-size: rem(24);
+  line-height: calc(24 / 24);
+  letter-spacing: rem(0);
+  font-weight: $normal;
+  transition: all 0.1s ease,
 }
