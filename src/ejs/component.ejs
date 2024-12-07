@@ -11,6 +11,9 @@
       width: 100%;
       margin: auto;
     }
+    div {
+      margin: 40px 0;
+    }
     .h2 {
       margin-top: 75px;
       background-color: yellow;
@@ -52,12 +55,23 @@
       <p class="p">サイドバータイトル</p>
       <!-- prettier-ignore -->
       <%- include(ejsPath + '/component/_c-sidebar-title',{title:'人気記事'}) %>
+      <h2 class="h2">.c-breadcrumb</h2>
+      <p class="p">パンくず</p>
       <!-- prettier-ignore -->
-      <h2 class="h2">.c-diving-information-tab</h2>
-      <p class="p">ダイビング情報ページのタブ</p>
+      <%
+      const breadcrumbsKey = "diving"; // ここのキーを変更すると出し分けできます(キーは_c-breadcrumb.ejsファイルに記載)
+      %>
+      <%- include(ejsPath + '/component/_c-breadcrumb', { breadcrumbsKey }) %>
       <!-- prettier-ignore -->
-      <%- include(ejsPath + '/component/_c-diving-information-tab' ,{title:'ライセンス講習'}) %>
+      <h2 class="h2">.c-button</h2>
+      <p class="p">ボタン</p>
+      <%- include(ejsPath + '/component/_c-button' ,{link:'#',text:'View more'})
+      %>
       <!-- prettier-ignore -->
+      <h2 class="h2">.c-pagenavi</h2>
+      <p class="p">ページネーション</p>
+      <!-- prettier-ignore -->
+      <%- include(ejsPath + '/component/_c-pagenavi') %>
     </div>
   </body>
 </html>
