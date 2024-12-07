@@ -45,9 +45,13 @@
 }
 
 .c-diving-information-tab__img {
+  display: none;
   position: relative;
   width: rem(64);
   // margin-bottom: rem(64);
+  @include mq("md") {
+    display: block;
+  }
 }
 
 .c-diving-information-tab__img::before {
@@ -89,10 +93,20 @@
   opacity: 1;
   z-index: 1;
 }
+
 .c-diving-information-tab__text {
   font-size: rem(24);
   line-height: calc(24 / 24);
   letter-spacing: rem(0);
   font-weight: $normal;
-  transition: all 0.1s ease,
+  text-align: center;
+
+  transition: all 0.1s ease;
+}
+
+.c-diving-information-tab__break {
+  display: block;
+  @include mq("md") {
+    display: inline;
+  }
 }
