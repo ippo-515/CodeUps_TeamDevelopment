@@ -11,9 +11,6 @@
       width: 100%;
       margin: auto;
     }
-    div {
-      margin: 40px 0;
-    }
     .h2 {
       margin-top: 75px;
       background-color: yellow;
@@ -56,9 +53,10 @@
       <!-- prettier-ignore -->
       <%- include(ejsPath + '/component/_c-sidebar-title',{title:'人気記事'}) %>
       <!-- prettier-ignore -->
+      <h2 class="h2">.c-diving-information-tab</h2>
       <p class="p">ダイビング情報ページのタブ</p>
       <!-- prettier-ignore -->
-      <%- include(ejsPath + '/component/_c-diving-information-tab' ,{link:'#',title:'all'}) %>
+      <%- include(ejsPath + '/component/_c-diving-information-tab' ,{title:'ライセンス講習'}) %>
       <!-- prettier-ignore -->
     </div>
   </body>
