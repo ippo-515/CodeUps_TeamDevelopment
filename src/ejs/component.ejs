@@ -74,8 +74,8 @@
       <!-- prettier-ignore -->
       <h2 class="h2">.c-section-header</h2>
       <p class="p">セクションタイトル</p>
-      <% const sectionKey =
-      "campaign";//ここでキーを指定することで対応するセクションタイトルが出力されます
+      <%
+      const sectionKey = "campaign"; // ここでキーを指定することで対応するセクションタイトルが出力されます
       %>
       <!-- prettier-ignore -->
       <%- include(ejsPath + '/component/_c-section-header', { sectionKey }) %>
