@@ -30,6 +30,7 @@
     <div class="wrapper">
       <h2 class="h2">header</h2>
       <p class="p">ヘッダー</p>
+      <!-- prettier-ignore -->
       <%- include(ejsPath + '/common/_header' ) %>
 
       <h2 class="h2">.c-title</h2>
@@ -45,6 +46,7 @@
 
       <h2 class="h2">.footer</h2>
       <p class="p">フッター</p>
+      <!-- prettier-ignore -->
       <%- include(ejsPath + '/common/_footer' ) %>
       <h2 class="h2">.c-campaign-tab</h2>
       <p class="p">キャンペーンページのタブ</p>
@@ -66,14 +68,17 @@
       <%
       const breadcrumbsKey = "diving"; // ここのキーを変更すると出し分けできます(キーは_c-breadcrumb.ejsファイルに記載)
       %>
+      <!-- prettier-ignore -->
       <%- include(ejsPath + '/component/_c-breadcrumb', { breadcrumbsKey }) %>
       <!-- prettier-ignore -->
       <h2 class="h2">.c-button</h2>
       <p class="p">ボタン</p>
+      <!-- prettier-ignore -->
       <%- include(ejsPath + '/component/_c-button', {link:'#', text:'View more'}) %>
       <!-- prettier-ignore -->
       <h2 class="h2">.c-section-header</h2>
       <p class="p">セクションタイトル</p>
+      <!-- prettier-ignore -->
       <%
       const sectionKey = "campaign"; // ここでキーを指定することで対応するセクションタイトルが出力されます
       %>
@@ -106,6 +111,7 @@
       <!-- prettier-ignore -->
       <h2 class="h2">.c-to-top</h2>
       <p class="p">トップに戻るボタン</p>
+      <!-- prettier-ignore -->
       <%- include(ejsPath + '/component/_c-to-top', {link:'#top'}) %>
       <h2 class="h2">.c-left-facing-fish</h2>
       <p class="p">ページ共通さかなの装飾(左向き)</p>
