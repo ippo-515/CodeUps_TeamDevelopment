@@ -75,15 +75,10 @@
       <p class="p">ボタン</p>
       <!-- prettier-ignore -->
       <%- include(ejsPath + '/component/_c-button', {link:'#', text:'View more'}) %>
-      <!-- prettier-ignore -->
       <h2 class="h2">.c-section-header</h2>
       <p class="p">セクションタイトル</p>
       <!-- prettier-ignore -->
-      <%
-      const sectionKey = "campaign"; // ここでキーを指定することで対応するセクションタイトルが出力されます
-      %>
-      <!-- prettier-ignore -->
-      <%- include(ejsPath + '/component/_c-section-header', { sectionKey }) %>
+      <%- include(ejsPath + '/component/_c-section-header', {engTitle: "Blog", jaTitle: "ブログ", modifier: "white-pc"}) %>
       <!-- prettier-ignore -->
       <h2 class="h2">.c-pagenavi</h2>
       <p class="p">ページネーション</p>
