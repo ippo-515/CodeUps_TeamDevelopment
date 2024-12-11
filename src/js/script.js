@@ -63,4 +63,18 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     }
   });
 
+  // mv用swiper
+  const swiper = new Swiper(".js-mv-swiper", {
+    slidesPerView: 1, // 1枚ずつ表示
+    spaceBetween: 0, // スライド間の隙間をゼロにする
+    loop: true, // 無限ループ
+    effect: "slide", // スライドエフェクトに変更
+    speed: 1000, // スライドの切り替え速度
+    autoplay: {
+      delay: 3000, // 自動再生の待機時間
+      disableOnInteraction: false, // ユーザー操作後も再生を続ける
+    },
+  });
+  
+
 });

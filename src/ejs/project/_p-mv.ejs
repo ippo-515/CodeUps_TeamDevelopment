@@ -1,0 +1,30 @@
+<!-- mv -->
+<div class="mv">
+  <div class="mv__inner">
+    <div class="mv__wrap">
+      <p class="mv__title">DIVING</p>
+      <p class="mv__text">into the ocean</p>
+    </div>
+    <div class="mv__slider js-mv-swiper swiper">
+      <div class="swiper-wrapper">
+        <% 
+          // スライドデータを配列で管理
+          const slides = [
+            { pc: "./assets/images/common/mv-pc1.jpg", sp: "./assets/images/common/mv-sp1.jpg", alt: "ウミガメが泳いでいる様子" },
+            { pc: "./assets/images/common/mv-pc2.jpg", sp: "./assets/images/common/mv-sp2.jpg", alt: "2人のダイバーの近くをウミガメが泳いでいる様子" },
+            { pc: "./assets/images/common/mv-pc3.jpg", sp: "./assets/images/common/mv-sp3.jpg", alt: "青い海と快晴の空" },
+            { pc: "./assets/images/common/mv-pc4.jpg", sp: "./assets/images/common/mv-sp4.jpg", alt: "綺麗な砂浜と快晴の空" }
+          ];
+        %>
+        <% slides.forEach(slide => { %>
+          <div class="swiper-slide">
+            <picture class="mv__img">
+              <source srcset="<%= slide.pc %>" media="(min-width: 769px)" />
+              <img src="<%= slide.sp %>" alt="<%= slide.alt %>">
+            </picture>
+          </div>
+        <% }); %>
+      </div>
+    </div>
+  </div>
+</div>
