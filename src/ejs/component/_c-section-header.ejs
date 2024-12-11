@@ -1,35 +1,12 @@
 <%
-// セクションタイトルの定義
-const sectionTitles = {
-  campaign: { engTitle: "Campaign", jaTitle: "キャンペーン", customClass: "p-campaign__title" },
-  about: { engTitle: "About us", jaTitle: "私たちについて", customClass: "p-about__title" },
-  information: { engTitle: "Information", jaTitle: "ダイビング情報", customClass: "p-information__title" },
-  blog: { engTitle: "Blog", jaTitle: "ブログ", customClass: "p-blog__title" },
-  voice: { engTitle: "Voice", jaTitle: "お客様の声", customClass: "p-voice__title" },
-  price: { engTitle: "Price", jaTitle: "料金一覧", customClass: "p-price__title" },
-  contact: { engTitle: "Contact", jaTitle: "お問い合わせ", customClass: "p-contact__title" },
-};
-
-try {
-  // タイトルデータの取得
-  ({ engTitle, jaTitle, customClass } = sectionTitles[sectionKey] || {});
-
-  // 無効なsectionKeyが渡された場合にエラーを投げる
-  if ( !engTitle || !jaTitle || !customClass ) {
-    throw new Error(`Invalid sectionKey: ${sectionKey}`);
-  }
-  console.log("セクションデータは有効です");
-} catch (error) {
-  console.log("エラーが発生しました:", error.message);
-}
+const { engTitle, jaTitle, modifier } = locals || {};
 %>
 
-<div class="<%= customClass %> c-section-header">
+<div class="c-section-header">
   <% if (engTitle) { %>
-    <p class="c-section-header__engtitle"><%= engTitle %></p>
+    <p class="c-section-header__engtitle <%= modifier ? `c-section-header__engtitle--${modifier}` : '' %>"><%= engTitle %></p>
   <% } %>
-  <!-- prettier-ignore -->
   <% if (jaTitle) { %>
-    <h2 class="c-section-header__jatitle"><%= jaTitle %></h2>
+    <h2 class="c-section-header__jatitle <%= modifier ? `c-section-header__jatitle--${modifier}` : '' %>"><%= jaTitle %></h2>
   <% } %>
 </div>
