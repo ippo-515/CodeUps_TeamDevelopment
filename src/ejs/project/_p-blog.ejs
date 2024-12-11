@@ -1,0 +1,16 @@
+<!-- blog -->
+<section class="p-blog">
+  <div class="p-blog__inner l-inner">
+    <div class="c-blog__section-title c-section-header">
+      <%
+      const sectionKey = "blog"; // ここでキーを指定することで対応するセクションタイトルが出力されます
+      %>
+      <!-- prettier-ignore -->
+      <%- include(ejsPath + './component/_c-section-header', { sectionKey }) %>
+    </div>
+    <%- include(ejsPath + './project/_p-blog-cards') %>
+    <div class="p-blog__button">
+      <%- include(ejsPath + './component/_c-button', {link:'#', text:'View more'}) %>
+    </div>
+  </div>
+</section>
