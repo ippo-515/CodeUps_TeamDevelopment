@@ -34,6 +34,10 @@
   border: rem(1) solid $color-primary;
 }
 
+.c-button--reverse::before {
+  border-color: $white;
+}
+
 .c-button::after {
   content: "";
   position: absolute;
