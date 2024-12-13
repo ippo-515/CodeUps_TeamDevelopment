@@ -1,0 +1,42 @@
+@use "global" as *;
+
+.sub-mv {
+  height: rem(460);
+
+  @include mq(md) {
+    height: rem(548);
+  }
+}
+
+.sub-mv__inner {
+  height: inherit;
+  position: relative;
+  width:  100%;
+}
+
+.sub-mv__title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size:  rem(40);
+  font-weight: $medium;
+  font-family: $third-font-family;
+  color: $white;
+  white-space: nowrap;
+
+  @include mq(md) {
+    font-size:  rem(80);
+    font-weight: $normal;
+    top: 59%;
+  }
+}
+
+.sub-mv__img {
+  height: inherit;
+}
+
+.sub-mv__img img {
+  height: inherit;
+  object-fit: cover;
+}

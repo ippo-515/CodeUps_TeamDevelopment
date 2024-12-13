@@ -138,10 +138,16 @@
       <!-- prettier-ignore -->
        <%- include(ejsPath + '/project/_p-mv') %>
       <!-- prettier-ignore -->
+      <h2 class="h2">.p-sub-mv</h2>
+      <p class="p">下層ページトップ</p>
+      <!-- prettier-ignore -->
+<!-- <%- include(ejsPath + '/project/_p-sub-mv', { subMvDataKey: 'Campaign' }) %>// ここのキーを変更すると出し分けできます(キーは_p-sub-mv.ejsファイルに記載) -->
+      <!-- prettier-ignore -->
       <h2 class="h2">.p-voice-card</h2>
       <p class="p">お客様の声のカード</p>
       <!-- prettier-ignore -->
       <%- include(ejsPath + '/project/_p-voice-card', { age: '20代(女性)', category: 'ライセンス講習', title: 'ここにタイトルが入ります。ここにタイトル', imagePath: './assets/images/common/Voice1.webp', text: 'ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。'}) %>
+
     </div>
   </body>
 </html>
