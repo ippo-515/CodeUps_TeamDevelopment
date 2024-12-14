@@ -83,8 +83,8 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 
   //.js-colorboxの付いた全ての要素に対して下記の処理を行う
   box.each(function () {
-    $(this).append('<div class="color"></div>')
-    var color = $(this).find($('.color')),
+    $(this).append('<div class="c-colorbox__color"></div>')
+    var color = $(this).find($('.c-colorbox__color')),
       image = $(this).find('img');
     var counter = 0;
 

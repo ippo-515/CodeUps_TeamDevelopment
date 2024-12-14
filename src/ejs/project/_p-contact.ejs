@@ -1,0 +1,87 @@
+<% 
+  const logoLink = "#";
+  const logoSrc = "./assets/images/common/contact-logo.svg";
+  const logoAlt = "CodeUps";
+  const logoWidth = "";
+  const logoHeight = "";
+  const information = [
+    { text: "沖縄県那覇市1-1" },
+    { text: "TEL:0120-000-0000", link: "tel:+0120-000-0000" },
+    { text: "営業時間:8:30-19:00" },
+    { text: "定休日:毎週火曜日" }
+  ];
+  const mapSrc = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6479.313569841215!2d139.8081254764495!3d35.71006267257801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ed0d12f9adf%3A0x7d1d4fb31f43f72a!2z5p2x5Lqs44K544Kr44Kk44OE44Oq44O8!5e0!3m2!1sja!2sjp!4v1716632957968!5m2!1sja!2sjp";
+  const mapWidth = "460";
+  const mapHeight = "500";
+  const engTitle = "contact";
+  const jaTitle = "お問い合わせ";
+  const rightText = "ご予約・お問い合わせはコチラ";
+  const buttonLink = "#";
+  const buttonText = "View more";
+%>
+
+
+<section class="p-contact l-contact">
+  <div class="p-contact__inner l-inner">
+    <div class="p-contact__container">
+      <!-- 左側のコンテンツ -->
+      <div class="p-contact__left">
+        <div class="p-contact__logo">
+          <a href="<%= logoLink %>">
+            <img 
+              src="<%= logoSrc %>" 
+              alt="<%= logoAlt %>" 
+              width="<%= logoWidth %>" 
+              height="<%= logoHeight %>" 
+              loading="lazy" 
+              decoding="async">
+          </a>
+        </div>
+        <div class="p-contact__left-wrap">
+          <!-- 情報部分 -->
+          <div class="p-contact__information">
+            <% information.forEach(function(info) { %>
+              <p class="p-contact__information-text">
+                <% if (info.link) { %>
+                  <a href="<%= info.link %>"><%= info.text %></a>
+                <% } else { %>
+                  <%= info.text %>
+                <% } %>
+              </p>
+            <% }); %>
+          </div>
+          <!-- Googleマップ -->
+          <div class="p-contact__googlemap">
+            <iframe
+              src="<%= mapSrc %>" 
+              width="<%= mapWidth %>" 
+              height="<%= mapHeight %>" 
+              style="border:0;" 
+              allowfullscreen 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+      <!-- 右側のコンテンツ -->
+      <div class="p-contact__right">
+        <div class="p-contact__title section-title">
+          <%- include(ejsPath + './component/_c-section-header', {
+            engTitle: engTitle,
+            jaTitle: jaTitle,
+            modifier: "large"
+          }) %>
+        </div>
+        <div class="p-contact__righttext"><%= rightText %></div>
+        <div class="p-contact__button">
+          <%- include(ejsPath + './component/_c-button', {
+            link: buttonLink,
+            text: buttonText,
+            modifier: ""
+          }) %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

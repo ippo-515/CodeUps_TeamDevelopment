@@ -1,0 +1,50 @@
+<% 
+// 配列データ（動的に生成可能）
+const blogCards = [
+  {
+    datetime: "2023-11-17",
+    dateText: "2023.11/17",
+    title: "ライセンス取得",
+    imageSrc: "./assets/images/common/Blog1.webp",
+    imageAlt: "サンゴ礁",
+    text: "ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。"
+  },
+  {
+    imageSrc: "./assets/images/common/Blog1.webp",
+    imageAlt: "ウミガメが泳いでいる様子",
+    text: "ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。"
+  }
+];
+
+const singleItems = ["リスト1", "リスト2", "リスト3"];
+const paragraphTexts = [
+  "ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。"
+];
+%>
+
+<div class="p-single-content p-single__content">
+  <div class="p-blog__cards p-blog-cards p-blog-cards--single-cards">
+    <% blogCards.forEach((card) => { %>
+    <div class="p-blog-cards__item">
+      <a href="#" class="p-blog-card p-blog-card--single-card">
+        <div class="p-blog-card__wrap p-blog-card__wrap--single-card">
+          <time class="p-blog-card__dete" datetime="<%= card.datetime %>"><%= card.dateText %></time>
+          <p class="p-blog-card__title p-blog-card__title--large"><%= card.title %></p>
+        </div>
+        <div class="p-blog-card__img p-blog-card__img--single-card">
+          <img src="<%= card.imageSrc %>" alt="<%= card.imageAlt %>">
+        </div>
+        <p class="p-blog-card__text p-blog-card__text--single-card"><%= card.text %></p>
+      </a>
+    </div>
+    <% }); %>
+  </div>
+  <ul class="p-single__items">
+    <% singleItems.forEach((item) => { %>
+    <li class="p-single__item"><%= item %></li>
+    <% }); %>
+  </ul>
+  <% paragraphTexts.forEach((text) => { %>
+    <p class="p-blog-card__text p-blog-card__text--single-card"><%= text %></p>
+    <% }); %>
+</div>

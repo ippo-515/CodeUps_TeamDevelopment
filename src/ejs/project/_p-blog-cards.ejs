@@ -21,9 +21,9 @@ let cardContent = [
 ];
 %>
 
-<div class="blog-cards blog-cards__items">
+<div class="p-blog-cards p-blog-cards__items">
   <% cardContent.forEach(function(card) { %>
-  <div class="blog-cards__item">
+  <div class="p-blog-cards__item">
     <%- include(project + '/_p-blog-card', {
       time: card.time,
       title: card.title,
