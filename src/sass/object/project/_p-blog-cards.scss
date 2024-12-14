@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.blog-cards {
+.p-blog-cards {
   width: 100%;
   display: grid;
   gap: rem(40);
@@ -11,7 +11,7 @@
   }
 }
 
-.blog-cards__items {
+.p-blog-cards__items {
   margin-top: rem(27.2);
   max-width: rem(600);
   margin-inline: auto;
@@ -22,3 +22,9 @@
   }
 }
 
+.p-blog-cards.p-blog-cards--single-cards {
+  display: grid;
+  gap: 0;
+  grid-template-columns: repeat(1, 1fr);
+  margin-top: 0;
+}
