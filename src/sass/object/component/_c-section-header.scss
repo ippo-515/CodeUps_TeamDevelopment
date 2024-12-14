@@ -18,6 +18,7 @@
 
 .c-section-header__engtitle::first-letter {
   color: $color-primary;
+  font-size: rem(112);
 }
 
 .c-section-header__engtitle--white-pc {
@@ -32,8 +33,9 @@
   }
 }
 
-.c-section-header__engtitle--large {
+.c-section-header__engtitle.c-section-header__engtitle--large {
   font-size: rem(80);
+  text-indent: rem(-10);
 }
 
 .c-section-header__jatitle {
