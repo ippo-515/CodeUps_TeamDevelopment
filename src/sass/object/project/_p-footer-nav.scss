@@ -1,0 +1,191 @@
+@use "global" as *;
+
+.p-footer-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.p-footer-nav__left-content {
+  width: 50%;
+
+  @include mq(md) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.p-footer-nav__left-content--width {
+  @include mq(md) {
+    width: 54.2%;
+  }
+}
+
+.p-footer-nav__right-content {
+  width: 46.7%;
+
+  @include mq(md) {
+    display: flex;
+    justify-content: space-between;
+    width: 48.5%;
+  }
+}
+
+.p-footer-nav__right-content--width {
+  width: 43.5%;
+  @include mq(md) {
+    width: 44.1%;
+  }
+}
+
+.p-footer-nav__left-items:first-child {
+  @include mq(md) {
+    width: 50%;
+  }
+}
+
+.p-footer-nav__left-items:nth-child(2) {
+  margin-top: rem(2);
+  @include mq(md) {
+    width: 47%;
+    margin-top: 0;
+  }
+}
+
+.p-footer-nav__left-items--width {
+  @include mq(md) {
+    width: 46.8%;
+  }
+}
+
+.p-footer-nav__right-items {
+  @include mq(md) {
+    width: 48.4%;
+  }
+}
+
+.p-footer-nav__right-items--width {
+  @include mq(md) {
+    width: 38.2%;
+  }
+}
+
+.p-footer-nav__left-item,
+.p-footer-nav__right-item {
+  font-size: rem(16);
+  color: $white;
+}
+
+.p-footer-nav__right-items:first-child .p-footer-nav__right-item:nth-child(2) {
+  margin-top: rem(2);
+}
+
+.p-footer-nav__left-item--color-accent,
+.p-footer-nav__right-item--color-accent {
+  color: $color-accent;
+}
+
+.p-footer-nav__left-link,
+.p-footer-nav__right-link {
+  position: relative;
+  display: block;
+  font-weight: $bold;
+  padding: rem(17) 0 rem(15) rem(22);
+  @include mq(md) {
+    padding-top: rem(17);
+  }
+}
+
+.p-footer-nav__right-items:nth-child(2) .p-footer-nav__right-item:nth-child(2) .p-footer-nav__right-link {
+  line-height: 1.1;
+  padding-top: rem(24);
+}
+
+.p-footer-nav__right-items:nth-child(2) .p-footer-nav__right-item:nth-child(3) .p-footer-nav__right-link {
+  padding-top: rem(21);
+}
+
+.p-footer-nav__right-items:nth-child(2) .p-footer-nav__right-item:nth-child(4) .p-footer-nav__right-link {
+  padding-top: rem(19);
+}
+
+.p-footer-nav__left-link::before,
+.p-footer-nav__right-link::before {
+  content: "";
+  position: absolute;
+  top: rem(20);
+  left: 0;
+  display: inline-block;
+  width: rem(18);
+  height: rem(18);
+  background-image: url(../images/common/starfish.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.p-footer-nav__left-link--icon-accent::before,
+.p-footer-nav__right-link--icon-accent::before {
+  background-image: url(../images/common/starfish-accent.svg);
+}
+
+.p-footer-nav__right-items:nth-child(2) .p-footer-nav__right-item:nth-child(2) .p-footer-nav__right-link::before {
+  top: rem(23);
+}
+
+.p-footer-nav__right-items:nth-child(2) .p-footer-nav__right-item:nth-child(3) .p-footer-nav__right-link::before {
+  top: rem(24);
+}
+
+.p-footer-nav__right-items:nth-child(2) .p-footer-nav__right-item:nth-child(4) .p-footer-nav__right-link::before {
+  top: rem(22);
+}
+
+
+.p-footer-nav__left-items:first-child .p-footer-nav__left-detail-items {
+  @include mq(md) {
+    position: relative;
+    left: rem(-2);
+  }
+}
+
+.p-footer-nav__left-detail-item,
+.p-footer-nav__right-detail-item {
+  font-weight: $normal;
+}
+
+.p-footer-nav__left-detail-link,
+.p-footer-nav__right-detail-link {
+  display: block;
+}
+
+.p-footer-nav__left-detail-link {
+  padding-left: rem(24);
+}
+
+.p-footer-nav__left-items:nth-child(2) .p-footer-nav__left-detail-link,
+.p-footer-nav__right-detail-link {
+  padding-left: rem(22);
+}
+
+.p-footer-nav__left-detail-item:first-child .p-footer-nav__left-detail-link,
+.p-footer-nav__right-detail-item:first-child .p-footer-nav__right-detail-link {
+  padding-top: rem(3);
+}
+
+.p-footer-nav__left-detail-item:not(:first-child) .p-footer-nav__left-detail-link {
+  padding-top: rem(9);
+}
+
+.p-footer-nav__right-detail-item:not(:first-child) .p-footer-nav__right-detail-link {
+  padding-top: rem(9);
+}
+
+.p-footer-nav__left-detail-item:not(:last-child) .p-footer-nav__left-detail-link,
+.p-footer-nav__right-detail-item:not(:last-child) .p-footer-nav__right-detail-link {
+  padding-bottom: rem(9);
+}
+
+.p-footer-nav__left-detail-item:last-child .p-footer-nav__left-detail-link,
+.p-footer-nav__right-detail-item:last-child .p-footer-nav__right-detail-link {
+  padding-bottom: rem(17);
+}
