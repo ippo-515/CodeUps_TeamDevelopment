@@ -1,0 +1,74 @@
+@use "global" as *;
+
+.p-single-card {
+  display: block;
+  padding: 0;
+  background-color: initial;
+  box-shadow: initial;
+  transition: opacity 0.3s;
+}
+
+
+.p-single-card img {
+  aspect-ratio: 301/201;
+  object-fit: cover;
+  height: auto;
+}
+
+.p-single-card__img {
+  overflow: clip;
+  margin-top: rem(24);
+
+  @include mq(md) {
+    margin-top: rem(40);
+  }
+}
+
+.p-single-card:hover {
+  opacity: 1;
+  filter: brightness(1.05);
+}
+
+.p-single-card:hover.p-single-card img {
+  transform: scale(1.1);
+  transition: transform 0.6s ease;
+}
+
+.p-single-card__wrap {
+  padding: 0;
+}
+
+.p-single-card__dete {
+  font-size: rem(12);
+  font-family: $second-font-family;
+  font-weight: $normal;
+  line-height: calc(18/12);
+  color: $black;
+}
+
+.p-single-card__title {
+  font-size: rem(24);
+  font-family: $base-font-family;
+  font-weight: $medium;
+
+  @include mq(md) {
+    font-size: rem(32);
+  }
+}
+
+.p-single-cards__item:first-of-type .p-single-card__title {
+  border-bottom: 1px solid $color-primary;
+}
+
+.p-single-card__text {
+  text-align: left;
+  font-size: rem(16);
+  font-weight: $normal;
+  font-family: $base-font-family;
+  line-height: calc( 24/ 16);
+  margin-top: rem(24);
+
+  @include mq(md) {
+    margin-top: rem(35.6);
+  }
+}

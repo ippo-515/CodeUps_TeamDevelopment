@@ -1,0 +1,12 @@
+@use "global" as *;
+
+.p-single__cards {
+  display: grid;
+  gap: 0;
+  grid-template-columns: repeat(1, 1fr);
+  margin-top: 0;
+}
+
+.p-single-cards__item {
+  
+}

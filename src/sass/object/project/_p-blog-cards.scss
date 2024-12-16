@@ -21,10 +21,3 @@
     max-width: $l-inner;
   }
 }
-
-.p-blog-cards.p-blog-cards--single-cards {
-  display: grid;
-  gap: 0;
-  grid-template-columns: repeat(1, 1fr);
-  margin-top: 0;
-}
