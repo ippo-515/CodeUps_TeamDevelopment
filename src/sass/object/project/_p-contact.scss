@@ -140,6 +140,10 @@
   }
 }
 
+.p-contact__title {
+  text-indent: rem(-10);
+}
+
 .p-contact__righttext {
   font-size: rem(14);
   font-family: $base-font-family;

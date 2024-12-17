@@ -21,7 +21,7 @@
 %>
 
 
-<section class="p-contact l-contact">
+<section class="p-contact">
   <div class="p-contact__inner l-inner">
     <div class="p-contact__container">
       <!-- 左側のコンテンツ -->
@@ -38,7 +38,6 @@
           </a>
         </div>
         <div class="p-contact__left-wrap">
-          <!-- 情報部分 -->
           <div class="p-contact__information">
             <% information.forEach(function(info) { %>
               <p class="p-contact__information-text">
@@ -66,7 +65,7 @@
       </div>
       <!-- 右側のコンテンツ -->
       <div class="p-contact__right">
-        <div class="p-contact__title section-title">
+        <div class="p-contact__title">
           <%- include(ejsPath + './component/_c-section-header', {
             engTitle: engTitle,
             jaTitle: jaTitle,
