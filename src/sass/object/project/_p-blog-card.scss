@@ -47,7 +47,7 @@
   color: $black;
 }
 
-.p-blog-cards__item:first-of-type .p-blog-card__title {
+.p-blog-card__title {
   border-bottom: 1px solid $color-primary;
 }
 
@@ -58,42 +58,4 @@
   font-weight: $normal;
   font-family: $base-font-family;
   line-height: calc( 24/ 16);
-}
-
-
-// single用のmodifier
-.p-blog-card.p-blog-card--single-card {
-  padding: 0;
-  background-color: initial;
-  box-shadow: initial;
-}
-
-.p-blog-card__wrap.p-blog-card__wrap--single-card {
-  padding: 0;
-}
-
-.p-blog-card__title.p-blog-card__title--large {
-  font-size: rem(24);
-  font-family: $base-font-family;
-  font-weight: $medium;
-
-  @include mq(md) {
-    font-size: rem(32);
-  }
-}
-
-.p-blog-card__img.p-blog-card__img--single-card {
-  margin-top: rem(24);
-
-  @include mq(md) {
-    margin-top: rem(40);
-  }
-}
-
-.p-blog-card__text.p-blog-card__text--single-card {
-  margin-top: rem(24);
-
-  @include mq(md) {
-    margin-top: rem(35.6);
-  }
 }
