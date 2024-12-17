@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.sub-mv {
+.p-sub-mv {
   height: rem(460);
 
   @include mq(md) {
@@ -8,13 +8,13 @@
   }
 }
 
-.sub-mv__inner {
+.p-sub-mv__inner {
   height: inherit;
   position: relative;
   width:  100%;
 }
 
-.sub-mv__title {
+.p-sub-mv__title {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -32,11 +32,11 @@
   }
 }
 
-.sub-mv__img {
+.p-sub-mv__img {
   height: inherit;
 }
 
-.sub-mv__img img {
+.p-sub-mv__img img {
   height: inherit;
   object-fit: cover;
 }

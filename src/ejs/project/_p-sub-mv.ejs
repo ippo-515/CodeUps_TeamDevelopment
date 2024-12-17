@@ -92,10 +92,10 @@ const altText = data.altText || 'デフォルトの代替テキスト'; // altTe
 %>
 
 <!-- sub-mv -->
-<section class="sub-mv">
-  <div class="sub-mv__inner">
-    <h1 class="sub-mv__title"><%= pageTitle %></h1>
-    <picture class="sub-mv__img">
+<section class="p-sub-mv">
+  <div class="p-sub-mv__inner">
+    <h1 class="p-sub-mv__title"><%= pageTitle %></h1>
+    <picture class="p-sub-mv__img">
       <source srcset="<%= images.desktop %>" media="(min-width: 769px)">
       <img src="<%= images.mobile %>" alt="<%= altText %>" loading="lazy" decoding="async">
     </picture>
