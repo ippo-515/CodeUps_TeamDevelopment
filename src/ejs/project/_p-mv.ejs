@@ -1,11 +1,11 @@
 <!-- mv -->
-<div class="mv">
-  <div class="mv__inner">
-    <div class="mv__wrap">
-      <p class="mv__title">DIVING</p>
-      <p class="mv__text">into the ocean</p>
+<div class="p-mv">
+  <div class="p-mv__inner">
+    <div class="p-mv__wrap">
+      <p class="p-mv__title">DIVING</p>
+      <p class="p-mv__text">into the ocean</p>
     </div>
-    <div class="mv__slider js-mv-swiper swiper">
+    <div class="p-mv__slider js-mv-swiper swiper">
       <div class="swiper-wrapper">
         <% 
           // スライドデータを配列で管理
@@ -18,7 +18,7 @@
         %>
         <% slides.forEach(slide => { %>
           <div class="swiper-slide">
-            <picture class="mv__img">
+            <picture class="p-mv__img">
               <source srcset="<%= slide.pc %>" media="(min-width: 769px)" />
               <img src="<%= slide.sp %>" alt="<%= slide.alt %>">
             </picture>
