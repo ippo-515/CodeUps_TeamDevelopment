@@ -37,8 +37,8 @@ console.log('Breadcrumbs Key:', breadcrumbsKey);
 const breadcrumbs = generateBreadcrumbs(breadcrumbsKey);
 %>
 
-<div class="breadcrumb layout-breadcrumb">
-  <div class="breadcrumb__inner inner">
+<div class="c-breadcrumb">
+  <div class="c-breadcrumb__inner">
     <% breadcrumbs.forEach((breadcrumb, index) => { %>
       <span>
         <% if (breadcrumb.url) { %>
@@ -46,7 +46,7 @@ const breadcrumbs = generateBreadcrumbs(breadcrumbsKey);
             <span><%= breadcrumb.label %></span>
           </a>
         <% } else { %>
-          <span class="breadcrumb__item"><%= breadcrumb.label %></span>
+          <span class="c-breadcrumb__item"><%= breadcrumb.label %></span>
         <% } %>
       </span>
       <% if (index < breadcrumbs.length - 1) { %>

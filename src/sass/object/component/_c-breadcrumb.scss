@@ -1,0 +1,7 @@
+@use "global" as *;
+
+.c-breadcrumb {
+  font-size:  rem(14);
+  font-family: $base-font-family;
+  font-weight: $normal;
+}
