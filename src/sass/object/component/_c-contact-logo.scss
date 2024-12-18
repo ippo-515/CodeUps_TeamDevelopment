@@ -1,0 +1,23 @@
+@use "global" as *;
+
+.c-contact__logo {
+  display: inline-block;
+  max-width: rem(174);
+  width:  100%;
+  margin-bottom: rem(1.6);
+
+  @include mq(md) {
+    max-width: rem(200);
+    margin-bottom: rem(4.8);
+  }
+}
+
+.c-contact__logo img {
+  aspect-ratio: 174/65;
+  object-fit: cover;
+  height: auto;
+
+  @include mq(md) {
+    aspect-ratio: 200/75;
+  }
+}
