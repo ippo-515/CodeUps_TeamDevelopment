@@ -1,0 +1,230 @@
+.sub-blog__sidebar {
+  margin-inline: auto;
+  max-width: rem(600);
+  width: 100%;
+  padding-left: rem(24);
+  padding-right: rem(24);
+  margin-top: rem(90);
+
+  @include mq(md) {
+    margin-left: rem(80);
+    max-width: rem(294);
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 0;
+  }
+}
+
+.sub-blog__sidebar-items {
+}
+
+.sub-blog__sidebar-item {
+}
+
+.sub-blog__sidebar-item + .sub-blog__sidebar-item {
+  margin-top: rem(80);
+}
+
+.sub-blog__sidebar-title {
+  position: relative;
+  display: inline-block;
+  font-size: rem(24);
+  font-family: $base-font-family;
+  font-weight: $regular;
+  color: $black;
+  padding: rem(7) 0 rem(7) rem(82);
+  border-left: 8px solid $green;
+}
+
+.sub-blog__sidebar-title::before {
+  background-image: url(../images/common/whaleblack.webp);
+    background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      content: "";
+      height: rem(50);
+      max-width: rem(50);
+      position: absolute;
+      right: 0;
+      left: rem(25.2);
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      z-index: 1;
+}
+
+.sub-blog__favorite-items {
+  
+}
+
+.sub-blog__favorite-item {
+  display: flex;
+  margin-top: rem(24);
+  padding: rem(16);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
+}
+
+.sub-blog__favorite-img {
+  width: 50%;
+}
+
+.sub-blog__favorite-img img {
+  aspect-ratio: 121/90;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.sub-blog__heading {
+  width: 50%;
+  margin-left: rem(16);
+}
+
+.sub-blog__reviews-items {
+  margin-top: rem(24);
+}
+
+.sub-blog__reviews-item {
+
+}
+
+.sub-blog__reviews-img {
+
+}
+
+.sub-blog__reviews-img img {
+  aspect-ratio: 294/218;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.sub-blog__reviews-category {
+  font-size: rem(12);
+  font-family: $base-font-family;
+  font-weight: $regular;
+  margin-top: rem(16);
+}
+
+.sub-blog__reviews-title {
+  font-size: rem(24);
+  font-family: $base-font-family;
+  font-weight: $medium;
+  margin-top: rem(8);
+}
+
+.sub-blog__button {
+  margin-top: rem(40);
+  text-align: center;
+}
+
+.sub-blog__campaign-items {
+  margin-top: rem(32);
+}
+
+.sub-blog__campaign-item + .sub-blog__campaign-item {
+  margin-top: rem(40);
+}
+
+
+.sub-blog__archive {
+  margin-top: rem(24);
+}
+
+.sub-blog__archive-header::before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: rem(9) 0 rem(7) rem(14);
+  border-color: transparent transparent transparent $green;
+  position: absolute;
+  top: 0;
+  left: rem(7);
+  bottom: rem(-5);
+  margin: auto;
+}
+
+.sub-blog__archive-header {
+  position: relative;
+  padding-left: rem(32);
+  font-size: rem(24);
+  font-weight: $regular;
+  font-family: $base-font-family;
+  color: $green;
+}
+
+.sub-blog__archive-header.is-open__a::before {
+  transform: translateY(-50%) rotate(327.5deg);
+  top: rem(3);
+}
+
+.sub-blog__archive-text {
+  display: block;
+  position: relative;
+  font-size: rem(24);
+  font-weight: $regular;
+  font-family: $base-font-family;
+  color: $green;
+  max-width: rem(93);
+  text-align: end;
+
+}
+
+.sub-blog__archive-text::before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: rem(10) 0 rem(10) rem(14);
+  border-color: transparent transparent transparent $green;
+  position: absolute;
+  top: rem(-6);
+  left: rem(30);
+  bottom: 0;
+  margin: auto;
+}
+
+.sub-blog__archive .sub-blog__archive-container .sub-blog__archive-body {
+  display: none;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.sub-blog__items {
+  margin-top: rem(24);
+
+  @include mq(md) {
+    margin-top: rem(40);
+  }
+}
+
+.sub-blog__item {
+  position: relative;
+  font-size: rem(16);
+  font-weight: $regular;
+  font-family: $base-font-family;
+  line-height: calc( 24/ 16);
+  padding-left: rem(30);
+}
+
+.sub-blog__item + .sub-blog__item {
+  margin-top: rem(4);
+}
+
+.sub-blog__item::before {
+  background-image: url(../images/common/_ヒトデ.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+    height: rem(18);
+    left: 0;
+    max-width: rem(18);
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    z-index: 1;
+}
