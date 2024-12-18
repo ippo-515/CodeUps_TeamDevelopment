@@ -1,10 +1,12 @@
 <!-- blog -->
 <section class="p-blog">
   <div class="p-blog__inner l-inner">
-    <div class="c-blog__section-title c-section-header">
+    <div class="p-blog__section-title">
       <%- include(ejsPath + './component/_c-section-header', {engTitle: "Blog", jaTitle: "ブログ", modifier: "white-pc"}) %>
     </div>
-    <%- include(ejsPath + './project/_p-blog-cards') %>
+    <div class="p-blog__items">
+      <%- include(ejsPath + './project/_p-blog-cards') %>
+    </div>
     <div class="p-blog__button">
       <%- include(ejsPath + './component/_c-button', {link:'#', text:'View more'}) %>
     </div>
