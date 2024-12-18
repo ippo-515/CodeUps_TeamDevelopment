@@ -1,7 +1,6 @@
 @use "global" as *;
 
 .p-blog-cards-sub {
-  max-width: rem(703);
   display: grid;
   gap: rem(40);
   grid-template-columns: repeat(1, 1fr);
