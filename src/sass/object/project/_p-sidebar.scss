@@ -1,3 +1,11 @@
+@use "global" as *;
+
+.breadcrumb {
+  font-size:  rem(14);
+  font-family: $base-font-family;
+  font-weight: $normal;
+}
+
 .sub-blog__sidebar {
   margin-inline: auto;
   max-width: rem(600);
@@ -30,10 +38,10 @@
   display: inline-block;
   font-size: rem(24);
   font-family: $base-font-family;
-  font-weight: $regular;
+  font-weight: $normal;
   color: $black;
   padding: rem(7) 0 rem(7) rem(82);
-  border-left: 8px solid $green;
+  border-left: 8px solid $color-primary;
 }
 
 .sub-blog__sidebar-title::before {
@@ -102,7 +110,7 @@
 .sub-blog__reviews-category {
   font-size: rem(12);
   font-family: $base-font-family;
-  font-weight: $regular;
+  font-weight: $normal;
   margin-top: rem(16);
 }
 
@@ -137,7 +145,7 @@
   height: 0;
   border-style: solid;
   border-width: rem(9) 0 rem(7) rem(14);
-  border-color: transparent transparent transparent $green;
+  border-color: transparent transparent transparent $color-primary;
   position: absolute;
   top: 0;
   left: rem(7);
@@ -149,9 +157,9 @@
   position: relative;
   padding-left: rem(32);
   font-size: rem(24);
-  font-weight: $regular;
+  font-weight: $normal;
   font-family: $base-font-family;
-  color: $green;
+  color: $color-primary;
 }
 
 .sub-blog__archive-header.is-open__a::before {
@@ -163,9 +171,9 @@
   display: block;
   position: relative;
   font-size: rem(24);
-  font-weight: $regular;
+  font-weight: $normal;
   font-family: $base-font-family;
-  color: $green;
+  color: $color-primary;
   max-width: rem(93);
   text-align: end;
 
@@ -177,7 +185,7 @@
   height: 0;
   border-style: solid;
   border-width: rem(10) 0 rem(10) rem(14);
-  border-color: transparent transparent transparent $green;
+  border-color: transparent transparent transparent $color-primary;
   position: absolute;
   top: rem(-6);
   left: rem(30);
@@ -202,7 +210,7 @@
 .sub-blog__item {
   position: relative;
   font-size: rem(16);
-  font-weight: $regular;
+  font-weight: $normal;
   font-family: $base-font-family;
   line-height: calc( 24/ 16);
   padding-left: rem(30);
