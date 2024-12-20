@@ -74,7 +74,12 @@
       <h2 class="h2">.c-contact-logo</h2>
       <p class="p">コンタクトセクションのロゴ</p>
       <!-- prettier-ignore -->
-      <%- include(ejsPath + '/component/_c-contact-logo') %>
+      <%- include(ejsPath + '/component/_c-contact-logo', { 
+        imagePath: 'path/to/image.png', 
+        altText: 'ロゴの説明',
+        imageWidth: 100,
+        imageHeight: 50 
+      }) %>
       <!-- prettier-ignore -->
       <h2 class="h2">.c-button</h2>
       <p class="p">ボタン</p>
