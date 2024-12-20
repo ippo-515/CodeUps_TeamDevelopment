@@ -74,7 +74,12 @@
       <h2 class="h2">.c-contact-logo</h2>
       <p class="p">コンタクトセクションのロゴ</p>
       <!-- prettier-ignore -->
-      <%- include(ejsPath + '/component/_c-contact-logo') %>
+      <%- include(ejsPath + '/component/_c-contact-logo', { 
+        imagePath: 'path/to/image.png', 
+        altText: 'ロゴの説明',
+        imageWidth: 100,
+        imageHeight: 50 
+      }) %>
       <!-- prettier-ignore -->
       <h2 class="h2">.c-button</h2>
       <p class="p">ボタン</p>
@@ -165,6 +170,11 @@
       <p class="p">シングルページコンテンツ</p>
       <!-- prettier-ignore -->
       <%- include(ejsPath + '/project/_p-single-content') %>
+      <!-- prettier-ignore -->
+      <h2 class="h2">.p-contact</h2>
+      <p class="p">ページ共通コンタクトセクション</p>
+      <!-- prettier-ignore -->
+      <%- include(ejsPath + '/project/_p-contact') %>
       <!-- prettier-ignore -->
       <h2 class="h2">.p-contact</h2>
       <p class="p">ページ共通コンタクトセクション</p>
