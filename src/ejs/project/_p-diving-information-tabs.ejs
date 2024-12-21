@@ -13,9 +13,9 @@ imgDefaultAlt:'クジラの画像', imgHover:
 title1: '体験', title2: 'ダイビング' }, ] %>
 
 <div class="p-diving-information-tabs">
-  <ul class="p-sp3column-pc3column">
+  <ul class="p-diving-information-tabs__items">
     <% tabText.forEach(function(tab) { %>
-    <li class="p-sp3column-pc3column__item">
+    <li class="p-diving-information-tabs__item">
       <%- include(project + './component/_c-diving-information-tab', { link:
       tab.link, imgDefault: tab.imgDefault, imgDefaultAlt: tab.imgDefaultAlt,
       imgHover: tab.imgHover, imgHoverAlt: tab.imgHoverAlt, title1:tab.title1,

@@ -1,5 +1,26 @@
 @use "global" as *;
 
 .p-diving-information-tabs {
+}
 
+.p-diving-information-tabs__items {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  // justify-content: space-between;
+  row-gap: rem(16);
+  column-gap: rem(19);
+  @include mq("md") {
+    column-gap: rem(90);
+  }
+}
+
+.p-diving-information-tabs__item {
+  margin: 0;
+  padding: 0;
+  width: calc(100% / 3 - rem(19) * 2 / 3);
+  @include mq("md") {
+    width: calc(100% / 3 - rem(90) * 2 / 3);
+  }
 }

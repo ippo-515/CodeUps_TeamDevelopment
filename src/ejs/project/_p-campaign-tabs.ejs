@@ -3,9 +3,9 @@ title:'ライセンス講習'}, {link: '#', title: 'ファンダイビング'}, 
 title: '体験ダイビング'}, ] %>
 
 <div class="p-campaign-tabs">
-  <ul class="p-sp2column-pcfree">
+  <ul class="p-campaign-tabs__items">
     <% tabText.forEach(function(tab) { %>
-    <li class="p-sp2column-pcfree__item">
+    <li class="p-campaign-tabs__item">
       <%- include(project + './component/_c-campaign-tab', { link: tab.link,
       title: tab.title, }) %>
     </li>
