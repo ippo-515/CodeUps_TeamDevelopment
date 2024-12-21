@@ -1,0 +1,58 @@
+@use "global" as *;
+
+.p-accordion-item__header {
+  background-color: $color-primary;
+  color: $white;
+  font-size: rem(16);
+  font-family: $base-font-family;
+  font-weight: $normal;
+  padding: rem(14.4);
+  transition: background .3s ease;
+  cursor: pointer;
+  position: relative;
+
+  @include mq(md) {
+  font-size: rem(20);
+  padding: rem(25) rem(40);
+  }
+}
+
+.p-accordion-item__header::before,
+.p-accordion-item__header::after{
+  position:absolute;
+  content:'';
+  top: rem(1);
+  right: rem(20);
+  bottom: 0;
+  width: rem(28);
+  height: rem(1);
+  margin: auto;
+  background: $white;
+
+  @include mq(md) {
+    width: rem(32);
+    right: rem(36);
+  }
+}
+.p-accordion-item__header::after {
+  transform:rotate(-90deg);
+  transition:transform 0.3s;
+}
+
+.p-accordion-item__header.active-faq::after{transform:rotate(0deg);}
+
+.p-accordion-item__text {
+  color: $black;
+  font-size: rem(16);
+  font-family: $base-font-family;
+  font-weight: $normal;
+  background-color: $white;
+  padding: rem(21.6) rem(16);
+  border: 1px solid $color-primary;
+  display: none;
+
+  @include mq(md) {
+    padding: rem(40);
+    margin-top: rem(16);
+  }
+}
