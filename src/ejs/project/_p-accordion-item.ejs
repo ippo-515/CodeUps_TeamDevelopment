@@ -4,10 +4,10 @@
 
 <div class="p-accordion__item">
   <% faq.forEach((faq, index) => { %>
-      <div class="p-accordion-item__header <%= index === 0 ? 'active-faq' : '' %>">
+      <div class="p-accordion-item__header active-faq">
         <span><%= faq.question %></span>
       </div>
-      <div class="p-accordion-item__text" style="<%= index === 0 ? 'display: block;' : 'display: none;' %>">
+      <div class="p-accordion-item__text" style="display: block;">
         <span><%= faq.answer %></span>
       </div>
   <% }); %>
