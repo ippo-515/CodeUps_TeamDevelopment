@@ -1,7 +1,8 @@
 <% baseUrlPath='.' ; ejsPath='.' ; pageData="top" %>
 <!DOCTYPE html>
 <html lang="ja">
-  <%- include(ejsPath + '/common/_head' ,{ baseUrl: baseUrlPath, page: json[pageData] }) %>
+  <%- include(ejsPath + '/common/_head' ,{ baseUrl: baseUrlPath, page:
+  json[pageData] }) %>
   <!-- css -->
   <!-- <link rel="stylesheet" href="../../dist/assets/css/style.css" /> -->
   <!-- <link rel="stylesheet" href="/assets/css/style.css" /> -->
@@ -126,37 +127,39 @@
       <h2 class="h2">.p-blog-card</h2>
       <p class="p">ブログカード</p>
       <!-- prettier-ignore -->
-      <%- include(ejsPath + '/project/_p-blog-card', { time: '2023.11/17', title: 'ライセンス取得', text: 'ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキスト', imagePath: './assets/images/common/Blog1.jpg'}) %>
+      <%- include(ejsPath + '/project/_p-blog-card', { time: '2023.11/17', title: 'ライセンス取得', text: 'ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。ここにテキスト',
+      imagePath: './assets/images/common/Blog1.jpg'}) %>
       <!-- prettier-ignore -->
       <h2 class="h2">.p-blog-cards</h2>
       <p class="p">ブログカード群</p>
       <!-- prettier-ignore -->
-       <%- include(ejsPath + '/project/_p-blog-cards') %>
+      <%- include(ejsPath + '/project/_p-blog-cards') %>
       <!-- prettier-ignore -->
       <h2 class="h2">.p-blog-cards-sub</h2>
       <p class="p">ブログリスト（ブログ一覧ページ）</p>
       <!-- prettier-ignore -->
-       <%- include(ejsPath + '/project/_p-blog-cards-sub') %>
+      <%- include(ejsPath + '/project/_p-blog-cards-sub') %>
       <!-- prettier-ignore -->
       <h2 class="h2">.p-blog</h2>
       <p class="p">ブログセクション（トップページ）</p>
       <!-- prettier-ignore -->
-       <%- include(ejsPath + '/project/_p-blog') %>
+      <%- include(ejsPath + '/project/_p-blog') %>
       <!-- prettier-ignore -->
       <h2 class="h2">.p-mv</h2>
       <p class="p">メインビュー</p>
       <!-- prettier-ignore -->
-       <%- include(ejsPath + '/project/_p-mv') %>
+      <%- include(ejsPath + '/project/_p-mv') %>
       <!-- prettier-ignore -->
       <h2 class="h2">.p-sub-mv</h2>
       <p class="p">下層ページトップ</p>
       <!-- prettier-ignore -->
-<!-- <%- include(ejsPath + '/project/_p-sub-mv', { subMvDataKey: 'Campaign' }) %>// ここのキーを変更すると出し分けできます(キーは_p-sub-mv.ejsファイルに記載) -->
+      <!-- <%- include(ejsPath + '/project/_p-sub-mv', { subMvDataKey: 'Campaign' }) %>// ここのキーを変更すると出し分けできます(キーは_p-sub-mv.ejsファイルに記載) -->
       <!-- prettier-ignore -->
       <h2 class="h2">.p-voice-card</h2>
       <p class="p">お客様の声のカード</p>
       <!-- prettier-ignore -->
-      <%- include(ejsPath + '/project/_p-voice-card', { age: '20代(女性)', category: 'ライセンス講習', title: 'ここにタイトルが入ります。ここにタイトル', imagePath: './assets/images/common/Voice1.webp', text: 'ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。'}) %>
+      <%- include(ejsPath + '/project/_p-voice-card', { age: '20代(女性)', category: 'ライセンス講習', title: 'ここにタイトルが入ります。ここにタイトル', imagePath: './assets/images/common/Voice1.webp', text: 'ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。'})
+      %>
       <h2 class="h2">.p-voice-cards</h2>
       <p class="p">お客様の声のカード群</p>
       <!-- prettier-ignore -->
