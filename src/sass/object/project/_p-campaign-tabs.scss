@@ -3,3 +3,25 @@
 .p-campaign-tabs {
 }
 
+.p-campaign-tabs__items {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  // justify-content: space-between;
+  row-gap: rem(16);
+  column-gap: rem(21);
+  @include mq("md") {
+    row-gap: rem(16);
+    column-gap: rem(32);
+  }
+}
+
+.p-campaign-tabs__item {
+  margin: 0;
+  padding: 0;
+  width: calc(100% / 2 - rem(21) * 1 / 2);
+  @include mq("md") {
+    width: rem(162);
+  }
+}
