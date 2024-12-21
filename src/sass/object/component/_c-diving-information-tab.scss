@@ -38,6 +38,9 @@
 .c-diving-information-tab:hover::after {
   transform: scale(1, 1);
 }
+.c-diving-information-tab:hover .c-diving-information-tab__inner::before {
+  background-image: url(../images/common/information-tab-white.png);
+}
 
 .c-diving-information-tab__inner {
   display: flex;
@@ -46,55 +49,19 @@
   align-items: center;
   column-gap: rem(9);
 }
-
-.c-diving-information-tab__img {
-  display: none;
-  position: relative;
+.c-diving-information-tab__inner::before {
+  background-image: url(../images/common/information-tab-green.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  content: "";
   width: rem(64);
-  // margin-bottom: rem(64);
+  height: rem(64);
+  z-index: 1;
+  display: none;
   @include mq("md") {
     display: block;
   }
-}
-
-.c-diving-information-tab__img::before {
-  content: "";
-  display: block;
-  padding-top: 100%; //このおかげで画像サイズ1:1を保てる！
-}
-
-.c-diving-information-tab__img img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: all 0.3s ease;
-}
-
-/* 通常時は1つ目の画像を表示 */
-.c-diving-information-tab img:nth-child(1) {
-  opacity: 1;
-  z-index: 1;
-}
-
-/* 通常時は2つ目の画像を非表示 */
-.c-diving-information-tab img:nth-child(2) {
-  opacity: 0;
-  z-index: 0;
-}
-
-/* hover時に2つ目の画像を表示 */
-.c-diving-information-tab:hover img:nth-child(1) {
-  opacity: 0;
-  z-index: 0;
-}
-
-.c-diving-information-tab:hover img:nth-child(2) {
-  opacity: 1;
-  z-index: 1;
 }
 
 .c-diving-information-tab__text {
@@ -110,10 +77,3 @@
     letter-spacing: rem(0);
   }
 }
-
-// .c-diving-information-tab__break {
-//   display: block;
-//   @include mq("md") {
-//     display: inline-block;
-//   }
-// }
