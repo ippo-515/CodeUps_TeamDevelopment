@@ -103,4 +103,19 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     });
   });
 
+  // アコーディオン
+  jQuery(function ($) {
+    $('.p-accordion-item__header:nth-child(1)').addClass('active-faq');
+$('.p-accordion-item__text:nth-child(2)').css('display', 'block');
+$('.p-accordion-item__header').click(function() {
+  $(this).next().slideToggle();
+  $(this).toggleClass('active-faq');
+});
+
+    $('.js-faq-question').on('click', function () {
+        $(this).next().slideToggle();
+        $(this).toggleClass('is-open__a');
+    });
+});
+
 });
