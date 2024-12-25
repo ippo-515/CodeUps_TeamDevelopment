@@ -8,7 +8,7 @@
 ]; %>
 
 <div class="p-accordion-items">
-  <div class="p-accordion__item">
+  <div class="p-accordion-items__wrap">
     <% faq.forEach((item, index) => { %>
       <%- include(ejsPath + './project/_p-accordion-item', {
         question: item.question,
