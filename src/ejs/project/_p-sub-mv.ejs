@@ -1,103 +1,12 @@
-<%
-const subMvData = {
-  Campaign: {
-    pageTitle: 'Campaign',
-    images: {
-        desktop: './assets/images/common/sub-campaign-mv.jpg',
-        mobile: './assets/images/common/sub-campaign-mv-sp.jpg'
-      },
-  },
-  About: {
-    pageTitle: 'About us',
-    images: {
-        desktop: './assets/images/common/sub-about-mv.jpg',
-        mobile: './assets/images/common/sub-about-mv-sp.jpg'
-      },
-  },
-  Information: {
-    pageTitle: 'Information',
-    images: {
-        desktop: './assets/images/common/sub-information-mv.jpg',
-        mobile: './assets/images/common/sub-information-mv-sp.jpg'
-      },
-  },
-  Blog: {
-    pageTitle: 'Blog',
-    images: {
-        desktop: './assets/images/common/sub-blog-mv.jpg',
-        mobile: './assets/images/common/sub-blog-mv-sp.jpg'
-      },
-  },
-  Voice: {
-    pageTitle: 'Voice',
-    images: {
-        desktop: './assets/images/common/sub-voice-mv.jpg',
-        mobile: './assets/images/common/sub-voice-mv-sp.jpg'
-      },
-  },
-  Price: {
-    pageTitle: 'Price',
-    images: {
-        desktop: './assets/images/common/sub-price-mv.jpg',
-        mobile: './assets/images/common/sub-price-mv-sp.jpg'
-      },
-  },
-  FAQ: {
-    pageTitle: 'FAQ',
-    images: {
-        desktop: './assets/images/common/faq-mv.jpg',
-        mobile: './assets/images/common/faq-mv-sp.jpg'
-      },
-  },
-  Contact: {
-    pageTitle: 'Contact',
-    images: {
-        desktop: './assets/images/common/contact-mv.jpg',
-        mobile: './assets/images/common/contact-mv-sp.jpg'
-      },
-  },
-  SiteMAP: {
-    pageTitle: 'Site MAP',
-    images: {
-        desktop: './assets/images/common/sitemap-mv.jpg',
-        mobile: './assets/images/common/sitemap-mv-sp.jpg'
-      },
-  },
-  PrivacyPolicy: {
-    pageTitle: 'Privacy Policy',
-    images: {
-        desktop: './assets/images/common/PrivacyPolicy-mv.jpg',
-        mobile: './assets/images/common/PrivacyPolicy-mv-sp.jpg'
-      },
-  },
-  TermsofService: {
-    pageTitle: 'Terms of Service',
-    images: {
-        desktop: './assets/images/common/PrivacyPolicy-mv.jpg',
-        mobile: './assets/images/common/PrivacyPolicy-mv-sp.jpg'
-      },
-  },
-};
 
-// 渡されたキーを元にデータを取得
-const data = subMvData[subMvDataKey];
-if (!data) {
-  throw new Error('Invalid subMvDataKey provided.');
-}
-
-// 必要なデータを変数に展開
-const pageTitle = data.pageTitle;
-const images = data.images;
-const altText = data.altText || 'デフォルトの代替テキスト'; // altText を取得、存在しない場合はデフォルト値を使用
-%>
 
 <!-- sub-mv -->
 <section class="p-sub-mv">
   <div class="p-sub-mv__inner">
     <h1 class="p-sub-mv__title"><%= pageTitle %></h1>
     <picture class="p-sub-mv__img">
-      <source srcset="<%= images.desktop %>" media="(min-width: 769px)">
-      <img src="<%= images.mobile %>" alt="<%= altText %>" loading="lazy" decoding="async">
+      <source srcset="<%= imagePathDesktop %>" media="(min-width: 769px)">
+      <img src="<%= imagePathMobile %>" alt="<%= altText %>" loading="lazy" decoding="async">
     </picture>
   </div>
 </section>
