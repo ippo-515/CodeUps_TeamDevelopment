@@ -10,9 +10,8 @@
   ]; %>
 
   <div class="p-single-content">
-    <div class="p-single__content">
-      <div class="p-single-cards">
-        <div class="p-single__cards">
+    <div class="p-single-content__wrap">
+        <div class="p-single-content__cards">
           <% blogCards.forEach((card)=> { %>
             <div class="p-single-cards__item">
               <a href="#" class="p-single-card">
@@ -34,7 +33,6 @@
             </div>
             <% }); %>
         </div>
-      </div>
       <ul class="p-single__items">
         <% singleItems.forEach((item)=> { %>
           <li class="p-single__item">
