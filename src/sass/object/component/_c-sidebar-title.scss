@@ -1,12 +1,15 @@
+@use "global" as *;
+
 .c-sidebar-title {
   border-left: 8px solid #408F95;
   color: #0D2936;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  gap: rem(8);
   font-family: "Noto Sans JP", sans-serif;
   font-size: 1.5rem;
   font-weight: 400;
-  padding: 0.4375rem 0 0.4375rem 5.125rem;
-  position: relative;
+  padding-left: rem(16);
 }
 
 .c-sidebar-title::before {
@@ -16,12 +19,7 @@
   background-size: cover;
   content: "";
   height: 3.125rem;
-  left: 1.575rem;
   max-width: 3.125rem;
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
   width: 100%;
   z-index: 1;
 }
