@@ -1,12 +1,14 @@
 <a href="#" class="p-blog-card">
-  <div class="p-blog-card__img">
-    <img src="<%= imagePath %>" alt="サンゴ礁">
-  </div>
-  <div class="p-blog-card__wrap">
-    <div class="p-blog-card__meta">
-      <time class="p-blog-card__dete" datetime="2023-11-17"><%= time %></time>
+  <div class="p-blog-card__item">
+    <div class="p-blog-card__img">
+      <img src="<%= imagePath %>" alt="サンゴ礁">
     </div>
-    <p class="p-blog-card__title"><%= title %></p>
-    <p class="p-blog-card__text"><%- text %></p>
+    <div class="p-blog-card__wrap">
+      <div class="p-blog-card__meta">
+        <time class="p-blog-card__dete" datetime="2023-11-17"><%= time %></time>
+      </div>
+      <p class="p-blog-card__title"><%= title %></p>
+      <p class="p-blog-card__text"><%- text %></p>
+    </div>
   </div>
 </a>
