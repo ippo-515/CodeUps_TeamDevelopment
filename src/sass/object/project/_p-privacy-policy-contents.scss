@@ -1,0 +1,85 @@
+@use "global" as *;
+
+.p-privacy-policy-contents {
+  position: relative;
+}
+
+.p-privacy-policy-contents::before {
+  background-image: url(../images/common/voice3.1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  content: "";
+  max-width: rem(120);
+  height: rem(55);
+  top: -1.5375rem;
+  left: calc(48% - min(44vw, 36rem));  position: absolute;
+  width: 100%;
+  z-index: -1;
+
+  @include mq(md) {
+    max-width: 18.8125rem;
+    height: 8.625rem;
+    top: -5.8375rem;
+    left: calc(47% - min(44vw, 36rem));
+  }
+}
+
+.p-privacy-policy-contents__inner {
+  max-width: rem(600);
+  width: 100%;
+  margin-inline: auto;
+  padding-left: rem(15);
+  padding-right: rem(15);
+
+  @include mq(md) {
+    max-width: rem(850);
+    padding-left: $padding-pc;
+    padding-right: $padding-pc;
+  }
+}
+
+.p-privacy-policy-contents__title {
+  font-size: rem(24);
+  font-weight: $medium;
+  font-family: $base-font-family;
+  text-indent: rem(-13.2);
+
+  @include mq(md) {
+    font-size: rem(32);
+  }
+}
+
+.p-privacy-policy-contents__items {
+  margin-top: rem(40);
+  line-height: calc( 32/ 16);
+  font-size: rem(16);
+}
+
+.p-privacy-policy-contents__item {
+
+}
+
+.p-privacy-policy-contents__item + .p-privacy-policy-contents__item {
+  margin-top: rem(32);
+}
+
+.p-privacy-policy-contents__text {
+  text-indent: rem(-13.2);
+}
+
+.p-privacy-policy-contents__numbers {
+
+}
+
+.p-privacy-policy-contents__number {
+  text-indent: rem(-8.2);
+}
+
+.p-privacy-policy-contents__title.p-privacy-policy-contents__title--no-indent {
+  text-indent: initial;
+}
+
+.p-privacy-policy-contents__text.p-privacy-policy-contents__text--no-indent {
+  text-indent: initial;
+}
