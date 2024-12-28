@@ -1,0 +1,86 @@
+@use "global" as *;
+
+.p-pc-nav__items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: inherit;
+}
+
+.p-pc-nav__item {
+  height: inherit;
+}
+
+.p-pc-nav__link {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: inherit;
+  color: $white;
+  padding: 0 rem(20);
+}
+
+.p-pc-nav__link::after {
+  content: "";
+  // 絶対配置で線の位置を決める
+  position: absolute;
+  bottom: rem(21);
+  left: 15%;
+  // 線の形状
+  width: 70%;
+  height: rem(2);
+  background: currentColor;
+  // アニメーションの指定
+  transition: transform 0.3s;
+  transform: scale(0, 1); // X方向0、Y方向1
+  transform-origin: center top; // 上部中央基点
+}
+
+.p-pc-nav__item:first-child .p-pc-nav__link::after {
+  left: 0;
+  width: 80%;
+}
+
+.p-pc-nav__item:last-child .p-pc-nav__link::after {
+  right: 0;
+  left: auto;
+  width: 80%;
+}
+
+.p-pc-nav__link:hover {
+  opacity: 1;
+}
+
+.p-pc-nav__link:hover::after {
+  transform: scale(1, 1); // X方向にスケール拡大
+}
+
+.p-pc-nav__item:first-child .p-pc-nav__link {
+  padding-left: 0;
+}
+
+.p-pc-nav__item:last-child .p-pc-nav__link {
+  padding-right: 0;
+}
+
+.p-pc-nav__engtext {
+  position: relative;
+  font-family: $second-font-family;
+  font-size: rem(18);
+  font-weight: $normal;
+  line-height: 1;
+}
+
+.p-pc-nav__item:not(:nth-child(n+7)) .p-pc-nav__engtext {
+  right: rem(1);
+}
+
+.p-pc-nav__jatext {
+  position: relative;
+  right: rem(1);
+  font-size: rem(10);
+  font-weight: $normal;
+  margin-top: rem(4);
+}
