@@ -1,0 +1,18 @@
+<header class="p-header js-header">
+  <div class="p-header__inner">
+    <h1 class="p-header__logo">
+      <a href="#top" class="p-header__logo-link">
+        <img src="./assets/images/common/logo.svg" alt="CodeUps">
+      </a>
+    </h1>
+    <div class="p-header__drawer">
+      <%- include(ejsPath + './component/_c-hamburger') %>
+    </div>
+    <div class="p-header__pc-nav">
+      <%- include(ejsPath + './project/_p-pc-nav') %>
+    </div>
+    <div class="p-header__sp-nav">
+      <%- include(ejsPath + './project/_p-sp-nav') %>
+    </div>
+  </div>
+</header>
