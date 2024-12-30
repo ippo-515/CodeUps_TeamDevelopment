@@ -1,0 +1,46 @@
+<!-- prettier-ignore -->
+<% project = '.'; cardContent = [
+  {imagePath:
+'assets/images/common/campaign1.jpg', imageAlt: '魚の画像', tag:
+'ライセンス講習', title: 'ライセンス取得', text: '全部コミコミ(お一人様)',
+priceBefore: '¥56,000', priceAfter: '¥46,000', },
+{imagePath:
+'assets/images/common/campaign2.jpg', imageAlt: '海の画像', tag:
+'体験ダイビング', title: '貸切体験ダイビング', text: '全部コミコミ(お一人様)',
+priceBefore: '¥24,000', priceAfter: '¥18,000', },
+  {imagePath:
+'assets/images/common/campaign3.jpg', imageAlt: 'くらげの画像', tag:
+'体験ダイビング', title: 'ナイトダイビング', text: '全部コミコミ(お一人様)',
+priceBefore: '¥10,000', priceAfter: '¥8,000', },
+{imagePath:
+'assets/images/common/campaign4.jpg', imageAlt: 'ダイビングの画像', tag:
+'ファンダイビング', title: '貸切ファンダイビング', text: '全部コミコミ(お一人様)',
+priceBefore: '¥20,000', priceAfter: '¥16,000', },
+]; %>
+
+<section class="p-campaign-top">
+  <div class="p-campaign-top__inner l-inner">
+    <div class="p-campaign-top__section-title">
+      <!-- prettier-ignore -->
+      <%- include(ejsPath + './component/_c-section-header', {engTitle:
+      "Campaign", jaTitle: "キャンペーン"}) %>
+    </div>
+    <div class="p-campaign-top__itemWrapper">
+      <!-- prettier-ignore -->
+      <% cardContent.forEach(function(card) { %>
+      <div class="p-campaign-top__item">
+        <!-- prettier-ignore -->
+        <%- include(project + '/_p-campaign-card', { imagePath: card.imagePath,
+        imageAlt: card.imageAlt, tag: card.tag, title: card.title, text:
+        card.text, priceBefore: card.priceBefore, priceAfter: card.priceAfter, })
+        %>
+      </div>
+      <!-- prettier-ignore -->
+      <% }); %>
+    </div>
+    <div class="p-campaign-top__button">
+      <!-- prettier-ignore -->
+      <%- include(ejsPath + './component/_c-button', {link:'#', text:'View more'}) %>
+    </div>
+  </div>
+</section>

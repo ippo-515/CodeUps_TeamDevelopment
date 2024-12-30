@@ -1,17 +1,17 @@
 <article class="p-campaign-card">
   <div class="p-campaign-card__img">
-    <img src="assets/images/common/campaign1.jpg" alt="魚の画像" />
+    <img src="<%= imagePath %>" alt="<%= imageAlt %>" />
   </div>
   <div class="p-campaign-card__contents">
     <div class="p-campaign-card__top">
-      <div class="p-campaign-card__tag">ライセンス講習</div>
-      <h3 class="p-campaign-card__title">ライセンス取得</h3>
+      <div class="p-campaign-card__tag"><%= tag %></div>
+      <h3 class="p-campaign-card__title"><%= title %></h3>
     </div>
     <div class="p-campaign-card__bottom">
-      <p class="p-campaign-card__text">全部コミコミ(お一人様)</p>
+      <p class="p-campaign-card__text"><%= text %></p>
       <div class="p-campaign-card__priceWrapper">
-        <p class="p-campaign-card__priceBefore">¥56,000</p>
-        <p class="p-campaign-card__priceAfter">¥46,000</p>
+        <p class="p-campaign-card__priceBefore"><%= priceBefore %></p>
+        <p class="p-campaign-card__priceAfter"><%= priceAfter %></p>
       </div>
     </div>
   </div>
