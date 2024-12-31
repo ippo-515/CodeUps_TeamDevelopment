@@ -20,7 +20,7 @@
   // justify-content: space-between;
   margin-bottom: rem(40);
   @include mq("md") {
-    width: 100vw;
+    width: 130vw;
     column-gap: rem(40);
     margin-bottom: rem(80);
   }
@@ -35,7 +35,7 @@
   @include mq("md") {
     width: calc(100% / 4 - rem(40) * 3 / 4);
     // width: 23.125vw;
-    max-width: none;
+    max-width: rem(333);
   }
 }
 
