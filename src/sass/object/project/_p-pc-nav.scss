@@ -1,5 +1,9 @@
 @use "global" as *;
 
+.p-pc-nav {
+  height: inherit;
+}
+
 .p-pc-nav__items {
   display: flex;
   align-items: center;
