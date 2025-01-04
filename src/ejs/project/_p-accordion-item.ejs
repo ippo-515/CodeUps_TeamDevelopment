@@ -1,14 +1,8 @@
-<% const faq = [ 
-  { question: "ここに質問が入ります", answer: "ここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入ります" }
-]; %>
-
 <div class="p-accordion-item">
-    <% faq.forEach((faq, index) => { %>
         <div class="p-accordion-item__header active-faq">
-          <span><%= faq.question %></span>
+          <span><%= question %></span>
         </div>
         <div class="p-accordion-item__text" style="display: block;">
-          <span><%= faq.answer %></span>
+          <span><%= answer %></span>
         </div>
-    <% }); %>
 </div>
