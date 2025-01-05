@@ -1,10 +1,10 @@
 @use "global" as *;
 
-.p-privacy-policy-contents {
+.p-Terms-of-Service-contents {
   position: relative;
 }
 
-.p-privacy-policy-contents::before {
+.p-Terms-of-Service-contents::before {
   background-image: url(../images/common/voice3.1.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -26,7 +26,7 @@
   }
 }
 
-.p-privacy-policy-contents > div {
+.p-Terms-of-Service-contents > div {
   max-width: rem(600);
   width: 100%;
   margin-inline: auto;
@@ -40,7 +40,7 @@
   }
 }
 
-.p-privacy-policy-contents > div > div:first-of-type {
+.p-Terms-of-Service-contents > div > div:first-of-type {
   font-size: rem(24);
   font-weight: $medium;
   font-family: $base-font-family;
@@ -51,37 +51,24 @@
   }
 }
 
-.p-privacy-policy-contents > div > div:nth-of-type(2) {
+.p-Terms-of-Service-contents > div > div:nth-of-type(2) {
   margin-top: rem(40);
   line-height: calc(32 / 16);
   font-size: rem(16);
 }
 
-
-.p-privacy-policy-contents > div > div > div {
-  margin-top: rem(32);
-}
-
-.p-privacy-policy-contents p {
-  text-indent: rem(-13.2);
-}
-
-.p-privacy-policy-contents ol:first-of-type {
+.p-Terms-of-Service-contents ol {
   margin-top: rem(40);
 }
 
-.p-privacy-policy-contents > div > div >div:nth-of-type(4) {
+.p-Terms-of-Service-contents > div > div > div:nth-of-type(5) {
   margin-top: 40px;
 }
 
-.p-privacy-policy-contents > div > div > div:nth-of-type(6) {
-  margin-top: 40px;
-}
-
-.p-privacy-policy-contents li {
+.p-Terms-of-Service-contents li {
   text-indent: rem(-8.2);
 }
 
-.p-privacy-policy-contents > div > div:first-of-type {
+.p-Terms-of-Service-contents > div > div:first-of-type {
   text-indent: initial;
 }

@@ -205,18 +205,13 @@
       <h2 class="h2">.p-privacy-policy-contents</h2>
       <p class="p">プライバシーポリシーコンテンツ</p>
       <!-- prettier-ignore -->
-      <%- include(ejsPath + '/project/_p-privacy-policy-contents', {
-        title: "プライバシーポリシー",
-        items: [
-          { text: "以下は、Webサイトで使用するための一般的なプライバシーポリシーの例です。" },
-          { 
-            numbers: [
-              "1.概要 当社は、お客様の個人情報を大切に扱い、個人情報保護に努めています。",
-              "2.収集する情報 当社は、お客様が当社のサービスを利用する際に、お名前、住所、電話番号、メールアドレスなどの個人情報を収集する場合があります。"
-            ]
-          }
-        ]
-      }) %>
+      <%- include(ejsPath + '/project/_p-privacy-policy-contents') %>
+      <!-- prettier-ignore -->
+      <h2 class="h2">.p-Terms-of-Service-contents</h2>
+      <p class="p">プライバシーポリシーコンテンツ</p>
+      <!-- prettier-ignore -->
+      <%- include(ejsPath + '/project/_p-Terms-of-Service-contents') %>
+      <!-- prettier-ignore -->
       <h2 class="h2">.p-campaign-card</h2>
       <p class="p">キャンペーンのカード（トップページ）</p>
       <!-- prettier-ignore -->
