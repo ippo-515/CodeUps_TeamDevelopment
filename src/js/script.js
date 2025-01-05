@@ -1,16 +1,17 @@
-jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
+jQuery(function ($) {
+  // この中であればWordpressでも「$」が使用可能になる
   // ヘッダークラス名付与
-  let header = $('.js-header');
-  let headerheight = $('.js-header').height();
-  let height = $('.js-mv-height').height();
-  console.log('ヘッダーの高さ：' + headerheight);
-  console.log('メインビューの高さ：' + height);
+  let header = $(".js-header");
+  let headerheight = $(".js-header").height();
+  let height = $(".js-mv-height").height();
+  console.log("ヘッダーの高さ：" + headerheight);
+  console.log("メインビューの高さ：" + height);
   console.log(height - headerheight);
   $(window).scroll(function () {
-    if ($(this).scrollTop() > (height - headerheight)) {
-      header.addClass('is-color');
+    if ($(this).scrollTop() > height - headerheight) {
+      header.addClass("is-color");
     } else {
-      header.removeClass('is-color');
+      header.removeClass("is-color");
     }
   });
 
@@ -170,24 +171,25 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
    * -------------------------------------------- */
   const swiperCampaignTop = new Swiper(".swiper", {
     loop: true, // ループ
-    speed: 6000, // 少しゆっくり(デフォルトは300)
-    slidesPerView: 4, // 一度に表示する枚数
-    // spaceBetween: 30, // スライド間の距離
-    centeredSlides: true, // アクティブなスライドを中央にする
+    speed: 3000, // 少しゆっくり(デフォルトは300)
+    // centeredSlides: true, // アクティブなスライドを中央にする
+    slidesPerView: 1.4, // デフォルトは1枚表示
+    spaceBetween: "24px", // スライド間の余白
     autoplay: {
       // 自動再生
       delay: 1000, // 1秒後に次のスライド
       disableOnInteraction: false, // 矢印をクリックしても自動再生を止めない
     },
-    // ページネーション
-    // pagination: {
-    //   el: ".swiper-pagination",
-    //   clickable: true,
-    // },
     // 前後の矢印
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 3.48, // 768px以上では4枚表示
+        spaceBetween: "40px",
+      },
     },
   });
 });

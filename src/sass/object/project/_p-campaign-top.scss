@@ -5,10 +5,80 @@
 }
 
 .p-campaign-top__inner {
+  position: relative;
 }
 
 .p-campaign-top__section-title {
-  margin-bottom: rem(24);
+  margin-bottom: rem(39);
+}
+
+.p-campaign-top__arrowWrapper {
+  display: none;
+  @include mq("md") {
+    display: flex;
+    position: absolute;
+    top: rem(0);
+    right: 0;
+    flex-direction: row;
+    column-gap: rem(80);
+    padding-right: 25px;
+  }
+}
+
+.p-campaign-top__arrowLeft,
+.p-campaign-top__arrowRight {
+  position: relative;
+  width: rem(80);
+  height: rem(80);
+  border: 1px solid $color-primary;
+  border-radius: 50%;
+  right: auto;
+  left: auto;
+  margin: 0;
+}
+
+.p-campaign-top__arrowLeft span,
+.p-campaign-top__arrowRight span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: rem(40);
+  background-color: $color-primary;
+  height: 1px;
+}
+
+.p-campaign-top__arrowLeft span::after,
+.p-campaign-top__arrowRight span::after {
+  position: absolute;
+  content: "";
+  display: block;
+  background-color: $color-primary;
+  top: 0;
+  // left: 0;
+  width: rem(10);
+  height: 1px;
+  // transform: rotate(-45deg);
+  // transform-origin: left center;
+}
+
+.p-campaign-top__arrowLeft span::after {
+  // top: 0;
+  left: 0;
+  transform: rotate(-45deg);
+  transform-origin: left center;
+}
+
+.p-campaign-top__arrowRight span::after {
+  // top: 0;
+  right: 0;
+  transform: rotate(45deg);
+  transform-origin: right center;
+}
+
+.p-campaign-top__swiper {
+  // overflow: visible;
+  margin-right: calc(50% - 50vw);
 }
 
 .p-campaign-top__itemWrapper {
@@ -16,12 +86,12 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  column-gap: rem(24);
+  // column-gap: rem(24);
   // justify-content: space-between;
   margin-bottom: rem(40);
   @include mq("md") {
-    width: 130vw;
-    column-gap: rem(40);
+    // width: 130vw;
+    // column-gap: rem(40);
     margin-bottom: rem(80);
   }
 }
@@ -29,13 +99,13 @@
 .p-campaign-top__item {
   margin: 0;
   padding: 0;
-  width: 74.66667vw;
-  max-width: rem(280);
+  // width: 74.66667vw;
+  // max-width: rem(280);
   flex-shrink: 0;
   @include mq("md") {
-    width: calc(100% / 4 - rem(40) * 3 / 4);
+    // width: calc(100% / 4 - rem(40) * 3 / 4);
     // width: 23.125vw;
-    max-width: rem(333);
+    // max-width: rem(333);
   }
 }
 
