@@ -2,36 +2,36 @@
 <% project = '.'; cardContent = [
   {imagePath:
 'assets/images/common/campaign1.jpg', imageAlt: '魚の画像', tag:
-'ライセンス講習', title: 'ライセンス取得', text: '全部コミコミ(お一人様)',
-priceBefore: '¥56,000', priceAfter: '¥46,000', },
+'ライセンス講習', titleClass: '', title: 'ライセンス取得', text: '全部コミコミ(お一人様)',
+priceBefore: '¥56,000', priceAfter: '¥46,000', campaignWrapperClass: 'none', campaignTextClass: 'none', campaignText: '', campaignDateClass: 'none', campaignDate: '', campaignGuideClass: 'none', campaignGuide: '', campaignButtonClass: 'none', },
 {imagePath:
 'assets/images/common/campaign2.jpg', imageAlt: '海の画像', tag:
-'体験ダイビング', title: '貸切体験ダイビング', text: '全部コミコミ(お一人様)',
-priceBefore: '¥24,000', priceAfter: '¥18,000', },
+'体験ダイビング', titleClass: '', title: '貸切体験ダイビング', text: '全部コミコミ(お一人様)',
+priceBefore: '¥24,000', priceAfter: '¥18,000', campaignWrapperClass: 'none', campaignTextClass: 'none', campaignText: '', campaignDateClass: 'none', campaignDate: '', campaignGuideClass: 'none', campaignGuide: '', campaignButtonClass: 'none', },
   {imagePath:
 'assets/images/common/campaign3.jpg', imageAlt: 'くらげの画像', tag:
-'体験ダイビング', title: 'ナイトダイビング', text: '全部コミコミ(お一人様)',
-priceBefore: '¥10,000', priceAfter: '¥8,000', },
+'体験ダイビング', titleClass: '', title: 'ナイトダイビング', text: '全部コミコミ(お一人様)',
+priceBefore: '¥10,000', priceAfter: '¥8,000', campaignWrapperClass: 'none', campaignTextClass: 'none', campaignText: '', campaignDateClass: 'none', campaignDate: '', campaignGuideClass: 'none', campaignGuide: '', campaignButtonClass: 'none', },
 {imagePath:
 'assets/images/common/campaign4.jpg', imageAlt: 'ダイビングの画像', tag:
-'ファンダイビング', title: '貸切ファンダイビング', text: '全部コミコミ(お一人様)',
-priceBefore: '¥20,000', priceAfter: '¥16,000', },
+'ファンダイビング', titleClass: '', title: '貸切ファンダイビング', text: '全部コミコミ(お一人様)',
+priceBefore: '¥20,000', priceAfter: '¥16,000', campaignWrapperClass: 'none', campaignTextClass: 'none', campaignText: '', campaignDateClass: 'none', campaignDate: '', campaignGuideClass: 'none', campaignGuide: '', campaignButtonClass: 'none', },
   {imagePath:
 'assets/images/common/campaign1.jpg', imageAlt: '魚の画像', tag:
-'ライセンス講習', title: 'ライセンス取得', text: '全部コミコミ(お一人様)',
-priceBefore: '¥56,000', priceAfter: '¥46,000', },
+'ライセンス講習', titleClass: '', title: 'ライセンス取得', text: '全部コミコミ(お一人様)',
+priceBefore: '¥56,000', priceAfter: '¥46,000', campaignWrapperClass: 'none', campaignTextClass: 'none', campaignText: '', campaignDateClass: 'none', campaignDate: '', campaignGuideClass: 'none', campaignGuide: '', campaignButtonClass: 'none', },
 {imagePath:
 'assets/images/common/campaign2.jpg', imageAlt: '海の画像', tag:
-'体験ダイビング', title: '貸切体験ダイビング', text: '全部コミコミ(お一人様)',
-priceBefore: '¥24,000', priceAfter: '¥18,000', },
+'体験ダイビング', titleClass: '', title: '貸切体験ダイビング', text: '全部コミコミ(お一人様)',
+priceBefore: '¥24,000', priceAfter: '¥18,000', campaignWrapperClass: 'none', campaignTextClass: 'none', campaignText: '', campaignDateClass: 'none', campaignDate: '', campaignGuideClass: 'none', campaignGuide: '', campaignButtonClass: 'none', },
   {imagePath:
 'assets/images/common/campaign3.jpg', imageAlt: 'くらげの画像', tag:
-'体験ダイビング', title: 'ナイトダイビング', text: '全部コミコミ(お一人様)',
-priceBefore: '¥10,000', priceAfter: '¥8,000', },
+'体験ダイビング', titleClass: '', title: 'ナイトダイビング', text: '全部コミコミ(お一人様)',
+priceBefore: '¥10,000', priceAfter: '¥8,000', campaignWrapperClass: 'none', campaignTextClass: 'none', campaignText: '', campaignDateClass: 'none', campaignDate: '', campaignGuideClass: 'none', campaignGuide: '', campaignButtonClass: 'none', },
 {imagePath:
 'assets/images/common/campaign4.jpg', imageAlt: 'ダイビングの画像', tag:
-'ファンダイビング', title: '貸切ファンダイビング', text: '全部コミコミ(お一人様)',
-priceBefore: '¥20,000', priceAfter: '¥16,000', },
+'ファンダイビング', titleClass: '', title: '貸切ファンダイビング', text: '全部コミコミ(お一人様)',
+priceBefore: '¥20,000', priceAfter: '¥16,000', campaignWrapperClass: 'none', campaignTextClass: 'none', campaignText: '', campaignDateClass: 'none', campaignDate: '', campaignGuideClass: 'none', campaignGuide: '', campaignButtonClass: 'none', },
 ]; %>
 
 <section class="p-campaign-top">
@@ -56,8 +56,23 @@ priceBefore: '¥20,000', priceAfter: '¥16,000', },
         <div class="p-campaign-top__item swiper-slide">
           <!-- prettier-ignore -->
           <%- include(project + '/_p-campaign-card', { imagePath: card.imagePath,
-          imageAlt: card.imageAlt, tag: card.tag, title: card.title, text:
-          card.text, priceBefore: card.priceBefore, priceAfter: card.priceAfter, })
+          imageAlt: card.imageAlt, 
+          tag: card.tag, 
+          titleClass: card.titleClass, 
+          title: card.title, 
+          text:
+          card.text, 
+          priceBefore: card.priceBefore, 
+          priceAfter: card.priceAfter, 
+          campaignWrapperClass: card.campaignWrapperClass, 
+          campaignTextClass: card.campaignTextClass, 
+          campaignText: card.campaignText, 
+          campaignDateClass: card.campaignDateClass, 
+          campaignDate: card.campaignDate, 
+          campaignGuideClass: card.campaignGuideClass, 
+          campaignGuide: card.campaignGuide, 
+          campaignButtonClass: card.campaignButtonClass, 
+        })
           %>
         </div>
         <!-- prettier-ignore -->
