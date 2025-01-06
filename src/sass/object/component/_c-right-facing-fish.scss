@@ -6,17 +6,19 @@
 .c-right-facing-fish::after {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
+  top: rem(-24);
+  left: rem(14);
   background-image: url(../images/common/pc-fishBlog2.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   width: rem(120);
   height: rem(55);
-  z-index: 1;
+  z-index: -1;
   @include mq("md") {
     width: rem(301);
     height: rem(138);
+    top: rem(-74);
+    left: rem(-63);
   }
 }
