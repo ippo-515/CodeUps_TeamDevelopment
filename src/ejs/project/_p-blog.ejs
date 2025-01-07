@@ -1,11 +1,17 @@
-<!-- blog -->
+<% 
+  const isTwoRows = true; // 条件に応じて変更
+  const cardsModifier = isTwoRows ? 'p-blog-cards--two-rows' : ''; // falseの場合は空文字
+%>
+
 <section class="p-blog">
   <div class="p-blog__inner l-inner">
     <div class="p-blog__section-title">
       <%- include(ejsPath + './component/_c-section-header', {engTitle: "Blog", jaTitle: "ブログ", modifier: "white-pc"}) %>
     </div>
     <div class="p-blog__items">
-      <%- include(ejsPath + './project/_p-blog-cards') %>
+      <%- include(ejsPath + './project/_p-blog-cards', {
+        modifier: cardsModifier, // 必要に応じてモディファイアを付ける
+      }) %>
     </div>
     <div class="p-blog__button">
       <%- include(ejsPath + './component/_c-button', {link:'#', text:'View more'}) %>

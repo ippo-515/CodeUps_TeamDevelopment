@@ -11,6 +11,18 @@
   }
 }
 
+.p-blog-cards .p-blog-cards--two-rows {
+  display: grid;
+  gap: rem(40);
+  grid-template-columns: repeat(1, 1fr);
+  margin-top: 0;
+
+  @include mq(md) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(80) rem(40);
+  }
+}
+
 .p-blog-cards__items {
   margin-top: rem(27.2);
   max-width: rem(600);
