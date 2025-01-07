@@ -5,23 +5,23 @@ project = '.';
 let cardContent = [
   {time: '2023.11/17',
    title: 'ライセンス取得',
-   text: 'ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキスト',
+   text: 'ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト',
    imagePath: './assets/images/common/Blog1.jpg'
   },
   {time: '2023.11/17',
    title: 'ウミガメと泳ぐ',
-   text: 'ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキスト',
+   text: 'ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト',
    imagePath: './assets/images/common/Blog2.jpg'
   },
   {time: '2023.11/17',
   title: 'カクレクマノミ',
-  text: 'ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキスト',
+  text: 'ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト',
   imagePath: './assets/images/common/Blog3.jpg'
 },
 ];
 %>
 
-<div class="p-blog-cards">
+<div class="p-blog-cards <%= typeof modifier !== 'undefined' ? modifier : '' %>">
   <% cardContent.forEach(function(card) { %>
   <div class="p-blog-cards__item">
     <%- include(project + '/_p-blog-card', {
