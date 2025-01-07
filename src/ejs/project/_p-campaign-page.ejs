@@ -1,0 +1,60 @@
+<!-- prettier-ignore -->
+<% project = '.'; cardContent = [
+  {imagePath:
+'assets/images/common/campaign1.jpg', imageAlt: '魚の画像', tag:
+'ライセンス講習', titleClass: 'true', title: 'ライセンス取得', text: '全部コミコミ(お一人様)',
+priceBefore: '¥56,000', priceAfter: '¥46,000', campaignWrapperClass: '', campaignTextClass: '', campaignText: 'ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト', campaignDateClass: '', campaignDate: '2023/6/1-9/30', campaignGuideClass: '', campaignGuide: '', campaignButtonClass: '', },
+{imagePath:
+'assets/images/common/campaign2.jpg', imageAlt: '海の画像', tag:
+'体験ダイビング', titleClass: 'true', title: '貸切体験ダイビング', text: '全部コミコミ(お一人様)',
+priceBefore: '¥24,000', priceAfter: '¥18,000', campaignWrapperClass: '', campaignTextClass: '', campaignText: 'ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト', campaignDateClass: '', campaignDate: '2023/6/1-9/30', campaignGuideClass: '', campaignGuide: 'ご予約・お問い合わせはコチラ', campaignButtonClass: '', },
+  {imagePath:
+'assets/images/common/campaign3.jpg', imageAlt: 'くらげの画像', tag:
+'体験ダイビング', titleClass: 'true', title: 'ナイトダイビング', text: '全部コミコミ(お一人様)',
+priceBefore: '¥10,000', priceAfter: '¥8,000', campaignWrapperClass: '', campaignTextClass: '', campaignText: 'ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト', campaignDateClass: '', campaignDate: '2023/6/1-9/30', campaignGuideClass: '', campaignGuide: 'ご予約・お問い合わせはコチラ', campaignButtonClass: '', },
+{imagePath:
+'assets/images/common/campaign4.jpg', imageAlt: 'ダイビングの画像', tag:
+'ファンダイビング', titleClass: 'true', title: '貸切ファンダイビング', text: '全部コミコミ(お一人様)',
+priceBefore: '¥20,000', priceAfter: '¥16,000', campaignWrapperClass: '', campaignTextClass: '', campaignText: 'ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト', campaignDateClass: '', campaignDate: '2023/6/1-9/30', campaignGuideClass: '', campaignGuide: 'ご予約・お問い合わせはコチラ', campaignButtonClass: '', },
+]; %>
+
+<section class="p-campaign-page">
+  <div class="p-campaign-page__inner c-right-facing-fish l-inner">
+    <div class="p-campaign-page__tabs">
+      <!-- prettier-ignore -->
+      <%- include(ejsPath + './project/_p-campaign-tabs') %>
+    </div>
+    <div class="p-campaign-page__itemWrapper">
+      <!-- prettier-ignore -->
+      <% cardContent.forEach(function(card) { %>
+      <div class="p-campaign-page__item">
+        <!-- prettier-ignore -->
+        <%- include(project + '/_p-campaign-card', { imagePath: card.imagePath,
+          imageAlt: card.imageAlt, 
+          tag: card.tag, 
+          titleClass: card.titleClass, 
+          title: card.title, 
+          text:
+          card.text, 
+          priceBefore: card.priceBefore, 
+          priceAfter: card.priceAfter, 
+          campaignWrapperClass: card.campaignWrapperClass, 
+          campaignTextClass: card.campaignTextClass, 
+          campaignText: card.campaignText, 
+          campaignDateClass: card.campaignDateClass, 
+          campaignDate: card.campaignDate, 
+          campaignGuideClass: card.campaignGuideClass, 
+          campaignGuide: card.campaignGuide, 
+          campaignButtonClass: card.campaignButtonClass, 
+        })
+          %>
+      </div>
+      <!-- prettier-ignore -->
+      <% }); %>
+    </div>
+    <div class="p-campaign-page__pagenavi">
+      <!-- prettier-ignore -->
+      <%- include(ejsPath + './component/_c-pagenavi') %>
+    </div>
+  </div>
+</section>

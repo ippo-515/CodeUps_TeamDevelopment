@@ -97,15 +97,14 @@
 }
 
 .p-campaign-top__item {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
   margin: 0;
   padding: 0;
-  // width: 74.66667vw;
-  // max-width: rem(280);
   flex-shrink: 0;
+  height: auto;
   @include mq("md") {
-    // width: calc(100% / 4 - rem(40) * 3 / 4);
-    // width: 23.125vw;
-    // max-width: rem(333);
   }
 }
 

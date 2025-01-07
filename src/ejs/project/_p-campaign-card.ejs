@@ -5,13 +5,22 @@
   <div class="p-campaign-card__contents">
     <div class="p-campaign-card__top">
       <div class="p-campaign-card__tag"><%= tag %></div>
-      <h3 class="p-campaign-card__title"><%= title %></h3>
+      <h3 class="p-campaign-card__title<%- titleClass ? ' p-campaign-card__title--campaign' : '' %>"><%= title %></h3>
     </div>
     <div class="p-campaign-card__bottom">
       <p class="p-campaign-card__text"><%= text %></p>
       <div class="p-campaign-card__priceWrapper">
         <p class="p-campaign-card__priceBefore"><%= priceBefore %></p>
         <p class="p-campaign-card__priceAfter"><%= priceAfter %></p>
+      </div>
+    </div>
+    <div class="p-campaign-card__campaignWrapper" <%- campaignWrapperClass === 'none' ? 'style="display: none;"' : '' %>>
+      <p class="p-campaign-card__campaignText" <%- campaignTextClass === 'none' ? 'style="display: none;"' : '' %>><%= campaignText %></p>
+      <p class="p-campaign-card__campaignDate" <%- campaignDateClass === 'none' ? 'style="display: none;"' : '' %>><%= campaignDate %></p>
+      <p class="p-campaign-card__campaignGuide" <%- campaignGuideClass === 'none' ? 'style="display: none;"' : '' %>><%= campaignGuide %></p>
+      <div class="p-campaign-card__campaignButton" <%- campaignButtonClass === 'none' ? 'style="display: none;"' : '' %>>
+        <!-- prettier-ignore -->
+        <%- include(ejsPath + './component/_c-button', {link:'#', text:'View more'}) %>
       </div>
     </div>
   </div>

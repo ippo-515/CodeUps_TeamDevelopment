@@ -217,15 +217,25 @@
       <!-- prettier-ignore -->
       <%- include(ejsPath + '/project/_p-campaign-card', {imagePath:
         'assets/images/common/campaign1.jpg', imageAlt: '魚の画像', tag:
-        'ライセンス講習', title: 'ライセンス取得', text: '全部コミコミ(お一人様)',
-        priceBefore: '¥56,000', priceAfter: '¥46,000', })
+        'ライセンス講習', titleClass: '', title: 'ライセンス取得', text: '全部コミコミ(お一人様)',
+        priceBefore: '¥56,000', priceAfter: '¥46,000', campaignWrapperClass: 'none', campaignTextClass: 'none', campaignText: '', campaignDateClass: 'none', campaignDate: '', campaignGuideClass: 'none', campaignGuide: '', campaignButtonClass: 'none', })
       %>
       <h2 class="h2">.p-campaign-top</h2>
       <p class="p">キャンペーンセクション（トップページ）</p>
       <!-- prettier-ignore -->
       <%- include(ejsPath + '/project/_p-campaign-top') %>
-
+      <h2 class="h2">.p-campaign-card</h2>
+      <p class="p">キャンペーンのカード（キャンペーンページ）</p>
       <!-- prettier-ignore -->
+      <%- include(ejsPath + '/project/_p-campaign-card', {imagePath:
+        'assets/images/common/campaign1.jpg', imageAlt: '魚の画像',tag:
+        'ライセンス講習', titleClass: 'true', title: 'ライセンス取得', text: '全部コミコミ(お一人様)',
+        priceBefore: '¥56,000', priceAfter: '¥46,000', campaignWrapperClass: '', campaignTextClass: '', campaignText: 'ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト', campaignDateClass: '', campaignDate: '2023/6/1-9/30', campaignGuideClass: '', campaignGuide: 'ご予約・お問い合わせはコチラ', campaignButtonClass: '', })
+      %>
+      <h2 class="h2">.p-campaign-page</h2>
+      <p class="p">キャンペーンセクション（キャンペーンページ）</p>
+      <!-- prettier-ignore -->
+      <%- include(ejsPath + '/project/_p-campaign-page') %>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </body>
