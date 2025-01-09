@@ -1,0 +1,16 @@
+<div class="p-voice">
+  <div class="p-voice__inner l-inner">
+    <div class="p-voice__title">
+      <!-- prettier-ignore -->
+      <%- include(ejsPath + './component/_c-section-header', {engTitle: "Voice", jaTitle: "お客様の声", modifier: ""}) %>
+    </div>
+    <div class="p-voice__items">
+      <!-- prettier-ignore -->
+      <%- include(ejsPath + '/_p-voice-cards') %>
+    </div>
+    <div class="p-voice__btn">
+      <!-- prettier-ignore -->
+      <%- include(ejsPath + './component/_c-button', {link:'#', text:'View more', modifier: ""}) %>
+    </div>
+  </div>
+</div>
