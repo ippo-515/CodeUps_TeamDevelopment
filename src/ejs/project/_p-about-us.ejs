@@ -1,0 +1,40 @@
+<div class="p-about-us">
+  <div class="p-about-us__inner l-inner">
+    <div class="p-about-us__imgWrapper">
+      <div class="p-about-us__imgLeft">
+        <picture>
+          <source
+            srcset="./assets/images/common/about1-pc.jpg"
+            media="(min-width: 768px)"
+          />
+          <img
+            src="./assets/images/common/about1-sp.jpg"
+            alt="シーサーの画像"
+          />
+        </picture>
+      </div>
+      <div class="p-about-us__imgRight">
+        <picture>
+          <source
+            srcset="./assets/images/common/about2-pc.jpg"
+            media="(min-width: 768px)"
+          />
+          <img src="./assets/images/common/about2-sp.jpg" alt="魚の画像" />
+        </picture>
+      </div>
+    </div>
+    <div class="p-about-us__contentWrapper">
+      <h3 class="p-about-us__contentTitle">Dive into<br />the Ocean</h3>
+      <div class="p-about-us__textWrapper">
+        <p class="p-about-us__text">
+          ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+          ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
+        </p>
+        <div class="p-about-us__button">
+          <!-- prettier-ignore -->
+          <%- include(ejsPath + './component/_c-button', {link:'#', text:'View more'}) %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
