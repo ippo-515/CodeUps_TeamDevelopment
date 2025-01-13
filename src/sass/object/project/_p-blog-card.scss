@@ -35,9 +35,13 @@
   filter: brightness(1.05);
 }
 
-.p-blog-card:hover.p-blog-card img {
-  transform: scale(1.1);
+.p-blog-card img {
+  transform: scale(1);
   transition: transform 0.6s ease;
+}
+
+.p-blog-card:hover img {
+  transform: scale(1.1);
 }
 
 .p-blog-card__wrap {
