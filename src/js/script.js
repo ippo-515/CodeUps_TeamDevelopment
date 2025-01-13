@@ -169,7 +169,7 @@ jQuery(function ($) {
   /* --------------------------------------------
    * 　キャンペーンセクション（トップページ）のスライド
    * -------------------------------------------- */
-  const swiperCampaignTop = new Swiper(".swiper", {
+  const swiperCampaignTop = new Swiper(".js-campaign-swiper", {
     loop: true, // ループ
     speed: 3000, // 少しゆっくり(デフォルトは300)
     // centeredSlides: true, // アクティブなスライドを中央にする

@@ -1,0 +1,45 @@
+<!-- prettier-ignore -->
+<% contentText = [ {title: 'ライセンス講習'}, ] %>
+<!-- prettier-ignore -->
+<% itemText = [ {itemTitle: 'オープンウォーターダイバーコース', itemPrice: '¥50,000'},
+  {itemTitle: 'オープンウォーターダイバーコース', itemPrice: '¥50,000'},
+  {itemTitle: 'オープンウォーターダイバーコース', itemPrice: '¥50,000'},
+ ] %>
+
+<div class="p-fee-top">
+  <div class="p-fee-top__inner">
+    <div class="p-fee-top__section-title">
+      <!-- prettier-ignore -->
+      <%- include(ejsPath + './component/_c-section-header', {engTitle:
+    "Price", jaTitle: "料金一覧"}) %>
+    </div>
+    <div class="p-fee-top__contentWrapper">
+      <div class="p-fee-top__img">
+        <picture>
+          <source
+            srcset="./assets/images/common/Price1.jpg"
+            media="(min-width: 768px)"
+          />
+          <img src="./assets/images/common/Price-sp.jpg" alt="亀の画像" />
+        </picture>
+      </div>
+      <div class="p-fee-top__contents">
+        <% contentText.forEach(function(content) { %>
+        <div class="p-fee-top__content">
+          <h3 class="p-fee-top__title"><%= content.title %></h3>
+          <div class="p-fee-top__item">
+            <% itemText.forEach(function(item) { %>
+            <p class="p-fee-top__itemTitle"><%= item.itemTitle %></p>
+            <p class="p-fee-top__itemPrice"><%= item.itemPrice %></p>
+            <% }); %>
+          </div>
+        </div>
+        <% }); %>
+      </div>
+    </div>
+    <div class="p-fee-top__button">
+      <!-- prettier-ignore -->
+      <%- include(ejsPath + './component/_c-button', {link:'#', text:'View more'}) %>
+    </div>
+  </div>
+</div>
