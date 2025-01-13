@@ -1,49 +1,137 @@
 @use "global" as *;
 
 .p-fee-top {
-
+  background-color: $color-background;
+  padding: rem(80) 0;
 }
 
 .p-fee-top__inner {
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.p-fee-top__section-title {
+.p-fee-top__inner.c-left-facing-fish::after {
+  display: none;
+  @include mq("md") {
+    display: block;
+    top: auto;
+    left: rem(-60);
+    bottom: rem(-40);
+    width: rem(437);
+    height: rem(201);
+  }
+}
 
+.c-left-facing-fish .p-fee-top__section-title {
+  margin-bottom: rem(24);
+  @include mq("md") {
+    margin-bottom: rem(40);
+  }
 }
 
 .p-fee-top__contentWrapper {
-
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: rem(40);
+  margin-bottom: rem(40);
+  @include mq("md") {
+    flex-direction: row-reverse;
+    column-gap: rem(93);
+    margin-bottom: rem(80);
+  }
 }
 
 .p-fee-top__img {
+  position: relative;
+  @include mq("md") {
+    width: 45.68245%;
+  }
+}
 
+.p-fee-top__img::before {
+  content: "";
+  display: block;
+  padding-top: 60.53333%;
+  @include mq("md") {
+    padding-top: 151.62602%;
+  }
+}
+
+.p-fee-top__img img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .p-fee-top__contents {
-
+  display: flex;
+  flex-direction: column;
+  row-gap: rem(40);
+  @include mq("md") {
+    flex-grow: 1;
+  }
 }
 
 .p-fee-top__content {
-
 }
 
 .p-fee-top__title {
+  font-size: rem(16);
+  line-height: calc(16 / 16);
+  letter-spacing: rem(0);
+  font-weight: $bold;
+  color: $color-accent;
+  padding-bottom: rem(4);
+  margin-bottom: rem(4);
+  border-bottom: 1px solid $color-primary;
+}
 
+.p-fee-top__itemWrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: rem(8);
+  align-items: center;
 }
 
 .p-fee-top__item {
-
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .p-fee-top__itemTitle {
-
+  font-size: rem(14);
+  line-height: calc(24 / 14);
+  letter-spacing: rem(0);
+  font-weight: $normal;
+  color: $color-accent;
+  // margin-bottom: rem(24);
+  @include mq("md") {
+    font-size: rem(16);
+    line-height: calc(24 / 16);
+  }
 }
 
 .p-fee-top__itemPrice {
-
+  font-size: rem(14);
+  line-height: calc(24 / 14);
+  letter-spacing: rem(0);
+  font-weight: $normal;
+  color: $color-accent;
+  // margin-bottom: rem(24);
+  @include mq("md") {
+    font-size: rem(16);
+    line-height: calc(24 / 16);
+  }
 }
 
 .p-fee-top__button {
-  
 }
