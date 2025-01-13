@@ -23,25 +23,25 @@
                     <%= card.title %>
                   </p>
                 </div>
-                <div class="p-single-card__img">
+                <div>
                   <img src="<%= card.imageSrc %>" alt="<%= card.imageAlt %>">
                 </div>
-                <p class="p-single-card__text">
+                <p>
                   <%= card.text %>
                 </p>
               </a>
             </div>
             <% }); %>
         </div>
-      <ul class="p-single__items">
+      <ul>
         <% singleItems.forEach((item)=> { %>
-          <li class="p-single__item">
+          <li>
             <%= item %>
           </li>
           <% }); %>
       </ul>
       <% paragraphTexts.forEach((text)=> { %>
-        <p class="p-single-card__text">
+        <p>
           <%= text %>
         </p>
         <% }); %>

@@ -27,7 +27,7 @@
 //   }
 // }
 
-.p-single__items {
+.p-single-content__wrap > ul {
   margin-top: rem(24);
 
   @include mq(md) {
@@ -35,7 +35,7 @@
   }
 }
 
-.p-single__item {
+.p-single-content__wrap > ul > li {
   position: relative;
   font-size: rem(16);
   font-weight: $normal;
@@ -44,11 +44,11 @@
   padding-left: rem(30);
 }
 
-.p-single__item + .p-single__item {
+.p-single-content__wrap > ul > li + li {
   margin-top: rem(4);
 }
 
-.p-single__item::before {
+.p-single-content__wrap > ul > li::before {
   background-image: url(../images/common/starfish.png);
     background-position: center;
     background-repeat: no-repeat;
