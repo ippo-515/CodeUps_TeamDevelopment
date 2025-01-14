@@ -1,0 +1,56 @@
+<div class="p-form">
+  <form action="#" method="post" class="p-form__contact" id="p-form__contact">
+    <dl class="p-form__item">
+      <dt>お名前<span>必須</span></dt>
+      <dd>
+        <input type="text" name="user_name" class="p-form__name" id="p-form__name" placeholder="沖縄&emsp;太郎" required>
+      </dd>
+    </dl>
+    <dl class="p-form__item">
+      <dt>メールアドレス<span>必須</span></dt>
+      <dd>
+        <input type="email" name="mail_address" class="p-form__email" id="p-form__email" placeholder="aaa000@ggmail.com" required>
+      </dd>
+    </dl>
+    <dl class="p-form__item">
+      <dt>電話番号<span>必須</span></dt>
+      <dd>
+        <input type="tel" name="tel_number" class="p-form__tel" id="p-form__tel" placeholder="000-0000-0000" required>
+      </dd>
+    </dl>
+    <dl class="p-form__item">
+      <dt>お問合せ項目<span>必須</span></dt>
+      <dd>
+        <label><input type="checkbox" name="inquiry" value="ダイビング講習について" checked><span>ダイビング講習について</span></label>
+        <label><input type="checkbox" name="inquiry" value="ファンダイビングについて"><span>ファンダイビングについて</span></label>
+        <label><input type="checkbox" name="inquiry" value="体験ダイビングについて"><span>体験ダイビングについて</span></label>
+      </dd>
+    </dl>
+    <dl class="p-form__item">
+      <dt>キャンペーン</dt>
+      <dd>
+        <select name="campaign" class="p-form__campaign" id="p-form__campaign">
+          <option value="" hidden>キャンペーン内容を選択</option>
+          <option value="ライセンス講習">ライセンス講習</option>
+          <option value="ファンダイビング">ファンダイビング</option>
+          <option value="体験ダイビング">体験ダイビング</option>
+        </select>
+      </dd>
+    </dl>
+    <dl class="p-form__item">
+      <dt>お問合せ内容<span>必須</span></dt>
+      <dd>
+        <textarea name="contents" class="p-form__textarea" id="p-form__textarea" required></textarea>
+      </dd>
+    </dl>
+    <div class="p-form__agree">
+      <label><input type="checkbox" name="agree" value="1" id="p-form__checkbox" required><span>個人情報の取り扱いについて同意のうえ送信します。</span></label>
+    </div>
+    <div class="p-form__btn">
+      <div class="p-form__btn-submit">
+        <input type="submit" value="Send">
+        <div class="p-form__btn-arrow"></div>
+      </div>
+    </div>
+  </form>
+</div>
