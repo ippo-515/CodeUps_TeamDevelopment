@@ -161,7 +161,7 @@ jQuery(function ($) {
       $(this).toggleClass("is-active-faq");
     });
 
-    $(".js-faq-question").on("click", function () {
+    $(".js-sidebar-open").on("click", function () {
       $(this).next().slideToggle();
       $(this).toggleClass("is-open__a");
     });
