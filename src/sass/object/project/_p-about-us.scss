@@ -4,11 +4,37 @@
 }
 
 .p-about-us__inner {
+  @include mq("md") {
+    position: relative;
+  }
+}
+
+.p-about-us__inner::before {
+  @include mq("md") {
+    content: "";
+    position: absolute;
+    bottom: rem(-90);
+    right: rem(-72);
+    background-image: url(../images/common/about3.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 2;
+    width: rem(194);
+    height: rem(181);
+  }
 }
 
 .p-about-us__imgWrapper {
   position: relative;
   width: 100%;
+  padding-top: 61.62791%;
+  margin-bottom: rem(40);
+  @include mq("md") {
+    padding-top: 61.2037%;
+    margin-bottom: rem(0);
+    z-index: 1;
+  }
 }
 
 .p-about-us__imgLeft {
@@ -16,6 +42,7 @@
   width: 37.10145%;
   top: 0;
   left: 0;
+  z-index: 2;
 }
 
 .p-about-us__imgLeft::before {
@@ -35,10 +62,11 @@
 }
 
 .p-about-us__imgRight {
-  position: static;
+  position: absolute;
   width: 81.44928%;
-  top: rem(20);
+  bottom: 0;
   right: 0;
+  z-index: 1;
 }
 
 .p-about-us__imgRight::before {
@@ -58,6 +86,22 @@
 }
 
 .p-about-us__contentWrapper {
+  @include mq("md") {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    column-gap: rem(40);
+    // top: 50%;
+    // left: 50%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateX(7%) translateY(-3.6%);
+    z-index: 2;
+  }
 }
 
 .p-about-us__contentTitle {
@@ -67,10 +111,21 @@
   font-family: $second-font-family;
   font-weight: $normal;
   color: $color-primary;
-  // margin-bottom: rem(24);
+  margin-bottom: rem(14);
+  @include mq("md") {
+    font-size: rem(80);
+    line-height: calc(100 / 80);
+    color: $white;
+    flex-shrink: 0;
+  }
 }
 
 .p-about-us__textWrapper {
+  @include mq("md") {
+    width: rem(400);
+    flex-shrink: 0;
+    padding-top: rem(25);
+  }
 }
 
 .p-about-us__text {
@@ -79,8 +134,15 @@
   letter-spacing: rem(0);
   font-weight: $normal;
   color: $color-accent;
-  // margin-bottom: rem(24);
+  margin-bottom: rem(50);
+  @include mq("md") {
+    color: $white;
+    margin-bottom: rem(40);
+  }
 }
 
 .p-about-us__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
