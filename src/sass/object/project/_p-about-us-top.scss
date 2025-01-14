@@ -1,0 +1,17 @@
+@use "global" as *;
+
+.p-about-us-top {
+}
+
+.p-about-us-top__inner {
+}
+
+.p-about-us-top__section-title {
+  margin-bottom: rem(28);
+  @include mq("md") {
+    margin-bottom: rem(40);
+  }
+}
+
+.p-about-us-top__content {
+}

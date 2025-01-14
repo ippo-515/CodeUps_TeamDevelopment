@@ -1,5 +1,12 @@
+<!-- 有効な画像のリストを定義 -->
+<% const validimages = ['coral']; %>
+
+<!-- 有効な画像が指定された場合、その色に応じたクラス名を生成。そうでなければ、空文字列を代入 -->
+<% const imgClass = validimages.includes(img) ? ` p-about-us__inner--${img}` :
+''; %>
+
 <div class="p-about-us">
-  <div class="p-about-us__inner l-inner">
+  <div class="p-about-us__inner<%- imgClass %> l-inner">
     <div class="p-about-us__imgWrapper">
       <div class="p-about-us__imgLeft">
         <picture>
@@ -24,11 +31,9 @@
       </div>
     </div>
     <div class="p-about-us__contentWrapper">
-      <h3 class="p-about-us__contentTitle">Dive into<br />the Ocean</h3>
+      <h3 class="p-about-us__contentTitle"><%- contentTitle %></h3>
       <div class="p-about-us__textWrapper">
-        <p class="p-about-us__text">
-          ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
-        </p>
+        <p class="p-about-us__text"><%- text %></p>
         <div class="p-about-us__button">
           <!-- prettier-ignore -->
           <%- include(ejsPath + './component/_c-button', {link:'#', text:'View more'}) %>

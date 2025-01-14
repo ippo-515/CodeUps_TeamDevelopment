@@ -249,7 +249,13 @@
       <h2 class="h2">.p-about-us</h2>
       <p class="p">私たちについて共通パーツ</p>
       <!-- prettier-ignore -->
-      <%- include(ejsPath + '/project/_p-about-us') %>
+      <%- include(ejsPath + '/project/_p-about-us' ,{contentTitle: 'Dive into<br>the Ocean',
+      img: 'coral',
+      text: 'ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。', }) %>
+      <h2 class="h2">.p-about-us-top</h2>
+      <p class="p">私たちについてセクション（トップページ）</p>
+      <!-- prettier-ignore -->
+      <%- include(ejsPath + '/project/_p-about-us-top') %>
       <h2 class="h2">.p-form</h2>
       <p class="p">コンタクトフォーム</p>
       <!-- prettier-ignore -->
