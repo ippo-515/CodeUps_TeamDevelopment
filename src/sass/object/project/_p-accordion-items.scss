@@ -1,1 +1,9 @@
 @use "global" as *;
+
+.p-accordion-items__wrap + .p-accordion-items__wrap {
+  margin-top: rem(38.4);
+
+  @include mq(md) {
+    margin-top: rem(33.6);
+  }
+}

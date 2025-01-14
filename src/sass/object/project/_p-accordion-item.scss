@@ -1,14 +1,5 @@
 @use "global" as *;
 
-.p-accordion-item + .p-accordion-item {
-  margin-top: rem(38.4);
-
-  @include mq(md) {
-    margin-top: rem(33.6);
-  }
-}
-
-
 .p-accordion-item__header {
   background-color: $color-primary;
   color: $white;
