@@ -1,12 +1,6 @@
 @use "global" as *;
 
-.breadcrumb {
-  font-size:  rem(14);
-  font-family: $base-font-family;
-  font-weight: $normal;
-}
-
-.sub-blog__sidebar {
+.p-sidebar {
   margin-inline: auto;
   max-width: rem(600);
   width: 100%;
@@ -23,17 +17,11 @@
   }
 }
 
-.sub-blog__sidebar-items {
-}
-
-.sub-blog__sidebar-item {
-}
-
-.sub-blog__sidebar-item + .sub-blog__sidebar-item {
+.p-sidebar__item + .p-sidebar__item {
   margin-top: rem(80);
 }
 
-.sub-blog__sidebar-title {
+.p-sidebar__title {
   position: relative;
   display: inline-block;
   font-size: rem(24);
@@ -44,7 +32,7 @@
   border-left: 8px solid $color-primary;
 }
 
-.sub-blog__sidebar-title::before {
+.p-sidebar__title::before {
   background-image: url(../images/common/whaleblack.webp);
     background-position: center;
       background-repeat: no-repeat;
@@ -61,85 +49,174 @@
       z-index: 1;
 }
 
-.sub-blog__favorite-items {
-  
-}
-
-.sub-blog__favorite-item {
+.p-sidebar__favorite-item {
   display: flex;
   margin-top: rem(24);
   padding: rem(16);
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
 }
 
-.sub-blog__favorite-img {
+.p-sidebar__favorite-item > a {
+  display: flex;
+}
+
+.p-sidebar__favorite-img {
   width: 50%;
 }
 
-.sub-blog__favorite-img img {
+.p-sidebar__favorite-img img {
   aspect-ratio: 121/90;
   object-fit: cover;
   width: 100%;
   height: 100%;
 }
 
-.sub-blog__heading {
+.p-sidebar__heading {
   width: 50%;
   margin-left: rem(16);
 }
 
-.sub-blog__reviews-items {
+.p-sidebar__heading-dete {
+  font-size: rem(12);
+  font-family: $second-font-family;
+  font-weight: $normal;
+  line-height: calc(18/12);
+  color: $black;
+}
+
+.p-sidebar__reviews-items {
   margin-top: rem(24);
 }
 
-.sub-blog__reviews-item {
-
-}
-
-.sub-blog__reviews-img {
-
-}
-
-.sub-blog__reviews-img img {
+.p-sidebar__reviews-img img {
   aspect-ratio: 294/218;
   object-fit: cover;
   width: 100%;
   height: 100%;
 }
 
-.sub-blog__reviews-category {
+.p-sidebar__reviews-category {
   font-size: rem(12);
   font-family: $base-font-family;
   font-weight: $normal;
   margin-top: rem(16);
 }
 
-.sub-blog__reviews-title {
+.p-sidebar__reviews-title {
   font-size: rem(24);
   font-family: $base-font-family;
   font-weight: $medium;
   margin-top: rem(8);
 }
 
-.sub-blog__button {
+.p-sidebar__button {
   margin-top: rem(40);
   text-align: center;
 }
 
-.sub-blog__campaign-items {
+.p-sidebar__campaign-items {
   margin-top: rem(32);
 }
 
-.sub-blog__campaign-item + .sub-blog__campaign-item {
+.p-sidebar__campaign-item {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
+}
+
+.p-sidebar__campaign-item + .p-sidebar__campaign-item {
   margin-top: rem(40);
 }
 
+.p-sidebar__campaign-img img {
+  width: 100%;
+  aspect-ratio: 333/223;
+  object-fit: cover;
+}
 
-.sub-blog__archive {
+.p-sidebar__campaign-wrap {
+  display: flex;
+  flex-direction:column;
+  flex-grow: 1;
+  margin-top: rem(-1.2);
+  padding: rem(18) rem(16) rem(24) rem(16);
+
+  @include mq(md) {
+    padding: rem(16) rem(16) rem(40) rem(16);
+  }
+}
+
+.p-sidebar__campaign-meta {
+  flex-grow: 1;
+  border-bottom: 1px solid $color-primary;
+}
+
+.p-sidebar__campaign-title {
+  font-size: rem(16);
+  font-family: $base-font-family;
+  font-weight: $medium;
+  padding-bottom: 0;
+  text-align: center;
+
+  @include mq(md) {
+    margin-top: rem(5);
+  }
+}
+
+.p-sidebar__campaign-text {
+  text-align: center;
+  font-size: rem(16);
+  line-height: calc( 24/ 16);
+  margin-top: rem(8);
+
+  @include mq(md) {
+    font-size: rem(16);
+    line-height: calc( 24/ 16);
+    margin-top: rem(16);
+  }
+}
+
+.p-sidebar__campaign-body {
+  display: flex;
+  justify-content: center;
+  margin-top: rem(8);
+  align-items: flex-end;
+}
+
+.p-sidebar__campaign-price1 {
+  text-decoration: line-through 3px $red;
+  font-size: rem(20);
+  font-family: $third-font-family;
+  font-weight: $bold;
+  line-height: 1;
+  display: flex;
+  align-items: flex-end;
+
+  @include mq(md) {
+    font-size: rem(24);
+  }
+}
+
+.p-sidebar__campaign-price2 {
+  font-size: rem(32);
+  font-family: $third-font-family;
+  font-weight: $bold;
+  line-height: 1;
+  color: $color-primary;
+  margin-left: rem(16);
+
+  @include mq(md) {
+    font-size: rem(36.8);
+    margin-left: rem(32);
+  }
+}
+
+.p-sidebar__archive {
   margin-top: rem(24);
 }
 
-.sub-blog__archive-header::before {
+.p-sidebar__archive-header::before {
   content: '';
   width: 0;
   height: 0;
@@ -153,7 +230,7 @@
   margin: auto;
 }
 
-.sub-blog__archive-header {
+.p-sidebar__archive-header {
   position: relative;
   padding-left: rem(32);
   font-size: rem(24);
@@ -162,12 +239,12 @@
   color: $color-primary;
 }
 
-.sub-blog__archive-header.is-open__a::before {
+.p-sidebar__archive-header.is-open__a::before {
   transform: translateY(-50%) rotate(327.5deg);
   top: rem(3);
 }
 
-.sub-blog__archive-text {
+.p-sidebar__archive-text {
   display: block;
   position: relative;
   font-size: rem(24);
@@ -179,7 +256,7 @@
 
 }
 
-.sub-blog__archive-text::before {
+.p-sidebar__archive-text::before {
   content: '';
   width: 0;
   height: 0;
@@ -193,46 +270,8 @@
   margin: auto;
 }
 
-.sub-blog__archive .sub-blog__archive-container .sub-blog__archive-body {
+.p-sidebar__archive .p-sidebar__archive-container .p-sidebar__archive-body {
   display: none;
   padding: 0;
   box-sizing: border-box;
-}
-
-.sub-blog__items {
-  margin-top: rem(24);
-
-  @include mq(md) {
-    margin-top: rem(40);
-  }
-}
-
-.sub-blog__item {
-  position: relative;
-  font-size: rem(16);
-  font-weight: $normal;
-  font-family: $base-font-family;
-  line-height: calc( 24/ 16);
-  padding-left: rem(30);
-}
-
-.sub-blog__item + .sub-blog__item {
-  margin-top: rem(4);
-}
-
-.sub-blog__item::before {
-  background-image: url(../images/common/_ヒトデ.webp);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    content: "";
-    height: rem(18);
-    left: 0;
-    max-width: rem(18);
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
-    z-index: 1;
 }
