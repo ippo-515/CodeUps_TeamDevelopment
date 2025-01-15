@@ -199,9 +199,9 @@ button,
 			display: block;
 			opacity: 1;
 			/*チェックマークじゃない場合は以下を変更する*/
-			transform: translateY(-45%) rotate(-35deg); // -50% → -45% -45deg → -35deg
-			width: calc(rem(14) * 0.7);	// 0.9 → 0.7
-			height: calc(rem(14) * 0.35);	// 0.5 → 0.35
+			transform: translateY(-45%) rotate(-35deg);
+			width: calc(rem(14) * 0.7);
+			height: calc(rem(14) * 0.35);
 			margin-top: -0.1em;
 			margin-left: 0.1em;
 			border-left: rem(2) solid $red;	// $check-weight:4
