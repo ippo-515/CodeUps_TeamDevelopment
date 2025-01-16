@@ -1,0 +1,21 @@
+<!-- prettier-ignore -->
+<% const itemText = [
+{
+  title: 'ライセンス講習',
+  items: [
+    { itemTitle: 'オープンウォーター\<br class="u-mobile"/\>ダイバーコース', price: '¥50,000' },
+    { itemTitle: 'アドバンスド\<br class="u-mobile"/\>オープンウォーターコース', price: '¥60,000' },
+    { itemTitle: 'レスキュー＋EFRコース', price: '¥70,000' }
+  ]
+},
+]; %>
+<div class="p-price-table-list">
+  <div class="p-price-table-list__inner">
+    <% list.forEach(function(content) { %>
+    <div class="p-price-table-list__card">
+      <!-- prettier-ignore -->
+      <%- include(ejsPath + '/_p-price-table', { itemText: itemText }) %>
+    </div>
+    <% }); %>
+  </div>
+</div>
