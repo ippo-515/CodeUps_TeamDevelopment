@@ -1,0 +1,12 @@
+@use "global" as *;
+
+.p-price-table-list {
+
+}
+
+.p-price-table-list__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: rem(100);
+}
