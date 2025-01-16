@@ -249,9 +249,9 @@
       <h2 class="h2">.p-about-us</h2>
       <p class="p">私たちについて共通パーツ</p>
       <!-- prettier-ignore -->
-      <%- include(ejsPath + '/project/_p-about-us' ,{contentTitle: 'Dive into<br>the Ocean',
+      <%- include(ejsPath + '/project/_p-about-us' ,{contentTitle: 'Dive into\<br\>the Ocean',
       img: 'coral',
-      text: 'ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。', }) %>
+      text: 'ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。\<br\>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。', }) %>
       <h2 class="h2">.p-about-us-top</h2>
       <p class="p">私たちについてセクション（トップページ）</p>
       <!-- prettier-ignore -->
@@ -264,7 +264,21 @@
       <p class="p">ダイビング情報セクション（トップページ）</p>
       <!-- prettier-ignore -->
       <%- include(ejsPath + '/project/_p-diving-information') %>
+      <h2 class="h2">.p-price-table</h2>
+      <p class="p">料金一覧テーブル</p>
       <!-- prettier-ignore -->
+      <%- include(ejsPath + '/project/_p-price-table', {
+        itemText: [
+          {
+            title: 'ライセンス講習',
+            items: [
+              { itemTitle: 'オープンウォーター\<br class="u-mobile"/\>ダイバーコース', price: '¥50,000' },
+              { itemTitle: 'アドバンスド\<br class="u-mobile"/\>オープンウォーターコース', price: '¥60,000' },
+              { itemTitle: 'レスキュー＋EFRコース', price: '¥70,000' }
+            ]
+          }
+        ]
+      }) %>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </body>

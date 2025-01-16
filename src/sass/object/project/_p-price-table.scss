@@ -1,0 +1,100 @@
+@use "global" as *;
+
+.p-price-table {
+  margin-bottom: 100px;
+}
+
+.p-price-table__inner {
+  @include mq("md") {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.p-price-table__titleWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: rem(8);
+  background-color: $color-primary;
+  padding: rem(8) 0;
+  @include mq("md") {
+    flex-direction: column-reverse;
+    row-gap: rem(8);
+    padding: rem(40) rem(44);
+  }
+}
+.p-price-table__titleWrapper::before {
+  display: block;
+  content: "";
+  position: relative;
+  // bottom: rem(-90);
+  // right: rem(-72);
+  background-image: url(../images/common/information-tab-white.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 2;
+  width: rem(24);
+  height: rem(24);
+  @include mq("md") {
+    width: rem(64);
+    height: rem(64);
+  }
+}
+
+.p-price-table__title {
+  font-size: rem(16);
+  line-height: calc(24 / 16);
+  letter-spacing: rem(0);
+  font-weight: $bold;
+  color: $white;
+}
+
+.p-price-table__contentsWrapper {
+  @include mq("md") {
+    border-top: 1px solid $color-primary;
+    flex-grow: 1;
+  }
+}
+
+.p-price-table__item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid $color-primary;
+  border-top: none;
+}
+
+.p-price-table__itemTitle {
+  font-size: rem(16);
+  line-height: calc(24 / 16);
+  letter-spacing: rem(0);
+  font-weight: $normal;
+  color: $color-accent;
+  text-align: center;
+  flex-grow: 1;
+  @include mq("md") {
+    text-align: left;
+    padding: 0 rem(16) 0;
+    flex-grow: 1;
+  }
+}
+
+.p-price-table__price {
+  font-size: rem(16);
+  line-height: calc(24 / 16);
+  letter-spacing: rem(0);
+  font-weight: $normal;
+  color: $color-accent;
+  text-align: right;
+  padding: rem(19) rem(16) rem(19) rem(0);
+  max-width: rem(105);
+  border-left: 1px solid $color-primary;
+  flex-grow: 1;
+  @include mq("md") {
+    padding: rem(18) rem(16) rem(19) rem(0);
+    max-width: rem(160);
+  }
+}

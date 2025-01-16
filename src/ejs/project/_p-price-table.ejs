@@ -1,0 +1,18 @@
+<div class="p-price-table">
+  <div class="p-price-table__inner">
+    <% itemText.forEach(function(content) { %>
+    <div class="p-price-table__titleWrapper">
+      <h3 class="p-price-table__title"><%= content.title %></h3>
+    </div>
+    <div class="p-price-table__contentsWrapper">
+      <% content.items.forEach(function(item) { %>
+      <!-- prettier-ignore -->
+      <div class="p-price-table__item">
+        <p class="p-price-table__itemTitle"><%- item.itemTitle %></p>
+        <p class="p-price-table__price"><%= item.price %></p>
+      </div>
+      <% }); %>
+    </div>
+    <% }); %>
+  </div>
+</div>
