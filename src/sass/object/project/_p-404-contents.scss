@@ -1,0 +1,77 @@
+@use "global" as *;
+
+.p-404-contents {
+  position: relative;
+  background-color: $color-primary;
+}
+
+.p-404-contents::before {
+  background-image: url(../images/common/big-whale2.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  content: "";
+  max-width: rem(335.24);
+  height: rem(311.19);
+  top: -3.1375rem;
+  left: calc(49.2% - min(44vw, 36rem));  position: absolute;
+  width: 100%;
+  z-index: -1;
+
+  @include mq(md) {
+    max-width: rem(697.31);
+    height: rem(594);
+    top: -4.8375rem;
+    left: calc(53% - min(44vw, 36rem));
+  }
+}
+
+.p-404-contents__inner {
+  max-width: rem(600);
+  width:  100%;
+  margin-inline: auto;
+  padding-left: rem(15);
+  padding-right: rem(15);
+
+  @include mq(md) {
+    max-width: rem(439);
+  }
+}
+
+.p-404-contents__title {
+  font-size: rem(80);
+  font-weight: $normal;
+  font-family: $third-font-family;
+  letter-spacing: 0.51em;
+  color: $white;
+  text-align: center;
+  text-indent: rem(38);
+
+  @include mq(md) {
+    font-size: rem(160);
+    text-indent: rem(-18);
+  }
+}
+
+.p-404-contents__text {
+  font-size: rem(16);
+  font-weight: $normal;
+  font-family: $third-font-family;
+  line-height: calc( 24/ 16);
+  color: $white;
+  text-align: center;
+  margin-top: rem(-17);
+
+  @include mq(md) {
+    margin-top: 0;
+  }
+}
+
+.p-404-contents__button {
+  margin-top: rem(40);
+  text-align: center;
+
+  @include mq(md) {
+    margin-top: rem(80);
+  }
+}
