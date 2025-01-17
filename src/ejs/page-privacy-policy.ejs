@@ -1,0 +1,28 @@
+<% baseUrlPath='.' ; ejsPath='.' ; pageData="privacy-policy" %>
+  <!DOCTYPE html>
+  <html lang="ja">
+  <%- include(ejsPath + '/common/_head' , { baseUrl: baseUrlPath, page: json[pageData] }) %>
+
+    <body>
+      <%- include(ejsPath + '/common/_p-header' ) %>
+        <main>
+          <%- include(ejsPath + '/project/_p-sub-mv' , { pageTitle: 'privacy-policy' ,
+            imagePathDesktop: './assets/images/common/PrivacyPolicy-mv.webp' ,
+            imagePathMobile: './assets/images/common/PrivacyPolicy-mv-sp.webp' , altText: '多数の魚が泳いでいる様子' }) %>
+            <%const breadcrumbsKey="privacyPolicy" ;%>
+              <div class="l-breadcrumb">
+                <%- include(ejsPath + '/component/_c-breadcrumb' , { breadcrumbsKey }) %>
+              </div>
+              <div class="l-privacy-policy">
+                <%- include(ejsPath + '/project/_p-privacy-policy-contents' ) %>
+              </div>
+              <div class="l-contact">
+                <%- include(ejsPath + '/project/_p-contact') %>
+              </div>
+              <div class="l-footer">
+                <%- include(ejsPath + '/common/_p-footer' ) %>
+              </div>
+        </main>
+    </body>
+
+  </html>
