@@ -13,5 +13,10 @@
     "title": "privacy-policy__diving_shop",
     "description": "ダイビングショップのプライバシーポリシーのページです",
     "url": "http://localhost:3000/privacy-policy.html"
+  },
+  "terms": {
+    "title": "terms__diving_shop",
+    "description": "ダイビングショップの利用規約のページです",
+    "url": "http://localhost:3000/terms.html"
   }
 }
