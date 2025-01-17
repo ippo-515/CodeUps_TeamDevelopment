@@ -1,33 +1,24 @@
 @use "global" as *;
 
-.p-single__content {
-
+.p-single-content__header-meta {
+  color: $color-accent;
 }
 
-// .p-single__content::before {
-//   background-image: url(../images/common/_キンギョハナダイsub-campaign.png);
-//   background-position: center;
-//   background-repeat: no-repeat;
-//   background-size: cover;
-//   content: "";
-//   display: block;
-//   height: 3.4375rem;
-//   left: calc(46.5% - min(42vw, 35.5rem));
-//   max-width: 7.5rem;
-//   position: absolute;
-//   top: -1.5375rem;
-//   width: 100%;
-//   z-index: -1;
+.p-single-content__header-time {
+  font-size: rem(14);
+  font-family: $second-font-family;
+  font-weight: $normal;
+}
 
-//   @include mq(md) {
-//     height: 8.625rem;
-//     left: calc(46.5% - min(44vw, 35.5rem));
-//     max-width: 18.8125rem;
-//     top: rem(-70);
-//   }
-// }
+.p-single-content__header-title {
+  font-size: rem(32);
+  font-family: $base-font-family;
+  font-weight: $medium;
+  margin-top: rem(8);
+  border-bottom: 1px solid $color-primary;
+}
 
-.p-single-content__wrap > ul {
+.p-single-content__header > div:nth-of-type(2) {
   margin-top: rem(24);
 
   @include mq(md) {
@@ -35,7 +26,74 @@
   }
 }
 
-.p-single-content__wrap > ul > li {
+.p-single-content__header > div:nth-of-type(2) img {
+  aspect-ratio: 700/468;
+  object-fit: cover;
+  height: auto;
+}
+
+.p-single-content__footer {
+  margin-top: rem(24);
+
+  @include mq(md) {
+    margin-top: rem(40);
+  }
+}
+
+.p-single-content__footer > p {
+  font-size: rem(16);
+  font-weight: normal;
+  font-family: $base-font-family;
+  line-height: calc( 24/ 16);
+}
+
+.p-single-content__footer > p:nth-of-type(2) {
+  font-size: rem(16);
+  font-weight: normal;
+  font-family: $base-font-family;
+  line-height: calc( 24/ 16);
+  margin-top: rem(24);
+
+  @include mq(md) {
+    margin-top: rem(40);
+  }
+}
+
+.p-single-content__footer > p:nth-of-type(3) {
+  font-size: rem(16);
+  font-weight: normal;
+  font-family: $base-font-family;
+  line-height: calc( 24/ 16);
+  margin-top: rem(24);
+
+  @include mq(md) {
+    margin-top: rem(40);
+  }
+}
+
+.p-single-content__footer > div {
+  margin-top: rem(24);
+
+  @include mq(md) {
+    margin-top: rem(40);
+  }
+}
+
+.p-single-content__footer > div img {
+  aspect-ratio: 700/468;
+  object-fit: cover;
+  height: auto;
+}
+
+.p-single-content__footer > ul {
+  margin-top: rem(24);
+
+  @include mq(md) {
+    margin-top: rem(40);
+  }
+}
+
+.p-single-content__footer > ul > li {
   position: relative;
   font-size: rem(16);
   font-weight: $normal;
@@ -44,12 +102,12 @@
   padding-left: rem(30);
 }
 
-.p-single-content__wrap > ul > li + li {
+.p-single-content__footer > ul > li:not(:first-child) {
   margin-top: rem(4);
 }
 
-.p-single-content__wrap > ul > li::before {
-  background-image: url(../images/common/starfish.png);
+.p-single-content__footer > ul > li::before {
+  background-image: url(../images/common/starfish.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
