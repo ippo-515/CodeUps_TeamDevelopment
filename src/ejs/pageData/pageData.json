@@ -8,5 +8,10 @@
     "title": "チュートリアルのページタイトル",
     "description": "チュートリアルのコンテンツです！",
     "url": "https://turorialtest.com"
+  },
+  "privacy-policy": {
+    "title": "privacy-policy__diving_shop",
+    "description": "ダイビングショップのプライバシーポリシーのページです",
+    "url": "http://localhost:3000/privacy-policy.html"
   }
 }
