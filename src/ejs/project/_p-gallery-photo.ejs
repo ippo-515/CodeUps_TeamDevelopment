@@ -1,0 +1,36 @@
+<%
+  const galleryPhotoData = [
+    {
+      imagePath: './assets/images/common/gallery1.webp',
+      imageAlt: 'サンゴの周りを多くの赤い小さな熱帯魚が泳いでいる様子'
+    },
+    {
+      imagePath: './assets/images/common/gallery2.webp',
+      imageAlt: '晴れた日の海岸近くの海とそこに浮かぶ白い船'
+    },
+    {
+      imagePath: './assets/images/common/gallery3.webp',
+      imageAlt: '白とオレンジ色のツートンカラーの2匹の熱帯魚が泳いでいる様子'
+    },
+    {
+      imagePath: './assets/images/common/gallery4.webp',
+      imageAlt: '黄色い1匹の熱帯魚が泳いでいる様子'
+    },
+    {
+      imagePath: './assets/images/common/gallery5.webp',
+      imageAlt: '薄いピンク色の多くの熱帯魚が泳いでいる様子'
+    },
+    {
+      imagePath: './assets/images/common/gallery6.webp',
+      imageAlt: '2匹のオレンジ色の熱帯魚とその背後で無数の熱帯魚が泳いでいる様子'
+    }
+  ];
+%>
+
+<div class="p-gallery-photo">
+  <% galleryPhotoData.forEach(data => { %>
+    <div class="p-gallery-photo__item">
+      <%- include(ejsPath + '/_p-gallery-picture', data) %>
+    </div>
+  <% }); %>
+</div>

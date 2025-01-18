@@ -298,6 +298,16 @@
       <p class="p">料金一覧テーブルのリスト</p>
       <!-- prettier-ignore -->
       <%- include(ejsPath + '/project/_p-price-table-list') %>
+      <h2 class="h2">.p-gallery-picture</h2>
+      <p class="p">ギャラリー画像</p>
+      <!-- prettier-ignore -->
+      <%- include(ejsPath + '/project/_p-gallery-picture', {imagePath: './assets/images/common/gallery1.webp', imageAlt: 'サンゴの周りを多くの赤い小さな熱帯魚が泳いでいる様子'})
+      %>
+      <h2 class="h2">.p-gallery-photo</h2>
+      <p class="p">ギャラリー画像群</p>
+      <!-- prettier-ignore -->
+      <%- include(ejsPath + '/project/_p-gallery-photo')
+      %>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </body>
