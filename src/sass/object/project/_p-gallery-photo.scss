@@ -1,0 +1,26 @@
+@use "global" as *;
+
+.p-gallery-photo {
+  display: grid;
+  gap: rem(8);
+  @include mq(md) {
+    grid-template-columns:492fr 80fr 492fr;
+    grid-template-rows: repeat(4, 369fr);
+    grid-auto-flow: dense;
+  }
+}
+
+.p-gallery-photo__item {
+  @include mq(md) {
+    grid-row: span 1;
+    grid-column: span 2;
+  }
+}
+
+.p-gallery-photo__item:nth-child(6n+1),
+.p-gallery-photo__item:nth-child(6n+6) {
+  @include mq(md) {
+    grid-row: span 2;
+    grid-column: span 1;
+  }
+}

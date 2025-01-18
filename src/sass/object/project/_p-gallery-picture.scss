@@ -1,0 +1,24 @@
+@use "global" as *;
+
+.p-gallery-picture__img {
+  aspect-ratio: 345 / 219;
+  overflow: hidden;
+  cursor: pointer;
+  @include mq(md) {
+    aspect-ratio: 580 / 369;
+  }
+}
+
+.p-gallery-photo__item:nth-child(6n+1) .p-gallery-picture__img,
+.p-gallery-photo__item:nth-child(6n+6) .p-gallery-picture__img {
+  aspect-ratio: 345 / 523;
+  overflow: hidden;
+  @include mq(md) {
+    aspect-ratio: 492 / 746;
+  }
+}
+
+.p-gallery-picture__img img {
+  height: 100%;
+  object-fit: cover;
+}
