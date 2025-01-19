@@ -46,9 +46,12 @@
 %>
 
 <div class="p-voice-list">
+  <!-- prettier-ignore -->
   <% voiceListData.forEach(data => { %>
     <div class="p-voice-list__item">
+      <!-- prettier-ignore -->
       <%- include(ejsPath + '/_p-voice-card', data) %>
     </div>
+  <!-- prettier-ignore -->
   <% }); %>
 </div>
