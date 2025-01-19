@@ -1,0 +1,19 @@
+<div class="p-gallery">
+  <div class="p-gallery-inner l-inner">
+    <div class="p-gallery__title">
+      <!-- prettier-ignore -->
+      <%- include(ejsPath + './component/_c-section-header', {engTitle: "Gallery", jaTitle: "フォト", modifier: ""}) %>
+    </div>
+    <div class="p-gallery__items-wrap">
+      <div class="p-gallery__items">
+        <!-- prettier-ignore -->
+        <%- include(ejsPath + '/_p-gallery-photo') %>
+      </div>
+    </div>
+  </div>
+  <!-- モーダル -->
+  <div class="p-gallery__modal">
+    <!-- prettier-ignore -->
+    <%- include(ejsPath + './component/_c-modal', {}) %>
+  </div>
+</div>
