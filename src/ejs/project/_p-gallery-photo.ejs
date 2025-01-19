@@ -28,8 +28,10 @@
 %>
 
 <div class="p-gallery-photo">
+  <!-- prettier-ignore -->
   <% galleryPhotoData.forEach(data => { %>
     <div class="p-gallery-photo__item">
+      <!-- prettier-ignore -->
       <%- include(ejsPath + '/_p-gallery-picture', data) %>
     </div>
   <% }); %>
