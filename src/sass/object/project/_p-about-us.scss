@@ -27,7 +27,7 @@
   }
 }
 
-.p-about-us__img-wrapper {
+.p-about-us__imgWrapper {
   position: relative;
   width: 100%;
   padding-top: 61.62791%;
@@ -39,7 +39,7 @@
   }
 }
 
-.p-about-us__img-left {
+.p-about-us__imgLeft {
   position: absolute;
   width: 37.10145%;
   top: 0;
@@ -47,13 +47,13 @@
   z-index: 2;
 }
 
-.p-about-us__img-left::before {
+.p-about-us__imgLeft::before {
   content: "";
   display: block;
   padding-top: 151.5625%; //このおかげで画像サイズ1:1を保てる！
 }
 
-.p-about-us__img-left img {
+.p-about-us__imgLeft img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -63,7 +63,7 @@
   object-fit: cover;
 }
 
-.p-about-us__img-right {
+.p-about-us__imgRight {
   position: absolute;
   width: 81.44928%;
   bottom: 0;
@@ -71,13 +71,13 @@
   z-index: 1;
 }
 
-.p-about-us__img-right::before {
+.p-about-us__imgRight::before {
   content: "";
   display: block;
   padding-top: 66.19217%; //このおかげで画像サイズ1:1を保てる！
 }
 
-.p-about-us__img-right img {
+.p-about-us__imgRight img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -87,7 +87,7 @@
   object-fit: cover;
 }
 
-.p-about-us__content-wrapper {
+.p-about-us__contentWrapper {
   @include mq("md") {
     display: flex;
     flex-direction: row;
@@ -106,7 +106,7 @@
   }
 }
 
-.p-about-us__content-title {
+.p-about-us__contentTitle {
   font-size: rem(40);
   line-height: calc(40 / 40);
   letter-spacing: rem(0);
@@ -122,7 +122,7 @@
   }
 }
 
-.p-about-us__text-wrapper {
+.p-about-us__textWrapper {
   @include mq("md") {
     width: rem(400);
     flex-shrink: 0;

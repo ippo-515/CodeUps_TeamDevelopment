@@ -12,7 +12,7 @@
   margin-bottom: rem(24);
 }
 
-.p-diving-information__contents-wrapper {
+.p-diving-information__contentsWrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -52,14 +52,14 @@
   object-fit: cover;
 }
 
-.p-diving-information__content-wrapper {
+.p-diving-information__contentWrapper {
 }
 
-.p-diving-information__text-wrapper {
+.p-diving-information__textWrapper {
   margin-bottom: rem(40);
 }
 
-.p-diving-information__text-title {
+.p-diving-information__textTitle {
   font-size: rem(20);
   line-height: calc(24 / 20);
   letter-spacing: rem(0);

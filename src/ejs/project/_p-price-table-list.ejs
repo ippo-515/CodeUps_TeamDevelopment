@@ -1,46 +1,20 @@
 <!-- prettier-ignore -->
 <% const itemText = [
-  {
-    title: 'ライセンス講習',
-    items: [
-      { itemTitle: 'オープンウォーター\<br class="u-mobile"/\>ダイバーコース', price: '¥50,000' },
-      { itemTitle: 'アドバンスド\<br class="u-mobile"/\>オープンウォーターコース', price: '¥60,000' },
-      { itemTitle: 'レスキュー＋EFRコース', price: '¥70,000' },
-    ]
-  },
-  {
-    title: '体験ダイビング',
-    items: [
-      { itemTitle: 'ビーチ体験ダイビング\<br class="u-mobile"/\>(半日)', price: '¥70,000' },
-      { itemTitle: 'ビーチ体験ダイビング\<br class="u-mobile"/\>(1日)', price: '¥14,000' },
-      { itemTitle: 'ボート体験ダイビング\<br class="u-mobile"/\>(半日)', price: '¥10,000' },
-      { itemTitle: 'ボート体験ダイビング\<br class="u-mobile"/\>(1日)', price: '¥18,000' },
-    ]
-  },
-  {
-    title: 'ファンダイビング',
-    items: [
-      { itemTitle: 'ビーチダイビング\<br class="u-mobile"/\>(2ダイブ)', price: '¥14,000' },
-      { itemTitle: 'ボートダイビング\<br class="u-mobile"/\>(2ダイブ)', price: '¥18,000' },
-      { itemTitle: 'スペシャルダイビング\<br class="u-mobile"/\>(2ダイブ)', price: '¥24,000' },
-      { itemTitle: 'ナイトダイビング\<br class="u-mobile"/\>(1ダイブ)', price: '¥10,000' },
-    ]
-  },
-  {
-    title: 'スペシャルダイビング',
-    items: [
-      { itemTitle: '貸切ダイビング(2ダイブ)', price: '¥24,000' },
-      { itemTitle: '1日ダイビング(3ダイブ)', price: '¥32,000' },
-      { itemTitle: 'ナイトダイビング(2ダイブ)', price: '¥14,000' },
-    ]
-  },
+{
+  title: 'ライセンス講習',
+  items: [
+    { itemTitle: 'オープンウォーター\<br class="u-mobile"/\>ダイバーコース', price: '¥50,000' },
+    { itemTitle: 'アドバンスド\<br class="u-mobile"/\>オープンウォーターコース', price: '¥60,000' },
+    { itemTitle: 'レスキュー＋EFRコース', price: '¥70,000' }
+  ]
+},
 ]; %>
 <div class="p-price-table-list">
-  <div class="p-price-table-list__inner c-right-facing-fish l-inner">
-    <% itemText.forEach(function(item) { %>
+  <div class="p-price-table-list__inner">
+    <% itemText.forEach(function(content) { %>
     <div class="p-price-table-list__card">
       <!-- prettier-ignore -->
-      <%- include(ejsPath + '/_p-price-table', { itemText: [item] }) %>
+      <%- include(ejsPath + '/_p-price-table', { itemText: itemText }) %>
     </div>
     <% }); %>
   </div>
