@@ -1,0 +1,9 @@
+@use "global" as *;
+
+.l-page-sitemap {
+  margin-top: rem(31);
+
+  @include mq(md) {
+    margin-top: rem(129);
+  }
+}
