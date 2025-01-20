@@ -1,0 +1,24 @@
+@use "global" as *;
+
+.p-page-sitemap {
+  position: relative;
+}
+
+.p-page-sitemap::before {
+  content: "";
+  background-image: url(../images/common/pc-fishBlog2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: absolute;
+  top: rem(-4);
+  left: rem(15);
+  width: rem(120);
+  height: rem(55);
+  @include mq(md) {
+    top: rem(-70);  // PC版カンプは魚なしだが、他ページ同様に魚ありとした
+    left: calc(50% - min(48%, rem(620)));
+    width: rem(301);
+    height: rem(138);
+  }
+}
