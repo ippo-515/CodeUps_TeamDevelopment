@@ -1,32 +1,12 @@
 @use "global" as *;
 
 .p-price-table-list {
+
 }
 
 .p-price-table-list__inner {
   display: flex;
   flex-direction: column;
   align-items: center;
-  row-gap: rem(40);
-  @include mq("md") {
-    row-gap: rem(80);
-  }
-}
-
-.p-price-table-list__inner.c-right-facing-fish::after {
-  display: block;
-  top: rem(-22);
-  left: rem(15);
-  width: rem(120);
-  height: rem(55);
-  @include mq("md") {
-    top: rem(-60);
-    left: rem(-250);
-    width: rem(301);
-    height: rem(138);
-  }
-}
-
-.p-price-table-list__card {
-  width: 100%;
+  row-gap: rem(100);
 }
