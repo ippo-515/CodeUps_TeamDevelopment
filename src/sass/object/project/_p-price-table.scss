@@ -22,7 +22,8 @@
   @include mq("md") {
     flex-direction: column-reverse;
     row-gap: rem(8);
-    padding: rem(40) rem(44);
+    padding: rem(40) rem(20);
+    width: rem(200);
   }
 }
 .p-price-table__titleWrapper::before {
