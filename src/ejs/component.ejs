@@ -74,7 +74,7 @@
       const breadcrumbsKey = "diving"; // ここのキーを変更すると出し分けできます(キーは_c-breadcrumb.ejsファイルに記載)
       %>
       <!-- prettier-ignore -->
-      <%- include(ejsPath + '/component/_c-breadcrumb', { breadcrumbsKey }) %>
+      <%- include(ejsPath + '/component/_c-breadcrumb' , { breadcrumbsKey, modifier: ""}) %>
       <!-- prettier-ignore -->
       <h2 class="h2">.c-contact-logo</h2>
       <p class="p">コンタクトセクションのロゴ</p>
@@ -90,11 +90,7 @@
       <p class="p">ボタン</p>
       <!-- prettier-ignore -->
       <%- include(ejsPath + '/component/_c-button', {link:'#', text:'View more', modifier: ""}) %>
-      <!-- prettier-ignore -->
-      <h2 class="h2">.c-404-button</h2>
-      <p class="p">404ボタン</p>
-      <!-- prettier-ignore -->
-      <%- include(ejsPath + '/component/_c-404-button', {link:'#', text:'Page TOP', modifier: ""}) %>
+      <%- include(ejsPath + '/component/_c-button', {link:'#', text:'Page TOP', modifier: ""}) %>
       <!-- prettier-ignore -->
       <h2 class="h2">.c-section-header</h2>
       <p class="p">セクションタイトル</p>

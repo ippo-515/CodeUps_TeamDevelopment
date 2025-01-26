@@ -16,7 +16,7 @@
   top: -3.1375rem;
   left: calc(49.2% - min(44vw, 36rem));  position: absolute;
   width: 100%;
-  z-index: -1;
+  z-index: 1;
 
   @include mq(md) {
     max-width: rem(697.31);

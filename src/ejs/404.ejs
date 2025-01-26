@@ -1,0 +1,24 @@
+<% baseUrlPath='.' ; ejsPath='.' ; pageData="privacy-policy" %>
+  <!DOCTYPE html>
+  <html lang="ja">
+  <%- include(ejsPath + '/common/_head' , { baseUrl: baseUrlPath, page: json[pageData] }) %>
+
+    <body class="l-body-404-color">
+      <div class="l-404-wrap">
+        <%- include(ejsPath + '/common/_p-header' ) %>
+          <main class="l-inner">
+            <div class="l-breadcrumb">
+              <% const breadcrumbsKey="notFound" ; %>
+                <%- include(ejsPath + '/component/_c-breadcrumb' , { breadcrumbsKey, modifier: "white" }) %>
+            </div>
+            <div class="l-404-contents">
+              <%- include(ejsPath + '/project/_p-404-contents' ) %>
+            </div>
+          </main>
+          <div class="l-footer">
+            <%- include(ejsPath + '/common/_p-footer' ) %>
+          </div>
+      </div>
+    </body>
+
+  </html>
