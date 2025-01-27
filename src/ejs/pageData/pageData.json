@@ -18,5 +18,10 @@
     "title": "terms__diving_shop",
     "description": "ダイビングショップの利用規約のページです",
     "url": "http://localhost:3000/terms.html"
+  },
+  "404": {
+    "title": "404__diving_shop",
+    "description": "ダイビングショップの404ページです",
+    "url": "http://localhost:3000/404.html"
   }
 }

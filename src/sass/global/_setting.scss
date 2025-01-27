@@ -24,6 +24,10 @@ body {
   font-family: $base-font-family;
 }
 
+main {
+  flex: 1;
+}
+
 // フォントウェイト
 $light: 300;
 $normal: 400;

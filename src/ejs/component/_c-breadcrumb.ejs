@@ -22,6 +22,8 @@ const breadcrumbsData = {
   notFound: [{ label: "404" }],
 };
 
+
+
 // パンくずリストを動的に生成する関数
 function generateBreadcrumbs(key) {
   return [breadcrumbsData.home, ...(breadcrumbsData[key] || [])];
@@ -37,7 +39,11 @@ console.log('Breadcrumbs Key:', breadcrumbsKey);
 const breadcrumbs = generateBreadcrumbs(breadcrumbsKey);
 %>
 
-<div class="c-breadcrumb">
+<%
+const { modifier } = locals || {};
+%>
+
+<div class="c-breadcrumb <%= modifier ? `c-breadcrumb--${modifier}` : '' %>">
   <div class="c-breadcrumb__inner l-inner">
     <% breadcrumbs.forEach((breadcrumb, index) => { %>
       <span>
