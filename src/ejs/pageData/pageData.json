@@ -23,5 +23,10 @@
     "title": "404__diving_shop",
     "description": "ダイビングショップの404ページです",
     "url": "http://localhost:3000/404.html"
+  },
+  "sitemap": {
+    "title": "サイトマップ | CodeUps diving",
+    "description": "ダイビングショップのサイトマップページです",
+    "url": "http://localhost:3000/page-sitemap.html"
   }
 }
