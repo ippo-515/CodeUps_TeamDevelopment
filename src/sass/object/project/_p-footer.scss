@@ -1,5 +1,16 @@
 @use "global" as *;
 
+.p-footer {
+  background-color: $color-primary;
+  padding-top: rem(48);
+  padding-bottom: rem(56);
+
+  @include mq(md) {
+    padding-top: rem(80);
+    padding-bottom: rem(80);
+  }
+}
+
 .p-footer__img {
   @include mq(md) {
     display: flex;
