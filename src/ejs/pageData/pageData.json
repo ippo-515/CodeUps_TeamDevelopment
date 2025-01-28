@@ -28,5 +28,10 @@
     "title": "サイトマップ | CodeUps diving",
     "description": "ダイビングショップのサイトマップページです",
     "url": "http://localhost:3000/page-sitemap.html"
+  },
+  "thanks": {
+    "title": "お問い合わせ完了 | CodeUps diving",
+    "description": "ダイビングショップのお問い合わせ完了ページです",
+    "url": "http://localhost:3000/page-thanks.html"
   }
 }
