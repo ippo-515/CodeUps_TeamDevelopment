@@ -27,14 +27,19 @@
 
       <!-- お問い合わせ完了 -->
       <div class="l-page-contact">
-        <!-- prettier-ignore -->
-        <%- include(ejsPath + '/project/_p-thanks') %>
+        <div class="p-page-contact">
+          <div class="p-page-contact__inner l-inner">
+            <div class="p-page-contact__content">
+              <!-- prettier-ignore -->
+              <%- include(ejsPath + '/project/_p-thanks') %>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- トップへ戻るボタン -->
       <!-- prettier-ignore -->
       <%- include(ejsPath + '/component/_c-to-top', {link:'#top'}) %>
-
     </main>
 
     <!-- フッター -->
