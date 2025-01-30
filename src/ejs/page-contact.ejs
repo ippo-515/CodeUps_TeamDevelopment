@@ -1,0 +1,50 @@
+<% baseUrlPath='.' ; ejsPath='.' ; pageData="thanks" %>
+<!DOCTYPE html>
+<html lang="ja">
+  <!-- prettier-ignore -->
+  <%- include(ejsPath + '/common/_head' ,{ baseUrl: baseUrlPath, page:
+  json[pageData] }) %>
+
+  <body>
+    <!-- ヘッダー -->
+    <header class="l-header">
+      <!-- prettier-ignore -->
+      <%- include(ejsPath + '/common/_p-header' ) %>
+    </header>
+
+    <main>
+      <!-- 下層ページのメインビュー -->
+      <!-- prettier-ignore -->
+      <%- include(ejsPath + '/project/_p-sub-mv', { pageTitle: 'Contact', imagePathDesktop: './assets/images/common/contact-mv.webp', imagePathMobile: './assets/images/common/contact-mv-sp.jpg', altText: ''}) %>
+
+      <!-- パンくず -->
+      <!-- prettier-ignore -->
+      <% const breadcrumbsKey = "contact"; %>
+      <div class="l-breadcrumb">
+        <!-- prettier-ignore -->
+        <%- include(ejsPath + '/component/_c-breadcrumb' , { breadcrumbsKey, modifier: ""}) %>
+      </div>
+
+      <!-- お問い合わせ -->
+      <div class="l-page-contact">
+        <div class="p-page-contact">
+          <div class="p-page-contact__inner l-inner">
+            <div class="p-page-contact__content">
+              <!-- prettier-ignore -->
+              <%- include(ejsPath + '/project/_p-form') %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- トップへ戻るボタン -->
+      <!-- prettier-ignore -->
+      <%- include(ejsPath + '/component/_c-to-top', {link:'#top'}) %>
+    </main>
+
+    <!-- フッター -->
+    <!-- prettier-ignore -->
+    <%- include(ejsPath + '/common/_l-footer' , {modifierMarginTop:'contact-page'} ) %>
+  </body>
+
+</html>
