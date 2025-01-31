@@ -8,7 +8,7 @@
 <div class="p-about-us">
   <div class="p-about-us__inner<%- imgClass %> l-inner">
     <div class="p-about-us__img-wrapper">
-      <div class="p-about-us__img-left">
+      <div class="p-about-us__img-left<%= uDeskTopImgLeft ? ` ${uDeskTopImgLeft}` : '' %>">
         <picture>
           <source
             srcset="./assets/images/common/about1-pc.jpg"

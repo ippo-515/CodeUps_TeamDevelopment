@@ -1,0 +1,59 @@
+<% baseUrlPath='.' ; ejsPath='.' ; pageData="about" %>
+<!DOCTYPE html>
+<html lang="ja">
+  <!-- prettier-ignore -->
+  <%- include(ejsPath + '/common/_head' ,{ baseUrl: baseUrlPath, page:
+  json[pageData] }) %>
+
+  <body>
+    <!-- ヘッダー -->
+    <header class="l-header">
+      <!-- prettier-ignore -->
+      <%- include(ejsPath + '/common/_p-header' ) %>
+    </header>
+
+    <main>
+      <!-- 下層ページのメインビュー -->
+      <!-- prettier-ignore -->
+      <%- include(ejsPath + '/project/_p-sub-mv', { pageTitle: 'About us', imagePathDesktop: './assets/images/common/sub-about-mv.webp', imagePathMobile: './assets/images/common/sub-about-mv-sp.jpg', altText: ''}) %>
+
+      <!-- パンくず -->
+      <!-- prettier-ignore -->
+      <% const breadcrumbsKey = "about"; %>
+      <div class="l-breadcrumb">
+        <!-- prettier-ignore -->
+        <%- include(ejsPath + '/component/_c-breadcrumb' , { breadcrumbsKey, modifier: ""}) %>
+      </div>
+
+      <!-- 私たちについて -->
+      <section class="l-about-us">
+        <!-- prettier-ignore -->
+        <%- include(ejsPath + '/project/_p-about-us', {contentTitle: 'Dive into\<br\>the Ocean',
+        img: 'coral',
+        text: 'ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。\<br\>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。',
+        uDeskTopImgLeft: 'u-desktop'}) %>
+      </section>
+
+      <!-- ギャラリー -->
+      <section class="l-gallery">
+        <!-- prettier-ignore -->
+        <%- include(ejsPath + '/project/_p-gallery') %>
+      </section>
+
+      <!-- Contact -->
+      <div class="l-contact">
+        <!-- prettier-ignore -->
+        <%- include(ejsPath + '/project/_p-contact') %>
+      </div>
+
+      <!-- トップへ戻るボタン -->
+      <!-- prettier-ignore -->
+      <%- include(ejsPath + '/component/_c-to-top', {link:'#top'}) %>
+    </main>
+
+    <!-- フッター -->
+    <!-- prettier-ignore -->
+    <%- include(ejsPath + '/common/_l-footer' , {modifierMarginTop:''} ) %>
+  </body>
+
+</html>
