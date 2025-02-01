@@ -109,7 +109,7 @@ button,
 }
 
 [type="radio"] {
-	display: none;
+	// display: none;
 
 	+ span {
 		display: inline-block;
@@ -158,7 +158,7 @@ button,
 }
 
 [type="checkbox"] {
-	display: none;
+	// display: none;
 
 	+ span {
 		display: inline-block;
@@ -341,14 +341,18 @@ textarea {
 	margin-top: rem(3);
 }
 
+.p-form__checkbox {
+	margin-left: rem(-3);
+}
+
 .p-form__campaign {
 	font-size: rem(12);
 	font-weight: $normal;
 	@include mq(md) {
 		background-position: right 0.4375rem top 55%;
-		margin-top: rem(-3);
+		margin-top: rem(-4);
 		padding-top: rem(6);
-		padding-bottom: rem(3);
+		padding-bottom: rem(4);
 	}
 }
 
@@ -356,10 +360,10 @@ textarea {
 	max-width: rem(284);
 	width: 100%;
 	margin: auto;
-	margin-top: rem(39);
+	margin-top: rem(15);
 	@include mq(md) {
 		max-width: rem(374);
-		margin-top: rem(78);
+		margin-top: rem(54);
 	}
 }
 
