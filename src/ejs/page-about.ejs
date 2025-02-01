@@ -1,6 +1,6 @@
 <% baseUrlPath='.' ; ejsPath='.' ; pageData="about" %>
 <!DOCTYPE html>
-<html lang="ja">
+<html class="html-about" lang="ja">
   <!-- prettier-ignore -->
   <%- include(ejsPath + '/common/_head' ,{ baseUrl: baseUrlPath, page:
   json[pageData] }) %>
@@ -29,9 +29,13 @@
       <section class="l-about-us">
         <!-- prettier-ignore -->
         <%- include(ejsPath + '/project/_p-about-us', {contentTitle: 'Dive into\<br\>the Ocean',
-        img: 'coral',
+        img: '',
         text: 'ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。\<br\>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。',
-        uDeskTopImgLeft: 'u-desktop'}) %>
+        uDeskTopImgLeft: 'u-desktop',
+        modifierWidth: 'width',
+        modifierNone: 'none',
+        modifierImg: 'goldfish',
+        modifierTitle: 'page-title'}) %>
       </section>
 
       <!-- ギャラリー -->

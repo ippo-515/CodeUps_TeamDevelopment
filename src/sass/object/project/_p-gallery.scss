@@ -1,5 +1,24 @@
 @use "global" as *;
 
+.p-gallery {
+  position: relative;
+}
+
+.p-gallery::before {
+  @include mq(md) {
+    content: "";
+    position: absolute;
+    right: calc(50% - min(48%, rem(644)));
+    top: rem(-80);
+    width: rem(309); // カンプは301×138でその通り指定してもレンダリングサイズが(309x2)×(146x2)となりピクパチェックで一致しない → 309×146で指定した
+    height: rem(146);
+    background-image: url(../images/common/pc-fish1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}
+
 .p-gallery__items-wrap {
   margin-top: rem(40);
   @include mq(md) {

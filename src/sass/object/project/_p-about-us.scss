@@ -1,6 +1,28 @@
 @use "global" as *;
 
 .p-about-us {
+  position: relative;
+}
+
+.p-about-us--goldfish::before {
+  content: "";
+  background-image: url(../images/common/pc-fishBlog2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: absolute;
+  top: rem(-24);
+  left: rem(15);
+  width: rem(120);
+  height: rem(55);
+  z-index: 20;
+  @include mq(md) {
+    top: rem(-70);
+    left: calc(50% - min(48%, rem(620)));
+    width: rem(301);
+    height: rem(138);
+    z-index: 0;
+  }
 }
 
 .p-about-us__inner {
@@ -71,6 +93,15 @@
   z-index: 1;
 }
 
+.p-about-us__img-right--width {
+  bottom: rem(-16);
+  width: 100%;
+  @include mq(md) {
+    bottom: 0;
+    width: 81.44928%;
+  }
+}
+
 .p-about-us__img-right::before {
   content: "";
   display: block;
@@ -122,6 +153,17 @@
   }
 }
 
+.p-about-us__content-title--page-title {
+  position: absolute;
+  top: rem(24);
+  left: rem(39);
+  z-index: 10;
+  color: $white;
+  @include mq(md) {
+    position: static;
+  }
+}
+
 .p-about-us__text-wrapper {
   @include mq("md") {
     width: rem(400);
@@ -147,4 +189,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.p-about-us__button--none {
+  display: none;
 }
