@@ -1,12 +1,15 @@
-<% project = '.'; tabText = [ { link: '#',
+<% project = '.'; tabText = [ {active: 'active', target:
+'p-diving-tab-switching__content1',
 imgDefault:'./assets/images/common/information-tab-green.png',
 imgDefaultAlt:'クジラの画像', imgHover:
 './assets/images/common/information-tab-white.png', imgHoverAlt: 'クジラの画像',
-title1: 'ライセンス', title2: '講習' },{ link: '#',
+title1: 'ライセンス', title2: '講習' },{active: '', target:
+'p-diving-tab-switching__content2',
 imgDefault:'./assets/images/common/information-tab-green.png',
 imgDefaultAlt:'クジラの画像', imgHover:
 './assets/images/common/information-tab-white.png', imgHoverAlt: 'クジラの画像',
-title1: 'ファン', title2: 'ダイビング' },{ link: '#',
+title1: 'ファン', title2: 'ダイビング' },{active: '', target:
+'p-diving-tab-switching__content3',
 imgDefault:'./assets/images/common/information-tab-green.png',
 imgDefaultAlt:'クジラの画像', imgHover:
 './assets/images/common/information-tab-white.png', imgHoverAlt: 'クジラの画像',
@@ -16,10 +19,10 @@ title1: '体験', title2: 'ダイビング' }, ] %>
   <ul class="p-diving-information-tabs__items">
     <% tabText.forEach(function(tab) { %>
     <li class="p-diving-information-tabs__item">
-      <%- include(project + './component/_c-diving-information-tab', { link:
-      tab.link, imgDefault: tab.imgDefault, imgDefaultAlt: tab.imgDefaultAlt,
-      imgHover: tab.imgHover, imgHoverAlt: tab.imgHoverAlt, title1:tab.title1,
-      title2: tab.title2}) %>
+      <%- include(project + './component/_c-diving-information-tab', {active:
+      tab.active, target: tab.target, imgDefault: tab.imgDefault, imgDefaultAlt:
+      tab.imgDefaultAlt, imgHover: tab.imgHover, imgHoverAlt: tab.imgHoverAlt,
+      title1:tab.title1, title2: tab.title2}) %>
     </li>
     <% }); %>
   </ul>
