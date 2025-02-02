@@ -1,19 +1,19 @@
 <div class="p-form">
   <form action="#" method="post" class="p-form__contact" id="p-form__contact">
     <dl class="p-form__item">
-      <dt>お名前<span>必須</span></dt>
+      <dt><label for="p-form__name">お名前</label><span>必須</span></dt>
       <dd>
         <input type="text" name="user_name" class="p-form__name" id="p-form__name" placeholder="沖縄&emsp;太郎" required>
       </dd>
     </dl>
     <dl class="p-form__item">
-      <dt>メールアドレス<span>必須</span></dt>
+      <dt><label for="p-form__email">メールアドレス</label><span>必須</span></dt>
       <dd>
         <input type="email" name="mail_address" class="p-form__email" id="p-form__email" placeholder="aaa000@ggmail.com" required>
       </dd>
     </dl>
     <dl class="p-form__item">
-      <dt>電話番号<span>必須</span></dt>
+      <dt><label for="p-form__tel">電話番号</label><span>必須</span></dt>
       <dd>
         <input type="tel" name="tel_number" class="p-form__tel" id="p-form__tel" placeholder="000-0000-0000" required>
       </dd>
@@ -21,9 +21,9 @@
     <dl class="p-form__item">
       <dt>お問合せ項目<span>必須</span></dt>
       <dd>
-        <label><input type="checkbox" name="inquiry" value="ダイビング講習について" checked><span>ダイビング講習について</span></label>
-        <label><input type="checkbox" name="inquiry" value="ファンダイビングについて"><span>ファンダイビングについて</span></label>
-        <label><input type="checkbox" name="inquiry" value="体験ダイビングについて"><span>体験ダイビングについて</span></label>
+        <label><input type="checkbox" name="inquiry" class="p-form__checkbox" value="ダイビング講習について" checked><span>ダイビング講習について</span></label>
+        <label><input type="checkbox" name="inquiry" class="p-form__checkbox" value="ファンダイビングについて"><span>ファンダイビングについて</span></label>
+        <label><input type="checkbox" name="inquiry" class="p-form__checkbox" value="体験ダイビングについて"><span>体験ダイビングについて</span></label>
       </dd>
     </dl>
     <dl class="p-form__item">
@@ -38,7 +38,7 @@
       </dd>
     </dl>
     <dl class="p-form__item">
-      <dt>お問合せ内容<span>必須</span></dt>
+      <dt><label for="p-form__textarea">お問合せ内容</label><span>必須</span></dt>
       <dd>
         <textarea name="contents" class="p-form__textarea" id="p-form__textarea" required></textarea>
       </dd>

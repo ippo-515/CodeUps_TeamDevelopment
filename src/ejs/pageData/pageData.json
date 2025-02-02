@@ -34,6 +34,11 @@
     "description": "ダイビングショップのお問い合わせ完了ページです",
     "url": "http://localhost:3000/page-thanks.html"
   },
+  "contact": {
+    "title": "お問い合わせ | CodeUps diving",
+    "description": "ダイビングショップのお問い合わせページです",
+    "url": "http://localhost:3000/page-contact.html"
+  },
   "about": {
     "title": "私たちについて | CodeUps diving",
     "description": "ダイビングショップの私たちについてページです",
