@@ -5,10 +5,46 @@
   json[pageData] }) %>
 
   <body>
+    <!-- prettier-ignore -->
     <%- include(ejsPath + '/common/_p-header' ) %>
+    <section class="l-mv">
+      <!-- prettier-ignore -->
+      <%- include(ejsPath + '/project/_p-mv') %>
+    </section>
     <main>
-      
+      <section class="l-campaign-top">
+        <!-- prettier-ignore -->
+        <%- include(ejsPath + '/project/_p-campaign-top') %>
+      </section>
+    </section>
+      <section class="l-about-us-top">
+        <!-- prettier-ignore -->
+        <%- include(ejsPath + '/project/_p-about-us-top') %>
+      </section>
+      <section class="l-diving-information">
+        <!-- prettier-ignore -->
+        <%- include(ejsPath + '/project/_p-diving-information') %>
+      </section>
+      <section class="l-blog">
+        <!-- prettier-ignore -->
+        <%- include(ejsPath + '/project/_p-blog') %>
+      </section>
+      <section class="l-voice">
+        <!-- prettier-ignore -->
+        <%- include(ejsPath + '/project/_p-voice') %>
+      </section>
+      <section class="l-fee-top">
+        <!-- prettier-ignore -->
+        <%- include(ejsPath + '/project/_p-fee-top') %>
+      </section>
+      <section class="l-page-contact">
+        <!-- prettier-ignore -->
+        <%- include(ejsPath + '/project/_p-contact') %>
+      </section>
     </main>
-    <%- include(ejsPath + '/common/_p-footer' ) %>
+    <div class="l-footer">
+      <!-- prettier-ignore -->
+      <%- include(ejsPath + '/common/_p-footer' ) %>
+    </div>
   </body>
 </html>
