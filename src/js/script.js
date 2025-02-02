@@ -194,8 +194,8 @@ jQuery(function ($) {
   });
 
   // モーダル
-  const open = $('.js-modal-open'),
-    modal = $('.js-modal');
+  const open = $(".js-modal-open"),
+    modal = $(".js-modal");
   let scrollTop;
 
   //   スクロールバーの幅を計算する関数
@@ -204,10 +204,10 @@ jQuery(function ($) {
   }
 
   //Gallery画像をクリックしたらモーダルを表示する
-  open.on('click', function () {
-    let imgsrc = $(this).find('img').attr('src');
-    $('.c-modal__img').children().attr('src', imgsrc);
-    modal.addClass('is-open');
+  open.on("click", function () {
+    let imgsrc = $(this).find("img").attr("src");
+    $(".c-modal__img").children().attr("src", imgsrc);
+    modal.addClass("is-open");
 
     // スクロールバーの幅を取得
     const scrollbarWidth = getScrollbarWidth();
@@ -215,12 +215,12 @@ jQuery(function ($) {
     // 背景を固定してスクロールさせない
     scrollTop = $(window).scrollTop();
 
-    $('body').css({
-      position: 'fixed',
+    $("body").css({
+      position: "fixed",
       top: -scrollTop,
       left: 0,
       // right: 0,
-      width: `calc(100% - ${scrollbarWidth}px)` // スクロールバーの幅を考慮する
+      width: `calc(100% - ${scrollbarWidth}px)`, // スクロールバーの幅を考慮する
     });
   });
 
@@ -229,14 +229,28 @@ jQuery(function ($) {
     modal.removeClass("is-open");
 
     // 背景の固定を解除する
-    $('body').css({
-      position: '',
-      top: '',
-      left: '',
+    $("body").css({
+      position: "",
+      top: "",
+      left: "",
       // right: '',
-      width: ''
+      width: "",
     });
 
     $(window).scrollTop(scrollTop);
+  });
+  /* --------------------------------------------
+   * 　ダイビング情報のタブ切り替え
+   * -------------------------------------------- */
+  $(document).ready(function () {
+    $(".c-diving-information-tab").click(function () {
+      // タブのアクティブクラスを切り替え
+      $(".c-diving-information-tab").removeClass("active");
+      $(this).addClass("active");
+
+      // 画像の切り替え
+      $(".p-diving-tab-switching__content").removeClass("active");
+      $("#" + $(this).data("target")).addClass("active");
+    });
   });
 });
