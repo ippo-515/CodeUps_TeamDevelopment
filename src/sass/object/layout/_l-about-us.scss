@@ -1,0 +1,8 @@
+@use "global" as *;
+
+.l-about-us {
+  margin-top: rem(52);
+  @include mq(md) {
+    margin-top: rem(149);
+  }
+}
