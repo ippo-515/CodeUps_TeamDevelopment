@@ -43,5 +43,10 @@
     "title": "私たちについて | CodeUps diving",
     "description": "ダイビングショップの私たちについてページです",
     "url": "http://localhost:3000/page-about.html"
+  },
+  "voices": {
+    "title": "お客様の声 | CodeUps diving",
+    "description": "ダイビングショップのお客様の声ページです",
+    "url": "http://localhost:3000/archive-voices.html"
   }
 }

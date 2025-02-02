@@ -1,6 +1,8 @@
 @use "global" as *;
 
-.pagenavi {}
+.pagenavi {
+  margin-top: rem(80);
+}
 
 .pagenavi__inner {
   max-width: rem(703);
