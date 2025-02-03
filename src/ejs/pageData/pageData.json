@@ -53,5 +53,10 @@
     "title": "キャンペーン | CodeUps diving",
     "description": "ダイビングショップのキャンペーンページです",
     "url": "http://localhost:3000/archive-campain.html"
+  },
+  "price": {
+    "title": "プライス | CodeUps diving",
+    "description": "ダイビングショップの料金一覧ページです",
+    "url": "http://localhost:3000/page-price.html"
   }
 }
