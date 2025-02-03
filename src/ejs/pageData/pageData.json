@@ -48,5 +48,10 @@
     "title": "お客様の声 | CodeUps diving",
     "description": "ダイビングショップのお客様の声ページです",
     "url": "http://localhost:3000/archive-voices.html"
+  },
+  "campaign": {
+    "title": "キャンペーン | CodeUps diving",
+    "description": "ダイビングショップのキャンペーンページです",
+    "url": "http://localhost:3000/archive-campain.html"
   }
 }
