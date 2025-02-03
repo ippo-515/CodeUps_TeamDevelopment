@@ -5,8 +5,10 @@
   json[pageData] }) %>
 
   <body>
-    <!-- prettier-ignore -->
-    <%- include(ejsPath + '/common/_p-header' ) %>
+    <header class="l-header">
+      <!-- prettier-ignore -->
+      <%- include(ejsPath + '/common/_p-header' ) %>
+    </header>
     <section class="l-mv">
       <!-- prettier-ignore -->
       <%- include(ejsPath + '/project/_p-mv') %>
@@ -41,10 +43,13 @@
         <!-- prettier-ignore -->
         <%- include(ejsPath + '/project/_p-contact') %>
       </section>
+      <!-- トップへ戻るボタン -->
+      <!-- prettier-ignore -->
+      <%- include(ejsPath + '/component/_c-to-top', {link:'#top'}) %>
     </main>
-    <div class="l-footer">
+    <footer class="l-footer">
       <!-- prettier-ignore -->
       <%- include(ejsPath + '/common/_p-footer' ) %>
-    </div>
+    </footer>
   </body>
 </html>
