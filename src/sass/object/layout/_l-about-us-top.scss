@@ -1,8 +1,8 @@
 @use "global" as *;
 
-.l-about-us-top {
-  margin-top: rem(80);
+.l-diving-tab-switching {
+  margin-top: rem(121);
   @include mq("md") {
-    margin-top: rem(140);
+    margin-top: rem(150);
   }
 }
