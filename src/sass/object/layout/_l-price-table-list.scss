@@ -1,7 +1,7 @@
 @use "global" as *;
 
-.l-diving-tab-switching {
-  margin-top: rem(121);
+.l-price-table-list {
+  margin-top: rem(52);
   @include mq("md") {
     margin-top: rem(150);
   }

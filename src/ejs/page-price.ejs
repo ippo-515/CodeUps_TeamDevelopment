@@ -1,0 +1,51 @@
+<% baseUrlPath='.' ; ejsPath='.' ; pageData="price" %>
+<!DOCTYPE html>
+<html lang="ja">
+  <!-- prettier-ignore -->
+  <%- include(ejsPath + '/common/_head' ,{ baseUrl: baseUrlPath, page:
+  json[pageData] }) %>
+
+  <body>
+    <!-- ヘッダー -->
+    <header class="l-header">
+      <!-- prettier-ignore -->
+      <%- include(ejsPath + '/common/_p-header' ) %>
+    </header>
+
+    <main>
+      <!-- 下層ページのメインビュー -->
+      <!-- prettier-ignore -->
+      <%- include(ejsPath + '/project/_p-sub-mv', { pageTitle: 'Price', imagePathDesktop: './assets/images/common/sub-price-mv.webp', imagePathMobile: './assets/images/common/sub-price-mv-sp.jpg', altText: ''}) %>
+
+      <!-- パンくず -->
+      <!-- prettier-ignore -->
+      <% const breadcrumbsKey = "pricing"; %>
+      <div class="l-breadcrumb">
+        <!-- prettier-ignore -->
+        <%- include(ejsPath + '/component/_c-breadcrumb' , { breadcrumbsKey, modifier: ""}) %>
+      </div>
+
+      <!-- キャンペーンセクション -->
+      <div class="l-price-table-list">
+        <!-- prettier-ignore -->
+        <%- include(ejsPath + '/project/_p-price-table-list') %>
+      </div>
+
+      <!-- Contact -->
+      <div class="l-contact">
+        <!-- prettier-ignore -->
+        <%- include(ejsPath + '/project/_p-contact') %>
+      </div>
+
+      <!-- トップへ戻るボタン -->
+      <!-- prettier-ignore -->
+      <%- include(ejsPath + '/component/_c-to-top', {link:'#top'}) %>
+    </main>
+
+    <!-- フッター -->
+    <footer class="l-footer">
+      <!-- prettier-ignore -->
+      <%- include(ejsPath + '/common/_p-footer' ) %>
+    </footer>
+  </body>
+</html>
