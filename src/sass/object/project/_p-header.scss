@@ -8,6 +8,7 @@
   // width: 100%;
   height: rem(80);
   background-color: rgba($color: $color-accent, $alpha: 68%);
+  transition: background-color 0.3s;
 
   @include mq(md) {
     height: rem(90);
@@ -16,10 +17,6 @@
 
 .p-header.is-color {
   background-color: $gray;
-}
-
-.p-header.is-active {
-  background-color: $color-primary;
 }
 
 .p-header__inner {
