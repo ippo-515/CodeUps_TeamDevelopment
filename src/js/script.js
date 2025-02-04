@@ -25,7 +25,6 @@ jQuery(function ($) {
     } else {
       $(".js-hamburger").addClass("is-active");
       $("body, html").css("overflow", "hidden"); // ドロワーを開いたときは後ろがスクロールしないようにする
-      $(".js-header").addClass("is-active"); // ロゴとメニューの文字が被らないように背景色を指定
       $(".js-sp-nav").fadeIn(300);
     }
   });
