@@ -63,5 +63,10 @@
     "title": "ダイビング情報 | CodeUps diving",
     "description": "ダイビングショップのダイビング情報ページです",
     "url": "http://localhost:3000/page-diving-info.html"
+  },
+  "faq": {
+    "title": "faq__diving_shop",
+    "description": "ダイビングショップのよくある質問ページです",
+    "url": "http://localhost:3000/page-faq.html"
   }
 }
