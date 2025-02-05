@@ -52,7 +52,7 @@
   "campaign": {
     "title": "キャンペーン | CodeUps diving",
     "description": "ダイビングショップのキャンペーンページです",
-    "url": "http://localhost:3000/archive-campain.html"
+    "url": "http://localhost:3000/archive-campaign.html"
   },
   "price": {
     "title": "プライス | CodeUps diving",
