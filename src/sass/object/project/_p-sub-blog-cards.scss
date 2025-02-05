@@ -1,0 +1,47 @@
+@use "global" as *;
+
+.p-sub-blog-cards {
+  position: relative;
+  display: grid;
+  gap: rem(40);
+  grid-template-columns: repeat(1, 1fr);
+  margin-top: 0;
+
+  @include mq(md) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(80) rem(40);
+  }
+}
+
+.p-sub-blog-cards::before {
+  background-image: url(../images/common/voice3.1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  content: "";
+  width: 100%;
+  max-width: rem(120);
+  height: rem(55);
+  position: absolute;
+  top: -1.5375rem;
+  left: calc(48% - min(44vw, 24.6rem));
+  z-index: -1;
+
+  @include mq(md) {
+    max-width: 18.8125rem;
+    height: 8.625rem;
+    top: -5.8375rem;
+    left: calc(47% - min(44vw, 24.6rem));
+  }
+}
+
+.p-sub-blog-cards__items {
+  margin-top: rem(27.2);
+  max-width: rem(600);
+  margin-inline: auto;
+
+  @include mq(md) {
+    margin-top: rem(80);
+    max-width: $l-inner;
+  }
+}

@@ -11,7 +11,7 @@
   }
 }
 
-.p-blog-cards .p-blog-cards--two-rows {
+.p-blog-cards.p-blog-cards--two-rows {
   display: grid;
   gap: rem(40);
   grid-template-columns: repeat(1, 1fr);
