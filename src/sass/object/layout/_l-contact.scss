@@ -4,6 +4,10 @@
   margin-top: rem(80);
 
   @include mq(md) {
-    margin-top: rem(100);
+    margin-top: rem(140);
   }
+}
+
+.l-contact--about-page {
+  margin-top: rem(106);
 }

@@ -61,6 +61,10 @@
   }
 }
 
+.p-about-us__img-wrapper--about-page {
+  margin-bottom: rem(54);
+}
+
 .p-about-us__img-left {
   position: absolute;
   width: 37.10145%;
@@ -183,6 +187,10 @@
     color: $white;
     margin-bottom: rem(40);
   }
+}
+
+.p-about-us__text--about-page {
+  margin-bottom: 0;
 }
 
 .p-about-us__button {
