@@ -7,7 +7,7 @@
 
 <div class="p-about-us<%= modifierImg ? ` p-about-us--${modifierImg}` : '' %>">
   <div class="p-about-us__inner<%- imgClass %> l-inner">
-    <div class="p-about-us__img-wrapper">
+    <div class="p-about-us__img-wrapper<%= modifierMarginBottom ? ` p-about-us__img-wrapper--${modifierMarginBottom}` : '' %>">
       <div class="p-about-us__img-left<%= uDeskTopImgLeft ? ` ${uDeskTopImgLeft}` : '' %>">
         <picture>
           <source
@@ -33,7 +33,7 @@
     <div class="p-about-us__content-wrapper">
       <h3 class="p-about-us__content-title<%= modifierTitle ? ` p-about-us__content-title--${modifierTitle}` : '' %>"><%- contentTitle %></h3>
       <div class="p-about-us__text-wrapper">
-        <p class="p-about-us__text"><%- text %></p>
+        <p class="p-about-us__text<%= modifierMarginBottom ? ` p-about-us__text--${modifierMarginBottom}` : '' %>"><%- text %></p>
         <div class="p-about-us__button<%= modifierNone ? ` p-about-us__button--${modifierNone}` : '' %>">
           <!-- prettier-ignore -->
           <%- include(ejsPath + './component/_c-button', {link:'#', text:'View more'}) %>
