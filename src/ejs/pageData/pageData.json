@@ -68,5 +68,10 @@
     "title": "faq__diving_shop",
     "description": "ダイビングショップのよくある質問ページです",
     "url": "http://localhost:3000/page-faq.html"
+  },
+  "blog": {
+    "title": "blog__diving_shop",
+    "description": "ダイビングショップのブログ一覧ページです",
+    "url": "http://localhost:3000/home.html"
   }
 }
