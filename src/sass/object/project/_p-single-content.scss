@@ -1,5 +1,31 @@
 @use "global" as *;
 
+.p-single-content {
+  position: relative;
+}
+
+.p-single-content::before {
+  background-image: url(../images/common/voice3.1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  content: "";
+  width: 100%;
+  max-width: rem(120);
+  height: rem(55);
+  position: absolute;
+  top: -1.5375rem;
+  left: calc(48% - min(44vw, 24.6rem));
+  z-index: -1;
+
+  @include mq(md) {
+    max-width: 18.8125rem;
+    height: 8.625rem;
+    top: -4.1375rem;
+    left: calc(47% - min(44vw, 24.6rem));
+  }
+}
+
 .p-single-content__header-meta {
   color: $color-accent;
 }

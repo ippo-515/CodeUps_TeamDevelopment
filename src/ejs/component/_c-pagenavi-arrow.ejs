@@ -1,0 +1,32 @@
+<div class="pagenavi">
+  <div class="pagenavi__inner">
+    <div class='wp-pagenavi' role='navigation'>
+      <!-- 前のページリンク -->
+      <%
+        const previousLink = "/page/1";
+        const nextLink = "/page/3";
+        const page = [
+          { number: 1, link: "/page/1", isCurrent: true, isSp: false },
+          { number: 2, link: "/page/2", isCurrent: false, isSp: false },
+          { number: 3, link: "/page/3", isCurrent: false, isSp: false },
+          { number: 4, link: "/page/4", isCurrent: false, isSp: true },
+          { number: 5, link: "/page/5", isCurrent: false, isSp: true },
+          { number: 6, link: "/page/6", isCurrent: false, isSp: true },
+        ];
+      %>
+
+      <% if (previousLink) { %>
+        <a class="previouspostslink" rel="prev" href="<%= previousLink %>">
+          <span class="pagenavi-arrow"></span>
+        </a>
+      <% } %>
+
+      <!-- 次のページリンク -->
+      <% if (nextLink) { %>
+        <a class="nextpostslink" rel="next" href="<%= nextLink %>">
+          <span class="pagenavi-arrow pagenavi-arrow--next"></span>
+        </a>
+      <% } %>
+    </div>
+  </div>
+</div>

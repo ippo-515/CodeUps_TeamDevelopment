@@ -73,5 +73,10 @@
     "title": "blog__diving_shop",
     "description": "ダイビングショップのブログ一覧ページです",
     "url": "http://localhost:3000/home.html"
+  },
+  "single": {
+    "title": "投稿__diving_shop",
+    "description": "ダイビングショップのブログ詳細ページです",
+    "url": "http://localhost:3000/single.html"
   }
 }
