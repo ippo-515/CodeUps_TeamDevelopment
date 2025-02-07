@@ -9,10 +9,11 @@
   font-size: rem(32);
   font-weight: $normal;
   color: $color-accent;
-  line-height: 1;
+  line-height: 0.6;
 
   @include mq(md) {
     font-size: rem(40);
+    line-height: 0.8;
   }
 }
 
