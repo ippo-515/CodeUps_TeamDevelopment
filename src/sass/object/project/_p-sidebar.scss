@@ -84,6 +84,15 @@
   color: $black;
 }
 
+time.p-sidebar__heading-date {
+  font-size:  rem(12);
+  display: block;
+}
+
+p.p-sidebar__heading-title {
+  white-space: nowrap;
+}
+
 .p-sidebar__reviews-items {
   margin-top: rem(24);
 }
@@ -115,7 +124,7 @@
 }
 
 .p-sidebar__campaign-items {
-  margin-top: rem(32);
+  margin-top: rem(24);
 }
 
 .p-sidebar__campaign-item {
@@ -131,7 +140,7 @@
 
 .p-sidebar__campaign-img img {
   width: 100%;
-  aspect-ratio: 333/223;
+  aspect-ratio: 294/188;
   object-fit: cover;
 }
 
@@ -141,10 +150,6 @@
   flex-grow: 1;
   margin-top: rem(-1.2);
   padding: rem(18) rem(16) rem(24) rem(16);
-
-  @include mq(md) {
-    padding: rem(16) rem(16) rem(40) rem(16);
-  }
 }
 
 .p-sidebar__campaign-meta {
@@ -156,24 +161,22 @@
   font-size: rem(16);
   font-family: $base-font-family;
   font-weight: $medium;
-  padding-bottom: 0;
+  padding-bottom: rem(8);
   text-align: center;
 
   @include mq(md) {
-    margin-top: rem(5);
+    margin-top: rem(1.8);
   }
 }
 
 .p-sidebar__campaign-text {
   text-align: center;
-  font-size: rem(16);
+  font-size: rem(14.4);
   line-height: calc( 24/ 16);
   margin-top: rem(8);
 
   @include mq(md) {
-    font-size: rem(16);
     line-height: calc( 24/ 16);
-    margin-top: rem(16);
   }
 }
 
@@ -192,10 +195,6 @@
   line-height: 1;
   display: flex;
   align-items: flex-end;
-
-  @include mq(md) {
-    font-size: rem(24);
-  }
 }
 
 .p-sidebar__campaign-price2 {
@@ -205,11 +204,6 @@
   line-height: 1;
   color: $color-primary;
   margin-left: rem(16);
-
-  @include mq(md) {
-    font-size: rem(36.8);
-    margin-left: rem(32);
-  }
 }
 
 .p-sidebar__archive {
@@ -221,7 +215,7 @@
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: rem(9) 0 rem(7) rem(14);
+  border-width: rem(10.6) 0 rem(7) rem(15.6);
   border-color: transparent transparent transparent $color-primary;
   position: absolute;
   top: 0;
@@ -241,7 +235,7 @@
 
 .p-sidebar__archive-header.is-open__a::before {
   transform: translateY(-50%) rotate(327.5deg);
-  top: rem(3);
+  top: rem(9.4);
 }
 
 .p-sidebar__archive-text {
@@ -253,7 +247,7 @@
   color: $color-primary;
   max-width: rem(93);
   text-align: end;
-
+  margin-top: rem(4);
 }
 
 .p-sidebar__archive-text::before {
@@ -261,10 +255,10 @@
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: rem(10) 0 rem(10) rem(14);
+  border-width: rem(13.2) 0 rem(8.4) rem(18.8);
   border-color: transparent transparent transparent $color-primary;
   position: absolute;
-  top: rem(-6);
+  top: rem(-0.4);
   left: rem(30);
   bottom: 0;
   margin: auto;
