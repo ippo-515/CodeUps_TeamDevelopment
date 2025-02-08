@@ -14,15 +14,15 @@
   max-width: rem(120);
   height: rem(55);
   position: absolute;
-  top: -1.5375rem;
+  top: -1.1375rem;
   left: calc(48% - min(44vw, 24.6rem));
   z-index: -1;
 
   @include mq(md) {
     max-width: 18.8125rem;
     height: 8.625rem;
-    top: -4.1375rem;
-    left: calc(47% - min(44vw, 24.6rem));
+    top: -4.0375rem;
+    left: calc(47% - min(44vw, 25.7rem));
   }
 }
 
@@ -37,11 +37,16 @@
 }
 
 .p-single-content__header-title {
-  font-size: rem(32);
+  font-size: rem(24);
   font-family: $base-font-family;
   font-weight: $medium;
-  margin-top: rem(8);
   border-bottom: 1px solid $color-primary;
+  padding-bottom: rem(7);
+
+  @include mq(md) {
+    font-size:  rem(32);
+    padding-bottom: 0;
+  }
 }
 
 .p-single-content__header > div:nth-of-type(2) {
@@ -125,7 +130,7 @@
   font-weight: $normal;
   font-family: $base-font-family;
   line-height: calc( 24/ 16);
-  padding-left: rem(30);
+  padding-left: rem(25.2);
 }
 
 .p-single-content__footer > ul > li:not(:first-child) {

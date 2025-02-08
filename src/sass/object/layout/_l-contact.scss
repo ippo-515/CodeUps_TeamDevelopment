@@ -11,3 +11,11 @@
 .l-contact--about-page {
   margin-top: rem(106);
 }
+
+.l-contact.l-contact--single {
+  margin-top: rem(107.2);
+
+  @include mq(md) {
+    margin-top: rem(140);
+  }
+}
