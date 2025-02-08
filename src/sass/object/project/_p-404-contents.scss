@@ -13,7 +13,7 @@
   content: "";
   max-width: rem(335.24);
   height: rem(311.19);
-  top: -3.1375rem;
+  top: -3.2375rem;
   left: calc(49.2% - min(44vw, 36rem));  position: absolute;
   width: 100%;
   z-index: 1;
@@ -21,8 +21,8 @@
   @include mq(md) {
     max-width: rem(697.31);
     height: rem(594);
-    top: -4.8375rem;
-    left: calc(53% - min(44vw, 36rem));
+    top: -4.5375rem;
+    left: calc(53% - min(44vw, 35.7rem));
   }
 }
 
@@ -46,6 +46,8 @@
   color: $white;
   text-align: center;
   text-indent: rem(38);
+  position: relative;
+  z-index: 1;
 
   @include mq(md) {
     font-size: rem(160);
