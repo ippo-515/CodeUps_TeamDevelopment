@@ -45,10 +45,10 @@
   font-size: rem(12);
   font-weight: $normal;
   color: $color-primary;
-  margin-top: rem(8);
+  margin-top: rem(14);
 
   @include mq(md) {
-    margin-top: rem(8);
+    margin-top: rem(12);
   }
 }
 
