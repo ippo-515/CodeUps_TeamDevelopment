@@ -21,7 +21,7 @@
   @include mq(md) {
     max-width: 18.8125rem;
     height: 8.625rem;
-    top: -5.8375rem;
+    top: -4.0375rem;
     left: calc(47% - min(44vw, 36rem));
   }
 }
@@ -31,7 +31,7 @@
   width: 100%;
   margin-inline: auto;
   padding-left: rem(15);
-  padding-right: 1.5rem;
+  padding-right: rem(16.6);
 
   @include mq(md) {
     max-width: rem(850);
@@ -52,17 +52,21 @@
 }
 
 .p-privacy-policy-contents > div > div:nth-of-type(2) {
-  margin-top: rem(40);
+  margin-top: rem(38.4);
   line-height: calc(32 / 16);
   font-size: rem(16);
+
+  @include mq(md) {
+    margin-top: rem(43.2);
+  }
 }
 
 .p-privacy-policy-contents p {
-  text-indent: rem(-13.2);
+  text-indent: rem(-0.4);
 }
 
-.p-privacy-policy-contents li {
-  text-indent: rem(-8.2);
+.p-privacy-policy-contents ol {
+  padding-left: rem(22.6);
 }
 
 .p-privacy-policy-contents > div > div:first-of-type {
