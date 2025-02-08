@@ -44,7 +44,7 @@ const { modifier } = locals || {};
 %>
 
 <div class="c-breadcrumb <%= modifier ? `c-breadcrumb--${modifier}` : '' %>">
-  <div class="c-breadcrumb__inner l-inner">
+  <div class="c-breadcrumb__inner">
     <% breadcrumbs.forEach((breadcrumb, index) => { %>
       <span>
         <% if (breadcrumb.url) { %>
