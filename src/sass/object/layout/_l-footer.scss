@@ -25,3 +25,11 @@
 .l-footer.l-footer--404-page {
   margin-top: 0;
 }
+
+.l-footer.l-footer--page-terms {
+  margin-top: rem(99.2);
+
+  @include mq(md) {
+    margin-top: rem(160);
+  }
+}

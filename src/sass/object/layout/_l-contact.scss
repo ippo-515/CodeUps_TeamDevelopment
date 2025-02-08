@@ -19,3 +19,11 @@
     margin-top: rem(140);
   }
 }
+
+.l-contact.l-contact--page-terms {
+  margin-top: rem(105.6);
+
+  @include mq(md) {
+    margin-top: rem(140);
+  }
+}

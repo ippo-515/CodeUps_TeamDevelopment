@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .l-terms {
-  margin-top: rem(52);
+  margin-top: rem(47.2);
 
   @include mq(md) {
     margin-top: rem(150);

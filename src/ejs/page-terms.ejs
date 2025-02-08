@@ -4,25 +4,27 @@
   <%- include(ejsPath + '/common/_head' , { baseUrl: baseUrlPath, page: json[pageData] }) %>
 
     <body>
-      <%- include(ejsPath + '/common/_p-header' ) %>
-        <main>
-          <%- include(ejsPath + '/project/_p-sub-mv' , { pageTitle: 'Terms of Service' ,
-            imagePathDesktop: './assets/images/common/PrivacyPolicy-mv.webp' ,
-            imagePathMobile: './assets/images/common/PrivacyPolicy-mv-sp.webp' , altText: '多数の魚が泳いでいる様子' }) %>
-            <%const breadcrumbsKey="terms" ;%>
-              <div class="l-breadcrumb">
-                <%- include(ejsPath + '/component/_c-breadcrumb' , { breadcrumbsKey }) %>
-              </div>
-              <div class="l-terms">
-                <%- include(ejsPath + '/project/_p-Terms-of-Service-contents') %>
-              </div>
-              <div class="l-contact">
-                <%- include(ejsPath + '/project/_p-contact') %>
-              </div>
-              <div class="l-footer">
-                <%- include(ejsPath + '/common/_p-footer' ) %>
-              </div>
-        </main>
+      <div class="l-header">
+        <%- include(ejsPath + '/common/_p-header' ) %>
+      </div>
+      <main>
+        <%- include(ejsPath + '/project/_p-sub-mv' , { pageTitle: 'Terms of Service' ,
+          imagePathDesktop: './assets/images/common/PrivacyPolicy-mv.webp' ,
+          imagePathMobile: './assets/images/common/PrivacyPolicy-mv-sp.webp' , altText: '多数の魚が泳いでいる様子' }) %>
+          <%const breadcrumbsKey="terms" ;%>
+            <div class="l-breadcrumb">
+              <%- include(ejsPath + '/component/_c-breadcrumb' , { breadcrumbsKey }) %>
+            </div>
+            <div class="l-terms">
+              <%- include(ejsPath + '/project/_p-Terms-of-Service-contents' ) %>
+            </div>
+            <div class="l-contact l-contact--page-terms">
+              <%- include(ejsPath + '/project/_p-contact' ) %>
+            </div>
+            <div class="l-footer l-footer--page-terms">
+              <%- include(ejsPath + '/common/_p-footer' ) %>
+            </div>
+      </main>
     </body>
 
   </html>
