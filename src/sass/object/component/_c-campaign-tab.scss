@@ -4,7 +4,7 @@
   position: relative;
   display: block;
   font-size: rem(14);
-  line-height: calc(22 / 14);
+  line-height: 1.43;  // calc(22 / 14)から修正しました
   letter-spacing: rem(0);
   font-weight: $normal;
   color: $color-primary;

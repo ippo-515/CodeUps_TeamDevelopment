@@ -7,3 +7,11 @@
     margin-top: rem(80);
   }
 }
+
+.l-pagenavi--mt80 {
+  margin-top: rem(80);
+
+  @include mq(md) {
+    margin-top: rem(80);
+  }
+}
