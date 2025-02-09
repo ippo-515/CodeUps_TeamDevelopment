@@ -2,14 +2,17 @@
 
 .p-diving-information {
   background-color: $color-background;
-  padding: rem(80) 0;
+  padding: rem(90) 0 rem(84);
+  @include mq("md") {
+    padding: rem(103.4) 0 rem(84);
+  }
 }
 
 .p-diving-information__inner {
 }
 
 .p-diving-information__section-title {
-  margin-bottom: rem(24);
+  margin-bottom: rem(28);
 }
 
 .p-diving-information__contents-wrapper {
@@ -56,7 +59,7 @@
 }
 
 .p-diving-information__text-wrapper {
-  margin-bottom: rem(40);
+  margin-bottom: rem(39.4);
 }
 
 .p-diving-information__text-title {

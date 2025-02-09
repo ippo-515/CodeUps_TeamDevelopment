@@ -36,7 +36,7 @@
   flex-direction: column;
   // align-items: stretch;
   height: inherit;
-  padding: rem(16) rem(16) rem(24);
+  padding: rem(0) rem(16) rem(24);
   @include mq("md") {
     padding: rem(24) rem(16) rem(40);
     margin-top: 0;
@@ -45,7 +45,7 @@
 
 .p-campaign-card__top {
   border-bottom: 1px solid $color-primary;
-  margin-bottom: rem(8);
+  margin-bottom: rem(12);
   @include mq("md") {
     margin-bottom: rem(19);
   }
@@ -59,8 +59,8 @@
   font-weight: $normal;
   color: $color-primary;
   border: 1px solid $color-primary;
-  padding: rem(10) rem(12);
-  margin-bottom: rem(8);
+  padding: rem(8) rem(11);
+  margin-bottom: rem(4);
   @include mq("md") {
     padding: rem(10) rem(16);
     margin-bottom: rem(4);
@@ -73,7 +73,7 @@
   letter-spacing: rem(0);
   font-weight: $medium;
   color: $color-accent;
-  margin-bottom: rem(7);
+  margin-bottom: rem(7.5);
   @include mq("md") {
     // margin-bottom: rem(8);
   }
@@ -98,7 +98,7 @@
   font-weight: $medium;
   color: $color-accent;
   text-align: center;
-  margin-bottom: rem(8);
+  margin-bottom: rem(13);
   @include mq("md") {
     font-size: rem(16);
     line-height: calc(16 / 16);
