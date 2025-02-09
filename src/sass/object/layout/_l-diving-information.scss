@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .l-diving-information {
-  margin-top: rem(70);
+  margin-top: rem(74);
   @include mq("md") {
     margin-top: rem(164);
   }

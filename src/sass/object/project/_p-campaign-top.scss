@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .p-campaign-top {
-  overflow: hidden;
+  // overflow: hidden;
 }
 
 .p-campaign-top__inner {
@@ -9,7 +9,10 @@
 }
 
 .p-campaign-top__section-title {
-  margin-bottom: rem(39);
+  margin-bottom: rem(29);
+  @include mq("md") {
+    margin-bottom: rem(41);
+  }
 }
 
 .p-campaign-top__arrowWrapper {
@@ -22,6 +25,7 @@
     flex-direction: row;
     column-gap: rem(80);
     padding-right: 25px;
+    margin-top: rem(-2);
   }
 }
 
@@ -92,7 +96,7 @@
   @include mq("md") {
     // width: 130vw;
     // column-gap: rem(40);
-    margin-bottom: rem(80);
+    margin-bottom: rem(81);
   }
 }
 

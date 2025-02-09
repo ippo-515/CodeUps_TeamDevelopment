@@ -27,3 +27,10 @@
     margin-top: rem(140);
   }
 }
+
+.l-contact--top {
+  margin-top: rem(80);
+  @include mq("md") {
+    margin-top: rem(140);
+  }
+}
