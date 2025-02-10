@@ -4,7 +4,7 @@
   background-color: $color-background;
   padding: rem(90) 0 rem(84);
   @include mq("md") {
-    padding: rem(103.4) 0 rem(84);
+    padding: rem(103.4) 0 rem(76);
   }
 }
 
@@ -13,6 +13,9 @@
 
 .p-diving-information__section-title {
   margin-bottom: rem(28);
+  @include mq("md") {
+    margin-bottom: rem(41);
+  }
 }
 
 .p-diving-information__contents-wrapper {
@@ -56,6 +59,9 @@
 }
 
 .p-diving-information__content-wrapper {
+  @include mq("md") {
+  margin-top: rem(-7);
+  }
 }
 
 .p-diving-information__text-wrapper {
@@ -71,6 +77,13 @@
   padding-bottom: rem(4);
   margin-bottom: rem(8);
   border-bottom: 1px solid $color-primary;
+  @include mq("md") {
+    font-size: rem(24);
+    line-height: calc(24 / 20);
+    letter-spacing: rem(0);
+    padding-bottom: rem(6);
+    margin-bottom: rem(8);
+  }
 }
 
 .p-diving-information__text {
