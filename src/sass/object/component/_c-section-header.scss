@@ -45,6 +45,14 @@
   font-size: rem(12);
   font-weight: $normal;
   color: $color-primary;
+  margin-top: rem(14);
+
+  @include mq(md) {
+    margin-top: rem(12);
+  }
+}
+
+.c-section-header__jatitle.c-section-header__jatitle--large {
   margin-top: rem(7.6);
 
   @include mq(md) {
