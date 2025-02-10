@@ -14,3 +14,13 @@
 		padding-left: $padding-pc;
 	}
 }
+
+.l-breadcrumb.l-breadcrumb--404 {
+	padding-right: 0;
+	padding-left: 0;
+
+	@include mq(md) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
