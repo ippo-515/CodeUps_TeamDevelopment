@@ -13,6 +13,12 @@
   }
 }
 
+.p-price-table-list__inner.l-inner {
+  max-width: 750px;
+  // padding-left: 25px;
+  // padding-right: 25px;
+}
+
 .p-price-table-list__inner.c-right-facing-fish::after {
   display: block;
   top: rem(-22);
@@ -20,8 +26,8 @@
   width: rem(120);
   height: rem(55);
   @include mq("md") {
-    top: rem(-60);
-    left: rem(-250);
+    top: rem(-70);
+    left: rem(-245);
     width: rem(301);
     height: rem(138);
   }
