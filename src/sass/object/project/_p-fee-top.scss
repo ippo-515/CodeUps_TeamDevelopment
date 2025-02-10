@@ -3,6 +3,10 @@
 .p-fee-top {
   background-color: $color-background;
   padding: rem(90) 0 rem(84);
+  @include mq("md") {
+    padding: rem(104) 0 rem(104);
+  
+  }
 }
 
 .p-fee-top__inner {
@@ -17,9 +21,9 @@
     display: block;
     top: auto;
     left: rem(-60);
-    bottom: rem(-40);
-    width: rem(437);
-    height: rem(201);
+    bottom: rem(-54);
+    width: rem(446);
+    height: rem(212);
   }
 }
 
@@ -75,6 +79,7 @@
   row-gap: rem(44);
   @include mq("md") {
     flex-grow: 1;
+    padding-top: rem(4);
   }
 }
 
