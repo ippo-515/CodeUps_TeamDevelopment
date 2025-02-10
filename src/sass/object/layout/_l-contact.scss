@@ -34,3 +34,11 @@
     margin-top: rem(140);
   }
 }
+
+.l-contact.l-contact-404 {
+  margin-top: rem(104);
+
+  @include mq(md) {
+    margin-top: rem(140);
+  }
+}
