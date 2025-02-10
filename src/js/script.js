@@ -25,6 +25,7 @@ jQuery(function ($) {
     } else {
       $(".js-hamburger").addClass("is-active");
       $("body, html").css("overflow", "hidden"); // ドロワーを開いたときは後ろがスクロールしないようにする
+      $(".js-header").addClass("is-active"); // ロゴとメニューの文字が被らないように背景色を指定
       $(".js-sp-nav").fadeIn(300);
     }
   });
@@ -172,13 +173,13 @@ jQuery(function ($) {
     loop: true, // ループ
     speed: 3000, // 少しゆっくり(デフォルトは300)
     // centeredSlides: true, // アクティブなスライドを中央にする
-    slidesPerView: 1.262, // デフォルトは1枚表示
+    slidesPerView: 1.4, // デフォルトは1枚表示
     spaceBetween: "24px", // スライド間の余白
-    // autoplay: {
-    //   // 自動再生
-    //   delay: 1000, // 1秒後に次のスライド
-    //   disableOnInteraction: false, // 矢印をクリックしても自動再生を止めない
-    // },
+    autoplay: {
+      // 自動再生
+      delay: 1000, // 1秒後に次のスライド
+      disableOnInteraction: false, // 矢印をクリックしても自動再生を止めない
+    },
     // 前後の矢印
     navigation: {
       nextEl: ".swiper-button-next",
