@@ -12,6 +12,13 @@
   margin-top: rem(106);
 }
 
+.l-contact--site-map-page {
+  margin-top: rem(88);
+  @include mq(md) {
+    margin-top: rem(120);
+  }
+}
+
 .l-contact.l-contact--single {
   margin-top: rem(107.2);
 
