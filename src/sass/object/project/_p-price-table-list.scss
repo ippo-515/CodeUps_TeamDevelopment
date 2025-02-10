@@ -13,6 +13,12 @@
   }
 }
 
+.p-price-table-list__inner.l-inner {
+  max-width: 750px;
+  // padding-left: 25px;
+  // padding-right: 25px;
+}
+
 .p-price-table-list__inner.c-right-facing-fish::after {
   display: block;
   top: rem(-22);
