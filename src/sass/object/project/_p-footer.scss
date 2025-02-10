@@ -18,7 +18,8 @@
   }
 }
 
-.p-footer__logo {
+.p-footer__logo-link {
+  display: block;
   aspect-ratio: 120 / 45;
   width: rem(120);
   overflow: hidden;
