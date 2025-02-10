@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .l-voice {
-  margin-top: rem(88);
+  margin-top: rem(94);
   @include mq("md") {
     margin-top: rem(148);
   }

@@ -18,7 +18,7 @@
 .p-mv__img img {
   height: inherit;
   min-height: inherit;
-  width:  100%;
+  width: 100%;
 }
 
 .p-mv__slider {
@@ -30,7 +30,8 @@
 .p-mv-swiper-wrapper {
 }
 
-.p-mv-swiper-slide {}
+.p-mv-swiper-slide {
+}
 
 .p-mv__img {
   display: block;
@@ -42,7 +43,7 @@
   height: inherit;
   min-height: inherit;
   object-fit: cover;
-  width:  100%;
+  width: 100%;
 }
 
 .p-mv__wrap {
@@ -50,13 +51,13 @@
   z-index: 2;
   top: 50%;
   left: 50%;
-  transform: translate(-46.8%,-50%);
+  transform: translate(-50%, -50%);
   color: #fff;
   text-align: center;
 
   @include mq(md) {
     top: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
   }
 }
 
@@ -66,16 +67,18 @@
   font-weight: $normal;
   color: $white;
   letter-spacing: 0.54em;
-  
+  line-height: 1;
+  padding-left: rem(20);
   @include mq(md) {
     font-size: rem(73.6);
     letter-spacing: 0.64em;
     text-indent: rem(42);
+    padding-left: rem(0);
   }
 }
 
 .p-mv__text {
-  width: 100%;
+  // width: 100%;
   text-align: center;
   font-size: rem(20);
   font-family: $second-font-family;
@@ -88,12 +91,12 @@
 }
 
 .js-swiper1 {
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    overflow: hidden;
-    list-style: none;
-    padding: 0;
-    z-index: 1;
-    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+  display: block;
 }
