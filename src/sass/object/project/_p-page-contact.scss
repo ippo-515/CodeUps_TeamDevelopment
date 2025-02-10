@@ -23,6 +23,12 @@
   }
 }
 
+.p-page-contact--thanks-page::before {
+  @include mq(md) {
+    top: rem(-57);
+  }
+}
+
 .p-page-contact__inner.l-inner {
   max-width: rem(750);
 }

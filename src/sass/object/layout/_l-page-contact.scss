@@ -7,3 +7,9 @@
     margin-top: rem(149);
   }
 }
+
+.l-page-contact--thanks-page {
+  @include mq(md) {
+    margin-top: rem(136);
+  }
+}
