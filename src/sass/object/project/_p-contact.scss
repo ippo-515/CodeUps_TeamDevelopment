@@ -93,6 +93,7 @@
 .p-contact__information-text {
   text-align: center;
   text-wrap: nowrap;
+  white-space: nowrap;
 
   @include mq(md) {
     text-align: left;

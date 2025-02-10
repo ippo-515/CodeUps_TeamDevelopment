@@ -13,7 +13,7 @@
 
   @include mq(md) {
     font-size: rem(40);
-    line-height: 0.8;
+    line-height: 1;
   }
 }
 
@@ -56,7 +56,7 @@
   margin-top: rem(7.6);
 
   @include mq(md) {
-    margin-top: rem(12);
+    margin-top: rem(-13.6);
   }
 }
 
