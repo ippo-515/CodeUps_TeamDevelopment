@@ -54,3 +54,11 @@
     margin-top: rem(140);
   }
 }
+
+.l-contact.l-contact--faq {
+  margin-top: rem(99.2);
+
+  @include mq(md) {
+    margin-top: rem(135.2);
+  }
+}
