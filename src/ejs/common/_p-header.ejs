@@ -1,20 +1,40 @@
+<% var isTopPage = (typeof isTopPage !== 'undefined') ? isTopPage : false; %>
+
 <div class="p-header js-header">
   <div class="p-header__inner">
-    <h1 class="p-header__logo">
-      <a href="./" class="p-header__logo-link">
-        <picture>
-          <source media="(max-width: 767px)" srcset="./assets/images/common/logo-sp.svg">
-          <img src="./assets/images/common/logo.svg" alt="CodeUps">
-        </picture>
-      </a>
-    </h1>
+    <!-- prettier-ignore -->
+    <% if (isTopPage) { %>
+      <h1 class="p-header__logo">
+    <!-- prettier-ignore -->
+    <% } else { %>
+      <div class="p-header__logo">
+    <!-- prettier-ignore -->
+    <% } %>
+        <a href="./" class="p-header__logo-link">
+          <picture>
+            <source media="(max-width: 767px)" srcset="./assets/images/common/logo-sp.svg">
+            <img src="./assets/images/common/logo.svg" alt="CodeUps">
+          </picture>
+        </a>
+    <!-- prettier-ignore -->
+    <% if (isTopPage) { %>
+      </h1>
+    <!-- prettier-ignore -->
+    <% } else { %>
+      </div>
+    <!-- prettier-ignore -->
+    <% } %>
+
     <div class="p-header__drawer">
+      <!-- prettier-ignore -->
       <%- include(ejsPath + './component/_c-hamburger') %>
     </div>
     <div class="p-header__pc-nav">
+      <!-- prettier-ignore -->
       <%- include(ejsPath + './project/_p-pc-nav') %>
     </div>
     <div class="p-header__sp-nav">
+      <!-- prettier-ignore -->
       <%- include(ejsPath + './project/_p-sp-nav') %>
     </div>
   </div>
