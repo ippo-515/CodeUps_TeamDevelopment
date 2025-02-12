@@ -1,5 +1,3 @@
-@use "global" as *; // 追加
-
 *,
 *::before,
 *::after {
@@ -31,7 +29,6 @@ dd {
 /* Set core root defaults */
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: rem(240);  // 追加
 }
 
 .html-about {

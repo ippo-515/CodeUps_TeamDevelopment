@@ -259,23 +259,30 @@ jQuery(function ($) {
    * -------------------------------------------- */
   // ハッシュからタブを切り替える関数
   function switchTabFromHash() {
-      var hash = location.hash;
-      hash = (hash.match(/^#p-diving-tab-switching__content\d+$/) || [])[0]; // `#p-diving-tab-switching__content+数字` の形式のみ取得
+    var hash = location.hash;
+    hash = (hash.match(/^#p-diving-tab-switching__content\d+$/) || [])[0]; // `#p-diving-tab-switching__content+数字` の形式のみ取得
 
-      var tabname = hash ? hash.slice(1) : "p-diving-tab-switching__content1"; // デフォルトのタブID
+    var tabname = hash ? hash.slice(1) : "p-diving-tab-switching__content1"; // デフォルトのタブID
 
-      // 対象のタブが存在しない場合はデフォルトタブを表示
-      if ($(".p-diving-tab-switching__content#" + tabname).length === 0) {
-          tabname = "p-diving-tab-switching__content1";
-      }
+    // 対象のタブが存在しない場合はデフォルトタブを表示
+    if ($(".p-diving-tab-switching__content#" + tabname).length === 0) {
+        tabname = "p-diving-tab-switching__content1";
+    }
 
-      // タブのアクティブ状態を更新
-      $(".c-diving-information-tab, .p-diving-tab-switching__content").removeClass("active");
+    // タブのアクティブ状態を更新
+    $(".c-diving-information-tab, .p-diving-tab-switching__content").removeClass("active");
 
-      var tabIndex = $(".p-diving-tab-switching__content#" + tabname).index();
+    var tabIndex = $(".p-diving-tab-switching__content#" + tabname).index();
 
-      $(".p-diving-tab-switching__content").eq(tabIndex).addClass("active");
-      $(".c-diving-information-tab").eq(tabIndex).addClass("active");
+    $(".p-diving-tab-switching__content").eq(tabIndex).addClass("active");
+    $(".c-diving-information-tab").eq(tabIndex).addClass("active");
+
+    var speed = 500; // スクロールのスピード
+    var target = $(".p-diving-tab-switching__content").eq(tabIndex); // ターゲットとなる要素を取得
+    if (target.length) { // ターゲットが存在する場合のみ実行
+      var position = target.offset().top - 240; // ターゲットの位置を取得
+      $('html, body').animate({ scrollTop: position }, speed, 'swing'); // スムーズスクロール
+    }
   }
 
   // 初回ページ読み込み時にハッシュをチェック
