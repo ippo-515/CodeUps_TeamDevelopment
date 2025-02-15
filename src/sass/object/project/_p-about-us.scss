@@ -141,6 +141,14 @@
   }
 }
 
+.p-about-us__content-wrapper--about-page {
+  @include mq(md) {
+    bottom: rem(50);
+    left: rem(166);
+    transform: translateX(0) translateY(0);
+  }
+}
+
 .p-about-us__content-title {
   font-size: rem(40);
   line-height: calc(40 / 40);

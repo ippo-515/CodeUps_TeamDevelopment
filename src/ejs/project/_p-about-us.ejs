@@ -30,7 +30,7 @@
         </picture>
       </div>
     </div>
-    <div class="p-about-us__content-wrapper">
+    <div class="p-about-us__content-wrapper<%= modifierBottomLeft ? ` p-about-us__content-wrapper--${modifierBottomLeft}` : '' %>">
       <h3 class="p-about-us__content-title<%= modifierTitle ? ` p-about-us__content-title--${modifierTitle}` : '' %>"><%- contentTitle %></h3>
       <div class="p-about-us__text-wrapper">
         <p class="p-about-us__text<%= modifierMarginBottom ? ` p-about-us__text--${modifierMarginBottom}` : '' %>"><%- text %></p>
