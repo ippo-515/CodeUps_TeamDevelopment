@@ -1,0 +1,28 @@
+@use "global" as *;
+
+.p-page-thanks {
+  position: relative;
+}
+
+.p-page-thanks::before {
+  content: "";
+  background-image: url(../images/common/pc-fishBlog2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: absolute;
+  top: rem(-23);
+  left: rem(15);
+  width: rem(120);
+  height: rem(55);
+  @include mq(md) {
+    top: rem(-57);
+    left: calc(50% - min(48%, rem(620)));
+    width: rem(301);
+    height: rem(138);
+  }
+}
+
+.p-page-thanks__inner.l-inner {
+  max-width: rem(750);
+}
