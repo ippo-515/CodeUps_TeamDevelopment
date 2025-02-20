@@ -1,9 +1,9 @@
 @use "global" as *;
 
-.l-page-contact {
+.l-page-thanks {
   margin-top: rem(50);
 
   @include mq(md) {
-    margin-top: rem(149);
+    margin-top: rem(136);
   }
 }
