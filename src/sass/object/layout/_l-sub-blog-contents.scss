@@ -1,28 +1,18 @@
 @use "global" as *;
 
 .l-sub-blog-contents {
-  max-width: rem(600);
-  margin-inline: auto;
-  padding-right: rem(21);
-	padding-left: rem(21);
-  display: flex;
-  flex-direction: column;
   margin-top: rem(52);
 
   @include mq(md) {
-    max-width: rem(1130);
-    padding-right: $padding-pc;
-		padding-left: $padding-pc;
     margin-top: rem(150);
-    flex-direction: initial;
   }
 }
 
-.l-sub-blog-contents__wrap {
-  max-width: rem(600);
-  margin-inline: auto;
+.l-sub-blog-contents__inner {
+  display: flex;
+  flex-direction: column;
 
   @include mq(md) {
-    max-width: rem(706);
+    flex-direction: initial;
   }
 }
