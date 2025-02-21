@@ -25,13 +25,17 @@
             </div>
 
             <div class="l-single-contents">
-              <div class="l-single-contents__wrap">
-                <%- include(ejsPath + '/project/_p-single-content') %>
-                  <div class="l-pagenavi">
-                    <%- include(ejsPath + '/component/_c-pagenavi-arrow' ) %>
-                  </div>
+              <div class="l-single-contents__inner l-inner">
+                <div class="l-single-contents__wrap">
+                  <%- include(ejsPath + '/project/_p-single-content' ) %>
+                    <div class="l-pagenavi">
+                      <%- include(ejsPath + '/component/_c-pagenavi-arrow' ) %>
+                    </div>
+                </div>
+                <div class="l-sidebar">
+                  <%- include(ejsPath + '/project/_p-sidebar' ) %>
+                </div>
               </div>
-              <%- include(ejsPath + '/project/_p-sidebar') %>
             </div>
             <!-- Contact -->
             <div class="l-contact l-contact--single">

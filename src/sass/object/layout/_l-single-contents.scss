@@ -1,29 +1,18 @@
 @use "global" as *;
 
 .l-single-contents {
-  max-width: rem(600);
-  margin-inline: auto;
-  padding-right: $padding-sp;
-	padding-left: $padding-sp;
-  display: flex;
-  flex-direction: column;
   margin-top: rem(45.6);
 
   @include mq(md) {
-    max-width: rem(1130);
-    padding-right: $padding-pc;
-		padding-left: $padding-pc;
     margin-top: rem(150);
-    flex-direction: initial;
   }
 }
 
-.l-single-contents__wrap {
-  max-width: rem(600);
-  margin-inline: auto;
+.l-single-contents__inner {
+  display: flex;
+  flex-direction: column;
 
   @include mq(md) {
-    max-width: rem(700);
-    margin-top: rem(-6.4);
+    flex-direction: initial;
   }
 }
