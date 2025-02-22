@@ -37,12 +37,15 @@
 
 .pagenavi .wp-pagenavi {
   clear: both;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .previouspostslink {
   display: inline-block;
   min-width: rem(38);
+  min-height: rem(38);
   margin-right: rem(37.2);
   padding: rem(9) rem(9.6);
   font-size: rem(16);
@@ -54,11 +57,13 @@
   background-color: $white;
   color: $color-primary;
   transition: .3s;
+  text-align: center;
 }
 
 .nextpostslink {
   display: inline-block;
   min-width: rem(38);
+  min-height: rem(38);
   margin-left: rem(26);
   padding: rem(9) rem(9.2);
   font-size: rem(16);
