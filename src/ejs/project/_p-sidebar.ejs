@@ -1,111 +1,124 @@
-<% project = '.';
-const popularItems = [
-  { link: '#', imgSrc: './assets/images/common/gallery4.webp', imgAlt: '黄色い魚が海の中を泳いでいる様子', dateTime: '2023-11-17', dateDisplay: '2023.11/17', title: 'ライセンス取得' },
-  { link: '#', imgSrc: './assets/images/common/Blog2.webp', imgAlt: 'ウミガメが泳いでいる様子', dateTime: '2023-11-17', dateDisplay: '2023.11/17', title: 'ウミガメと泳ぐ' },
-  { link: '#', imgSrc: './assets/images/common/Blog3.webp', imgAlt: 'カクレクマノミがイソギンチャクから顔を出している様子', dateTime: '2023-11-17', dateDisplay: '2023.11/17', title: 'カクレクマノミ' },
-];
+<% project='.' ; const popularItems=[ { link: '#' , imgSrc: './assets/images/common/gallery4.webp' ,
+  imgAlt: '黄色い魚が海の中を泳いでいる様子' , dateTime: '2023-11-17' , dateDisplay: '2023.11/17' , title: 'ライセンス取得' }, { link: '#' ,
+  imgSrc: './assets/images/common/Blog2.webp' , imgAlt: 'ウミガメが泳いでいる様子' , dateTime: '2023-11-17' ,
+  dateDisplay: '2023.11/17' , title: 'ウミガメと泳ぐ' }, { link: '#' , imgSrc: './assets/images/common/Blog3.webp' ,
+  imgAlt: 'カクレクマノミがイソギンチャクから顔を出している様子' , dateTime: '2023-11-17' , dateDisplay: '2023.11/17' , title: 'カクレクマノミ' }, ];
+  const reviews=[ { imgSrc: './assets/images/common/reviews.webp' , imgAlt: '男性と女性が腕を組んでソファーに座っている様子' ,
+  category: '30代(カップル)' , title: 'ここにタイトルが入ります。ここにタイトル' }, ]; const campaigns=[ { link: '#' ,
+  imgSrc: './assets/images/common/campaign1.jpg' , imgAlt: 'さまざまな魚が泳いでいる様子' , title: 'ライセンス取得' , text: '全部コミコミ(お一人様)' ,
+  price1: '¥56,000' , price2: '¥46,000' }, { link: '#' , imgSrc: './assets/images/common/campaign2.webp' ,
+  imgAlt: 'さまざまな魚が泳いでいる様子' , title: '貸切体験ダイビング' , text: '全部コミコミ(お一人様)' , price1: '¥24,000' , price2: '¥18,000' }, ];
+  const archives=[ { year: '2023' , months: [{ name: '3月' , link: '' }, { name: '2月' , link: '' }, { name: '1月' ,
+  link: '' }] }, { year: '2022' , months: [{ name: '3月' , link: '' }, { name: '2月' , link: '' }, { name: '1月' , link: ''
+  }] }, ];%>
 
-const reviews = [
-  { imgSrc: './assets/images/common/reviews.webp', imgAlt: '男性と女性が腕を組んでソファーに座っている様子', category: '30代(カップル)', title: 'ここにタイトルが入ります。ここにタイトル' },
-];
-
-const campaigns = [
-  { link: '#', imgSrc: './assets/images/common/campaign1.jpg', imgAlt: 'さまざまな魚が泳いでいる様子', title: 'ライセンス取得', text: '全部コミコミ(お一人様)', price1: '¥56,000', price2: '¥46,000' },
-  { link: '#', imgSrc: './assets/images/common/campaign2.webp', imgAlt: 'さまざまな魚が泳いでいる様子', title: '貸切体験ダイビング', text: '全部コミコミ(お一人様)', price1: '¥24,000', price2: '¥18,000' },
-];
-
-const archives = [
-  { year: '2023', months: [{ name: '3月', link: '' }, { name: '2月', link: '' }, { name: '1月', link: '' }] },
-  { year: '2022', months: [{ name: '3月', link: '' }, { name: '2月', link: '' }, { name: '1月', link: '' }] },
-];%>
-
-<aside class="p-sidebar">
-  <ul class="p-sidebar__items">
-    <!-- 人気記事セクション -->
-    <li class="p-sidebar__item">
-      <%- include('../component/_c-sidebar-title', { title: '人気記事' }) %>
-      <ul class="p-sidebar__favorite-items">
-        <% popularItems.forEach(item => { %>
-          <li class="p-sidebar__favorite-item">
-            <a href="<%= item.link %>">
-              <div class="p-sidebar__favorite-img">
-                <img src="<%= item.imgSrc %>" alt="<%= item.imgAlt %>" loading="lazy">
-              </div>
-              <div class="p-sidebar__heading">
-                <time class="p-sidebar__heading-date" datetime="<%= item.dateTime %>"><%= item.dateDisplay %></time>
-                <p class="p-sidebar__heading-title"><%= item.title %></p>
-              </div>
-            </a>
-          </li>
-        <% }) %>
-      </ul>
-    </li>
-
-    <!-- 口コミセクション -->
-    <li class="p-sidebar__item">
-      <%- include('../component/_c-sidebar-title', { title: '口コミ' }) %>
-      <ul class="p-sidebar__reviews-items">
-        <% reviews.forEach(review => { %>
-          <li class="p-sidebar__reviews-item">
-            <div class="p-sidebar__reviews-img">
-              <img src="<%= review.imgSrc %>" alt="<%= review.imgAlt %>" loading="lazy">
-            </div>
-            <div class="p-sidebar__reviews-category"><%= review.category %></div>
-            <div class="p-sidebar__reviews-title"><%= review.title %></div>
-          </li>
-        <% }) %>
-        <div class="p-sidebar__button">
-          <%- include('../component/_c-button', { link: '#', text: 'View more', modifier: '' }) %>
-        </div>
-      </ul>
-    </li>
-
-    <!-- キャンペーンセクション -->
-    <li class="p-sidebar__item">
-      <%- include('../component/_c-sidebar-title', { title: 'キャンペーン' }) %>
-      <ul class="p-sidebar__campaign-items">
-        <% campaigns.forEach(campaign => { %>
-          <li class="p-sidebar__campaign-item">
-            <a href="<%= campaign.link %>">
-              <div class="p-sidebar__campaign-img">
-                <img src="<%= campaign.imgSrc %>" alt="<%= campaign.imgAlt %>">
-              </div>
-              <div class="p-sidebar__campaign-wrap">
-                <div class="p-sidebar__campaign-meta">
-                  <p class="p-sidebar__campaign-title"><%= campaign.title %></p>
-                </div>
-                <p class="p-sidebar__campaign-text"><%= campaign.text %></p>
-                <div class="p-sidebar__campaign-body">
-                  <p class="p-sidebar__campaign-price1"><%= campaign.price1 %></p>
-                  <p class="p-sidebar__campaign-price2"><%= campaign.price2 %></p>
-                </div>
-              </div>
-            </a>
-          </li>
-        <% }) %>
-        <div class="p-sidebar__button">
-          <%- include('../component/_c-button', { link: '#', text: 'View more', modifier: '' }) %>
-        </div>
-      </ul>
-    </li>
-
-    <!-- アーカイブセクション -->
-    <li class="p-sidebar__item">
-      <%- include('../component/_c-sidebar-title', { title: 'アーカイブ' }) %>
-      <div class="p-sidebar__archive">
-        <% archives.forEach(year => { %>
-          <div class="p-sidebar__archive-container">
-            <div class="p-sidebar__archive-header js-sidebar-open"><%= year.year %></div>
-            <div class="p-sidebar__archive-body">
-              <% year.months.forEach(month => { %>
-                <div class="p-sidebar__archive-container">
-                  <a href="<%= month.link %>" class="p-sidebar__archive-text"><%= month.name %></a>
-                </div>
+  <aside class="p-sidebar">
+    <ul class="p-sidebar__items">
+      <!-- 人気記事セクション -->
+      <li class="p-sidebar__item">
+        <%- include('../component/_c-sidebar-title', { title: '人気記事' }) %>
+          <ul class="p-sidebar__favorite-items">
+            <% popularItems.forEach(item=> { %>
+              <a href="<%= item.link %>">
+                <li class="p-sidebar__favorite-item">
+                  <div class="p-sidebar__favorite-img">
+                    <img src="<%= item.imgSrc %>" alt="<%= item.imgAlt %>" loading="lazy">
+                  </div>
+                  <div class="p-sidebar__heading">
+                    <time class="p-sidebar__heading-date" datetime="<%= item.dateTime %>">
+                      <%= item.dateDisplay %>
+                    </time>
+                    <p class="p-sidebar__heading-title">
+                      <%= item.title %>
+                    </p>
+                  </div>
+                </li>
+              </a>
               <% }) %>
-            </div>
+          </ul>
+      </li>
+
+      <!-- 口コミセクション -->
+      <li class="p-sidebar__item">
+        <%- include('../component/_c-sidebar-title', { title: '口コミ' }) %>
+          <ul class="p-sidebar__reviews-items">
+            <% reviews.forEach(review=> { %>
+              <li class="p-sidebar__reviews-item">
+                <div class="p-sidebar__reviews-img">
+                  <img src="<%= review.imgSrc %>" alt="<%= review.imgAlt %>" loading="lazy">
+                </div>
+                <div class="p-sidebar__reviews-category">
+                  <%= review.category %>
+                </div>
+                <div class="p-sidebar__reviews-title">
+                  <%= review.title %>
+                </div>
+              </li>
+              <% }) %>
+                <div class="p-sidebar__button">
+                  <%- include('../component/_c-button', { link: '#' , text: 'View more' , modifier: '' }) %>
+                </div>
+          </ul>
+      </li>
+
+      <!-- キャンペーンセクション -->
+      <li class="p-sidebar__item">
+        <%- include('../component/_c-sidebar-title', { title: 'キャンペーン' }) %>
+          <ul class="p-sidebar__campaign-items">
+            <% campaigns.forEach(campaign=> { %>
+              <li class="p-sidebar__campaign-item">
+                <a href="<%= campaign.link %>">
+                  <div class="p-sidebar__campaign-img">
+                    <img src="<%= campaign.imgSrc %>" alt="<%= campaign.imgAlt %>">
+                  </div>
+                  <div class="p-sidebar__campaign-wrap">
+                    <div class="p-sidebar__campaign-meta">
+                      <p class="p-sidebar__campaign-title">
+                        <%= campaign.title %>
+                      </p>
+                    </div>
+                    <p class="p-sidebar__campaign-text">
+                      <%= campaign.text %>
+                    </p>
+                    <div class="p-sidebar__campaign-body">
+                      <p class="p-sidebar__campaign-price1">
+                        <%= campaign.price1 %>
+                      </p>
+                      <p class="p-sidebar__campaign-price2">
+                        <%= campaign.price2 %>
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <% }) %>
+                <div class="p-sidebar__button">
+                  <%- include('../component/_c-button', { link: '#' , text: 'View more' , modifier: '' }) %>
+                </div>
+          </ul>
+      </li>
+
+      <!-- アーカイブセクション -->
+      <li class="p-sidebar__item">
+        <%- include('../component/_c-sidebar-title', { title: 'アーカイブ' }) %>
+          <div class="p-sidebar__archive">
+            <% archives.forEach(year=> { %>
+              <div class="p-sidebar__archive-container">
+                <div class="p-sidebar__archive-header js-sidebar-open">
+                  <%= year.year %>
+                </div>
+                <div class="p-sidebar__archive-body">
+                  <% year.months.forEach(month=> { %>
+                    <div class="p-sidebar__archive-container">
+                      <a href="<%= month.link %>" class="p-sidebar__archive-text">
+                        <%= month.name %>
+                      </a>
+                    </div>
+                    <% }) %>
+                </div>
+              </div>
+              <% }) %>
           </div>
-        <% }) %>
-      </div>
-    </li>
-  </ul>
-</aside>
+      </li>
+    </ul>
+  </aside>
