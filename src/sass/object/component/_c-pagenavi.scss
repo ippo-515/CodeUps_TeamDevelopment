@@ -81,7 +81,8 @@ a.page.larger {
   display: inline-block;
   min-width: rem(38);
   height: rem(38);
-  padding-top: rem(10);
+  padding: rem(10);
+  text-align: center;
   font-size: rem(16);
   font-family: $third-font-family;
   font-weight: $bold;
@@ -132,7 +133,8 @@ span.page.larger .current {
   display: inline-block;
   min-width: rem(38);
   height: rem(38);
-  padding-top: rem(10);
+  padding: rem(10);
+  text-align: center;
   font-size: rem(16);
   font-family: $third-font-family;
   font-weight: $bold;
