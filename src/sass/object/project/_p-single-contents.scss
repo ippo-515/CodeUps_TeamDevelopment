@@ -1,0 +1,10 @@
+@use "global" as *;
+
+.p-single-contents__inner {
+  display: flex;
+  flex-direction: column;
+
+  @include mq(md) {
+    flex-direction: initial;
+  }
+}

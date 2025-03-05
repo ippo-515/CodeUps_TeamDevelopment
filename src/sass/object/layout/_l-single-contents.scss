@@ -7,12 +7,3 @@
     margin-top: rem(150);
   }
 }
-
-.l-single-contents__inner {
-  display: flex;
-  flex-direction: column;
-
-  @include mq(md) {
-    flex-direction: initial;
-  }
-}
