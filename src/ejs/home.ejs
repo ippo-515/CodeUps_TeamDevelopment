@@ -24,18 +24,9 @@
               <%- include(ejsPath + '/component/_c-breadcrumb' , { breadcrumbsKey, modifier: "" }) %>
             </div>
 
+            <!-- ブログコンテンツ -->
             <div class="l-sub-blog-contents">
-              <div class="l-sub-blog-contents__inner l-inner">
-                <div class="l-sub-blog-contents__wrap">
-                  <%- include(ejsPath + '/project/_p-sub-blog-cards' ) %>
-                    <div class="l-pagenavi">
-                      <%- include(ejsPath + '/component/_c-pagenavi' ) %>
-                    </div>
-                </div>
-                <div class="l-sidebar">
-                  <%- include(ejsPath + '/project/_p-sidebar' ) %>
-                </div>
-              </div>
+                  <%- include(ejsPath + '/project/_p-sub-blog-contents' ) %>
             </div>
             
             <!-- Contact -->
