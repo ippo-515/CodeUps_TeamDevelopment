@@ -258,46 +258,82 @@ jQuery(function ($) {
    * 　特定のタブへダイレクトリンクできるようにする
    * -------------------------------------------- */
   // ハッシュからタブを切り替える関数
-  function switchTabFromHash() {
-    var hash = location.hash;
-    hash = (hash.match(/^#p-diving-tab-switching__content\d+$/) || [])[0]; // `#p-diving-tab-switching__content+数字` の形式のみ取得
+  // function switchTabFromHash() {
+  //   var hash = location.hash;
+  //   hash = (hash.match(/^#p-diving-tab-switching__content\d+$/) || [])[0]; // `#p-diving-tab-switching__content+数字` の形式のみ取得
 
-    var tabname = hash ? hash.slice(1) : "p-diving-tab-switching__content1"; // デフォルトのタブID
+  //   var tabname = hash ? hash.slice(1) : "p-diving-tab-switching__content1"; // デフォルトのタブID
 
-    // 対象のタブが存在しない場合はデフォルトタブを表示
-    if ($(".p-diving-tab-switching__content#" + tabname).length === 0) {
-        tabname = "p-diving-tab-switching__content1";
-    }
+  //   // 対象のタブが存在しない場合はデフォルトタブを表示
+  //   if ($(".p-diving-tab-switching__content#" + tabname).length === 0) {
+  //       tabname = "p-diving-tab-switching__content1";
+  //   }
 
-    // タブのアクティブ状態を更新
-    $(".c-diving-information-tab, .p-diving-tab-switching__content").removeClass("active");
+  //   // タブのアクティブ状態を更新
+  //   $(".c-diving-information-tab, .p-diving-tab-switching__content").removeClass("active");
 
-    var tabIndex = $(".p-diving-tab-switching__content#" + tabname).index();
+  //   var tabIndex = $(".p-diving-tab-switching__content#" + tabname).index();
 
+  //   $(".p-diving-tab-switching__content").eq(tabIndex).addClass("active");
+  //   $(".c-diving-information-tab").eq(tabIndex).addClass("active");
+
+  //   var speed = 500; // スクロールのスピード
+  //   var target = $(".p-diving-tab-switching__content").eq(tabIndex); // ターゲットとなる要素を取得
+  //   if (target.length) { // ターゲットが存在する場合のみ実行
+  //     var position = target.offset().top - 240; // ターゲットの位置を取得
+  //     $('html, body').animate({ scrollTop: position }, speed, 'swing'); // スムーズスクロール
+  //   }
+  // }
+
+  // // 初回ページ読み込み時にハッシュをチェック
+  // switchTabFromHash();
+
+  // // ハッシュが変更されたらタブを切り替える
+  // $(window).on("hashchange", function () {
+  //     switchTabFromHash();
+  // });
+
+  // // タブをクリックしたときにハッシュを変更
+  // $(".c-diving-information-tab").on("click", function () {
+  //     var targetPanelId = $(this).attr("data-target"); // `data-target` からパネルの ID を取得
+  //     if (targetPanelId) {
+  //         location.hash = targetPanelId; // ハッシュを更新
+  //     }
+  // });
+
+  // タブを選択する関数を定義
+  function selectTab(hash) {
+    // すべてのタブコンテンツを非表示に("active"クラスを削除)する
+    $('.p-diving-tab-switching__content').removeClass('active');
+
+    // すべてのタブから"active"クラスを削除する
+    $('.c-diving-information-tab').removeClass('active');
+
+    // ハッシュに対応するタブに"active"クラスを追加する
+    $(hash).addClass('active');
+
+    // ハッシュに対応するタブコンテンツを表示("active"クラスを追加)する
+    var tabIndex = $(hash).index();
     $(".p-diving-tab-switching__content").eq(tabIndex).addClass("active");
-    $(".c-diving-information-tab").eq(tabIndex).addClass("active");
-
-    var speed = 500; // スクロールのスピード
-    var target = $(".p-diving-tab-switching__content").eq(tabIndex); // ターゲットとなる要素を取得
-    if (target.length) { // ターゲットが存在する場合のみ実行
-      var position = target.offset().top - 240; // ターゲットの位置を取得
-      $('html, body').animate({ scrollTop: position }, speed, 'swing'); // スムーズスクロール
-    }
   }
 
-  // 初回ページ読み込み時にハッシュをチェック
-  switchTabFromHash();
+  // ページがロードされたときにURLのハッシュを取得
+  var hash = window.location.hash;
 
-  // ハッシュが変更されたらタブを切り替える
-  $(window).on("hashchange", function () {
-      switchTabFromHash();
-  });
+  // ハッシュが存在する場合は、そのタブを選択
+  if (hash) {
+    selectTab(hash);
+  }
 
-  // タブをクリックしたときにハッシュを変更
-  $(".c-diving-information-tab").on("click", function () {
-      var targetPanelId = $(this).attr("data-target"); // `data-target` からパネルの ID を取得
-      if (targetPanelId) {
-          location.hash = targetPanelId; // ハッシュを更新
-      }
+  // フッターまたはドロワーメニューのリンクがクリックされたときの処理
+  $('.footer-nav__left-detail-link, .sp-nav__left-detail-link').on('click', function (e) {
+    // デフォルトのリンク動作をキャンセル
+    // e.preventDefault();
+
+    // クリックされたリンクのハッシュを取得
+    var targetHash = this.hash;
+
+    // 該当するタブを選択
+    selectTab(targetHash);
   });
 });
