@@ -313,12 +313,12 @@ jQuery(function ($) {
     $(hash).addClass('active');
 
     // ハッシュに対応するタブコンテンツを表示("active"クラスを追加)する
-    var tabIndex = $(hash).index();
+    let tabIndex = $(".p-diving-information-tabs__item").has(hash).index();
     $(".p-diving-tab-switching__content").eq(tabIndex).addClass("active");
   }
 
   // ページがロードされたときにURLのハッシュを取得
-  var hash = window.location.hash;
+  let hash = window.location.hash;
 
   // ハッシュが存在する場合は、そのタブを選択
   if (hash) {
@@ -329,9 +329,9 @@ jQuery(function ($) {
   $('.footer-nav__left-detail-link, .sp-nav__left-detail-link').on('click', function (e) {
     // デフォルトのリンク動作をキャンセル
     // e.preventDefault();
-
+    window.location.reload();
     // クリックされたリンクのハッシュを取得
-    var targetHash = this.hash;
+    let targetHash = this.hash;
 
     // 該当するタブを選択
     selectTab(targetHash);
