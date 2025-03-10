@@ -301,39 +301,70 @@ jQuery(function ($) {
   //     }
   // });
 
-  // タブを選択する関数を定義
-  function selectTab(hash) {
-    // すべてのタブコンテンツを非表示に("active"クラスを削除)する
+  // // タブを選択する関数を定義
+  // function selectTab(hash) {
+  //   // すべてのタブコンテンツを非表示に("active"クラスを削除)する
+  //   $('.p-diving-tab-switching__content').removeClass('active');
+
+  //   // すべてのタブから"active"クラスを削除する
+  //   $('.c-diving-information-tab').removeClass('active');
+
+  //   // ハッシュに対応するタブに"active"クラスを追加する
+  //   $(hash).addClass('active');
+
+  //   // ハッシュに対応するタブコンテンツを表示("active"クラスを追加)する
+  //   let tabIndex = $(".p-diving-information-tabs__item").has(hash).index();
+  //   $(".p-diving-tab-switching__content").eq(tabIndex).addClass("active");
+  // }
+
+  // // ページがロードされたときにURLのハッシュを取得
+  // let hash = window.location.hash;
+
+  // // ハッシュが存在する場合は、そのタブを選択
+  // if (hash) {
+  //   selectTab(hash);
+  // }
+
+  // // フッターまたはドロワーメニューのリンクがクリックされたときの処理
+  // $('.p-footer-nav__left-detail-link, .p-sp-nav__left-detail-link').on('click', function (e) {
+  //   // デフォルトのリンク動作をキャンセル
+  //   // e.preventDefault();
+
+  //   // クリックされたリンクのハッシュを取得
+  //   let targetHash = this.hash;
+
+  //   // 該当するタブを選択
+  //   selectTab(targetHash);
+  // });
+
+  // URLのクエリパラメータを取得する関数
+  function getQueryParam(name) {
+    // window.location.search は URL の「?」以降の部分（クエリパラメータ）を取得
+    // new URLSearchParams(...) でクエリパラメータを 簡単に操作できるオブジェクト に変換
+    let params = new URLSearchParams(window.location.search);
+    // params.get(name) で、name に対応する パラメータの値 を取得
+    // 例えば getQueryParam('tab') を呼び出すと、"p-diving-tab-switching__content1" などの値が返ってくる
+    return params.get(name);
+  }
+
+  // タブを選択する関数
+  function selectTab(target) {  // target（どのタブを選択するかの情報）を受け取る
+    // すべてのタブとタブコンテンツの "active" クラスを削除
+    $('.c-diving-information-tab').removeClass('active');
     $('.p-diving-tab-switching__content').removeClass('active');
 
-    // すべてのタブから"active"クラスを削除する
-    $('.c-diving-information-tab').removeClass('active');
+    // data-target 属性が target の値と一致するタブを取得し、そのタブに "active" クラスを追加
+    $(`.c-diving-information-tab[data-target="${target}"]`).addClass('active');
 
-    // ハッシュに対応するタブに"active"クラスを追加する
-    $(hash).addClass('active');
-
-    // ハッシュに対応するタブコンテンツを表示("active"クラスを追加)する
-    var tabIndex = $(hash).index();
-    $(".p-diving-tab-switching__content").eq(tabIndex).addClass("active");
+    // target の ID を持つタブのコンテンツを取得し、そのコンテンツに "active" クラスを追加
+    $(`#${target}`).addClass('active');
   }
 
-  // ページがロードされたときにURLのハッシュを取得
-  var hash = window.location.hash;
+  // クエリパラメータ "tab" を取得
+  let tabParam = getQueryParam('tab');  // getQueryParam('tab') を呼び出して、URL の ?tab=... の値を取得
 
-  // ハッシュが存在する場合は、そのタブを選択
-  if (hash) {
-    selectTab(hash);
+  // クエリパラメータが存在すればタブを選択
+  if (tabParam) { // tabParam に値が入っている場合（クエリパラメータがある場合）、selectTab(tabParam); を実行
+    selectTab(tabParam);
   }
-
-  // フッターまたはドロワーメニューのリンクがクリックされたときの処理
-  $('.footer-nav__left-detail-link, .sp-nav__left-detail-link').on('click', function (e) {
-    // デフォルトのリンク動作をキャンセル
-    // e.preventDefault();
-
-    // クリックされたリンクのハッシュを取得
-    var targetHash = this.hash;
-
-    // 該当するタブを選択
-    selectTab(targetHash);
-  });
 });
