@@ -1,52 +1,12 @@
 <nav class="p-pc-nav">
   <ul class="p-pc-nav__items">
-    <li class="p-pc-nav__item">
-      <a href="./archive-campaign.html" class="p-pc-nav__link">
-        <span class="p-pc-nav__engtext">Campaign</span>
-        <span class="p-pc-nav__jatext">キャンペーン</span>
-      </a>
-    </li>
-    <li class="p-pc-nav__item">
-      <a href="./page-about.html" class="p-pc-nav__link">
-        <span class="p-pc-nav__engtext">About&nbsp;us</span>
-        <span class="p-pc-nav__jatext">私たちについて</span>
-      </a>
-    </li>
-    <li class="p-pc-nav__item">
-      <a href="./page-diving-info.html" class="p-pc-nav__link">
-        <span class="p-pc-nav__engtext">Information</span>
-        <span class="p-pc-nav__jatext">ダイビング情報</span>
-      </a>
-    </li>
-    <li class="p-pc-nav__item">
-      <a href="./home.html" class="p-pc-nav__link">
-        <span class="p-pc-nav__engtext">Blog</span>
-        <span class="p-pc-nav__jatext">ブログ</span>
-      </a>
-    </li>
-    <li class="p-pc-nav__item">
-      <a href="./archive-voices.html" class="p-pc-nav__link">
-        <span class="p-pc-nav__engtext">Voice</span>
-        <span class="p-pc-nav__jatext">お客様の声</span>
-      </a>
-    </li>
-    <li class="p-pc-nav__item">
-      <a href="./page-price.html" class="p-pc-nav__link">
-        <span class="p-pc-nav__engtext">Price</span>
-        <span class="p-pc-nav__jatext">料金一覧</span>
-      </a>
-    </li>
-    <li class="p-pc-nav__item">
-      <a href="./page-faq.html" class="p-pc-nav__link">
-        <span class="p-pc-nav__engtext">FAQ</span>
-        <span class="p-pc-nav__jatext">よくある質問</span>
-      </a>
-    </li>
-    <li class="p-pc-nav__item">
-      <a href="./page-contact.html" class="p-pc-nav__link">
-        <span class="p-pc-nav__engtext">Contact</span>
-        <span class="p-pc-nav__jatext">お問い合わせ</span>
-      </a>
-    </li>
+    <% navItems.forEach(function(item) { %>
+      <li class="p-pc-nav__item">
+        <a href="<%= item.url %>" class="p-pc-nav__link">
+          <span class="p-pc-nav__engtext"><%- item.eng %></span>
+          <span class="p-pc-nav__jatext"><%- item.ja %></span>
+        </a>
+      </li>
+    <% }); %>
   </ul>
 </nav>

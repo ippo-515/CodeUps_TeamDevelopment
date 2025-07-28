@@ -218,10 +218,23 @@
       <p class="p">ドロワーメニュー</p>
       <!-- prettier-ignore -->
       <%- include(ejsPath + '/project/_p-sp-nav') %>
+
       <h2 class="h2">.p-pc-nav</h2>
       <p class="p">グローバルナビゲーション</p>
       <!-- prettier-ignore -->
-      <%- include(ejsPath + '/project/_p-pc-nav') %>
+      <%- include(ejsPath + '/project/_p-pc-nav', {
+        navItems: [
+          { url: './archive-campaign.html', eng: 'Campaign', ja: 'キャンペーン' },
+          { url: './page-about.html', eng: 'About&nbsp;us', ja: '私たちについて' },
+          { url: './page-diving-info.html', eng: 'Information', ja: 'ダイビング情報' },
+          { url: './home.html', eng: 'Blog', ja: 'ブログ' },
+          { url: './archive-voices.html', eng: 'Voice', ja: 'お客様の声' },
+          { url: './page-price.html', eng: 'Price', ja: '料金一覧' },
+          { url: './page-faq.html', eng: 'FAQ', ja: 'よくある質問' },
+          { url: './page-contact.html', eng: 'Contact', ja: 'お問い合わせ' },
+        ]
+      }) %>
+
       <!-- prettier-ignore -->
       <h2 class="h2">.p-privacy-policy-contents</h2>
       <p class="p">プライバシーポリシーコンテンツ</p>
